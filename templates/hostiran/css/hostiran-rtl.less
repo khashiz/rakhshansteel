@@ -7,6 +7,15 @@
 .uk-text-zero{
   font-size: 0;
 }
+.uk-text-white{
+  color: #fff;
+}
+.uk-text-light{
+  font-weight: 300;
+}
+.uk-text-black{
+  font-weight: 800;
+}
 .ltr{
   direction: ltr;
 }
@@ -693,6 +702,13 @@ main{
   }
 }
 section{
+  &.slideshow{
+    div{
+      &.cover{
+        background-color: rgba(0, 0, 0, .6);
+      }
+    }
+  }
   &.pageHeader{
     background-position: center center;
     background-size: cover;
@@ -872,7 +888,6 @@ section{
       }
       &.text{
         font-size: 16px;
-        font-weight: 300;
       }
     }
   }
@@ -1142,9 +1157,6 @@ ul{
   }
   &.productTabsTitles{
     background-color: #fff;
-    li{
-      a{}
-    }
   }
 }
 aside{
@@ -1155,6 +1167,18 @@ aside{
       color: #000;
       .font;
     }
+  }
+}
+.moduleHead{
+  &:after{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 70px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e0ae45;
   }
 }
 

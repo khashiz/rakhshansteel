@@ -31,10 +31,10 @@ $total = count($slides['media']);
                             <div class="uk-container">
                                 <div class="uk-child-width-1-1 uk-grid-medium" data-uk-grid>
                                     <?php if (!empty($slides['title'][$i])) { ?>
-                                        <div><h2 class="uk-margin-remove font" data-uk-slideshow-parallax="x: 300,-300"><?php echo $slides['title'][$i]; ?></h2></div>
+                                        <div><h2 class="uk-margin-remove font uk-text-black" data-uk-slideshow-parallax="x: 300,-300"><?php echo $slides['title'][$i]; ?></h2></div>
                                     <?php } ?>
                                     <?php if (!empty($slides['text'][$i])) { ?>
-                                        <div><p class="uk-width-1-1 uk-width-1-2@m<?php if (str_replace(' ', '', $slides['align'][$i]) == 'center') {echo ' uk-margin-auto';} elseif (str_replace('-', '', $slides['align'][$i]) == 'right') {echo ' uk-margin-auto-left';} elseif (str_replace('-', '', $slides['align'][$i]) == 'left') {echo ' uk-margin-auto-right';} ?> font" data-uk-slideshow-parallax="x: 500,-500"><?php echo $slides['text'][$i]; ?></p></div>
+                                        <div><p class="uk-width-1-1 uk-text-light uk-text-white uk-width-1-1@m <?php if (str_replace(' ', '', $slides['align'][$i]) == 'center') {echo ' uk-margin-auto';} elseif (str_replace('-', '', $slides['align'][$i]) == 'right') {echo ' uk-margin-auto-left';} elseif (str_replace('-', '', $slides['align'][$i]) == 'left') {echo ' uk-margin-auto-right';} ?> font" data-uk-slideshow-parallax="x: 500,-500"><?php echo $slides['text'][$i]; ?></p></div>
                                     <?php } ?>
                                     <?php if (!empty($slides['link'][$i])) { ?>
                                         <div><a href="<?php echo $slides['link'][$i]; ?>" class="uk-button uk-button-default uk-border-rounded uk-box-shadow-small uk-text-capitalize font" data-uk-slideshow-parallax="x: 700,-700"><?php echo $slides['btnlabel'][$i]; ?></a></div>

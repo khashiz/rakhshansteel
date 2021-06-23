@@ -136,7 +136,7 @@ $total = count($socialsicons['icon']);
         // Initialized CedarMap
         var map = window.L.cedarmaps.map('map_rc0cxe', 'https://api.cedarmaps.com/v1/tiles/cedarmaps.streets.json?access_token=5256866fe5dbe63006370d837dc4e5554d6ec7f9', cm_options);
         // Markers options
-        var markers = [{"popupContent":"موقعیت مکانی شما","center":{"lat":37.4467056,"lng":49.6037977},"iconOpts":{"iconUrl":"https://api.cedarmaps.com/v1/markers/marker-default.png","iconRetinaUrl":"https://api.cedarmaps.com/v1/markers/marker-default@2x.png","iconSize":[82,98]}}];
+        var markers = [{"popupContent":"موقعیت مکانی شما","center":{"lat":35.674856,"lng":51.300682},"iconOpts":{"iconUrl":"https://api.cedarmaps.com/v1/markers/marker-default.png","iconRetinaUrl":"https://api.cedarmaps.com/v1/markers/marker-default@2x.png","iconSize":[82,98]}}];
         var markersLeaflet = [];
         var _marker = null;
 

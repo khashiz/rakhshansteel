@@ -23,9 +23,9 @@ $total = count($items['number']);
                     <ul class="uk-child-width-1-4@m uk-grid-large uk-grid-divider" data-uk-grid>
                         <?php for ($i=0;$i<$total;$i++) { ?>
                             <li>
-                                <div>
-                                    <span class="uk-display-block uk-text-center number font color ltr"><?php echo $items['number'][$i]; ?></span>
-                                    <span class="uk-display-block uk-text-center uk-margin-small-top text font"><?php echo $items['title'][$i]; ?></span>
+                                <div class="uk-light">
+                                    <span class="uk-display-block uk-text-center uk-text-white number font ltr"><?php echo $items['number'][$i]; ?></span>
+                                    <span class="uk-display-block uk-text-center uk-margin-small-top uk-text-bold text font"><?php echo $items['title'][$i]; ?></span>
                                 </div>
                             </li>
                         <?php } ?>

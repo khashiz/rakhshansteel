@@ -26,6 +26,8 @@ $task     = $app->input->getCmd('task', '');
 $itemid   = $app->input->getCmd('Itemid', '');
 $sitename = $app->get('sitename');
 
+$netparsi = '<a href="https://netparsi.com" target="_blank" title="'.JText::sprintf('NETPARSI').'">&ensp;'.JText::sprintf('NETPARSI').'</a>';
+
 $lang = JFactory::getLanguage();
 $languages = JLanguageHelper::getLanguages('lang_code');
 $languageCode = $languages[ $lang->getTag() ]->sef;
@@ -66,7 +68,7 @@ $cells = explode("\n", $params->get('cellphone'));
     </style>
 </head>
 <body>
-<header class="uk-text-zero <?php echo $pageparams->get('headerstyle') == 'transparent' ? 'uk-position-absolute uk-width-1-1' : 'uk-position-relative'; ?> uk-position-z-index <?php echo $pageparams->get('headerstyle', 'normal'); ?>">
+<header class="uk-text-zero <?php echo $pageparams->get('headerstyle') == 'transparent' ? 'uk-position-absolute uk-width-1-1' : 'uk-position-relative'; ?> uk-position-z-index <?php echo $pageparams->get('headerstyle', 'normal'); ?> <?php if ($pageclass == 'home') echo 'uk-box-shadow-medium'; ?>">
     <div class="headerWrapper">
         <div class="topBar uk-position-relative uk-position-z-index uk-visible@m">
             <div class="uk-container">
@@ -246,6 +248,7 @@ $cells = explode("\n", $params->get('cellphone'));
                 <div class="copyright">
                     <div class="uk-grid-small uk-flex-center" data-uk-grid>
                         <div class="uk-width-1-1 uk-width-auto@m"><p class="font uk-text-center uk-text-right@m"><i class="far fa-copyright uk-margin-small-left"></i><?php echo JText::sprintf('COPYRIGHT', $sitename); ?></p></div>
+                        <div class="uk-width-1-1 uk-width-expand@m"><p class="font uk-flex uk-flex-center uk-flex-middle uk-flex-left@m"><i class="fa fa-code uk-margin-small-left"></i><?php echo JText::sprintf('DEVELOPER', $netparsi); ?></p></div>
                     </div>
                 </div>
             </div>
