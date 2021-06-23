@@ -12,9 +12,9 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
                     <?php $canDownload = rsfilesHelper::permissions('CanDownload',$item->fullpath); ?>
                     <?php if (!empty($item->DownloadLimit) && $item->Downloads >= $item->DownloadLimit) $canDownload = false; ?>
                     <div>
-                        <div class="uk-box-shadow-small uk-border-rounded uk-padding-small">
+                        <div class="uk-box-shadow-small uk-border-rounded uk-padding-small uk-text-center">
                             <div></div>
-                            <i class="rsfiles-file-icon <?php echo $item->icon; ?>"></i>
+                            <i class="uk-margin-small-top uk-margin-small-bottom uk-display-block rsfiles-file-icon <?php echo $item->icon; ?>"></i>
                             <?php if ($item->isnew) { ?>
                                 <span class="badge badge-info"><?php echo JText::_('COM_RSFILES_NEW'); ?></span>
                             <?php } ?>
@@ -22,22 +22,22 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
                             <?php if ($item->popular) { ?>
                                 <span class="badge badge-success"><?php echo JText::_('COM_RSFILES_POPULAR'); ?></span>
                             <?php } ?>
-                            <div>
+                            <div class="uk-text-muted uk-text-meta uk-hidden">
                                 <?php if ($this->params->get('date')) { ?>
 
                                     <?php if ($item->type != 'folder') echo $item->dateadded; ?>
 
                                 <?php } ?>
                             </div>
-                            <?php echo$item->downloads; ?>
+                            <?php // echo $item->downloads; ?>
                             <div>
                                 <?php if ($item->type != 'folder') { ?>
                                 <?php $download = rsfilesHelper::downloadlink($item,$item->fullpath); ?>
                                 <?php if ($canDownload && $this->config->direct_download) { ?>
                                 <?php if ($download->ismodal) { ?>
-                                <a class="rsfiles-file" href="javascript:void(0)" onclick="rsfiles_show_modal('<?php echo $download->dlink; ?>', '<?php echo JText::_('COM_RSFILES_DOWNLOAD'); ?>', 600)">
+                                <a class="font uk-text-bold uk-text-small uk-link-reset rsfiles-file" href="javascript:void(0)" onclick="rsfiles_show_modal('<?php echo $download->dlink; ?>', '<?php echo JText::_('COM_RSFILES_DOWNLOAD'); ?>', 600)">
                                     <?php } else { ?>
-                                    <a class="rsfiles-file" href="<?php echo $download->dlink; ?>">
+                                    <a class="font uk-text-bold uk-text-small uk-link-reset rsfiles-file" href="<?php echo $download->dlink; ?>">
                                         <?php } ?>
                                         <?php } else { ?>
                                         <a href="<?php echo JRoute::_('index.php?option=com_rsfiles&layout=download&path='.rsfilesHelper::encode($item->fullpath).$this->itemid); ?>" class="rsfiles-file">
