@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_SEARCH_SEARCH_VIEW_SEARCH_TITLE" option="COM_SEARCH_SEARCH_VIEW_SEARCH_OPTION">
+		<help
+			key = "JHELP_MENUS_MENU_ITEM_SEARCH_RESULTS"
+		/>
+		<message>
+			<![CDATA[COM_SEARCH_SEARCH_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request" label="COM_SEARCH_FIELDSET_OPTIONAL_LABEL">
+
+			<field
+				name="searchword"
+				type="text"
+				label="COM_SEARCH_FIELD_LABEL"
+				description="COM_SEARCH_FIELD_DESC"
+			/>
+		</fieldset>
+	</fields>
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<fieldset name="pageparams" label="TPL_HOSTIRAN_PAGEPARAMS">
+			<field name="bgcolor" type="color" label="TPL_HOSTIRAN_BGCOLOR" />
+			<field name="gridwidth" type="list" label="TPL_HOSTIRAN_GRIDWIDTH" default="normal">
+				<option value="uk-container uk-container-xsmall">TPL_HOSTIRAN_XSMALL</option>
+				<option value="uk-container uk-container-small">TPL_HOSTIRAN_SMALL</option>
+				<option value="uk-container">TPL_HOSTIRAN_NORMAL</option>
+				<option value="uk-container uk-container-large">TPL_HOSTIRAN_LARGE</option>
+				<option value="uk-container uk-container-expand">TPL_HOSTIRAN_EXPAND</option>
+			</field>
+			<field name="headerstyle" type="radio" label="TPL_HOSTIRAN_HEADERSTYLE" class="btn-group btn-group-yesno" default="normal">
+				<option value="normal">TPL_HOSTIRAN_NORMAL</option>
+				<option value="transparent">TPL_HOSTIRAN_TRANSPARENT</option>
+			</field>
+			<field name="headerbgcolor" type="color" label="TPL_HOSTIRAN_BGCOLOR" format="rgba" />
+			<field name="headerbgimage" type="media" label="TPL_HOSTIRAN_BGIMAGE" />
+			<field name="headerbgattachment" type="radio" label="TPL_HOSTIRAN_BGATTACHMENT" class="btn-group btn-group-yesno" default="normal">
+				<option value="normal">TPL_HOSTIRAN_NORMAL</option>
+				<option value="fixed">TPL_HOSTIRAN_FIXED</option>
+			</field>
+			<field name="cover" type="radio" label="TPL_HOSTIRAN_COVER" class="btn-group btn-group-yesno" default="1">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="coverbgcolor" type="color" label="TPL_HOSTIRAN_COVERBGCOLOR" format="rgba" showon="cover:1" />
+			<field type="spacer" name="spacer1" hr="true" />
+			<field type="text" name="pagetitle" label="TPL_HOSTIRAN_PAGETITLE" />
+			<field name="pagetitlecolor" type="color" label="TPL_HOSTIRAN_COLOR" />
+			<field type="text" name="pagedescription" label="TPL_HOSTIRAN_PAGEDESCRIPTION" />
+			<field name="pagedescriptioncolor" type="color" label="TPL_HOSTIRAN_COLOR" />
+		</fieldset>
+
+		<!-- Basic options. -->
+		<fieldset name="basic" label="COM_MENUS_BASIC_FIELDSET_LABEL">
+
+			<field
+				name="search_phrases"
+				type="list"
+				label="COM_SEARCH_FIELD_SEARCH_PHRASES_LABEL"
+				description="COM_SEARCH_FIELD_SEARCH_PHRASES_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="search_areas"
+				type="list"
+				label="COM_SEARCH_FIELD_SEARCH_AREAS_LABEL"
+				description="COM_SEARCH_FIELD_SEARCH_AREAS_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="show_date"
+				type="list"
+				label="COM_SEARCH_CONFIG_FIELD_CREATED_DATE_LABEL"
+				description="COM_SEARCH_CONFIG_FIELD_CREATED_DATE_DESC"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="spacer1"
+				type="spacer"
+				label="COM_SEARCH_SAVED_SEARCH_OPTIONS"
+				class="text"
+			/>
+
+			<!-- Add fields to define saved search. -->
+
+			<field
+				name="searchphrase"
+				type="list"
+				label="COM_SEARCH_FOR_LABEL"
+				description="COM_SEARCH_FOR_DESC"
+				default="0"
+				>
+				<option value="0">COM_SEARCH_ALL_WORDS</option>
+				<option value="1">COM_SEARCH_ANY_WORDS</option>
+				<option value="2">COM_SEARCH_EXACT_PHRASE</option>
+			</field>
+
+			<field
+				name="ordering"
+				type="list"
+				label="COM_SEARCH_ORDERING_LABEL"
+				description="COM_SEARCH_ORDERING_DESC"
+				default="newest"
+				>
+				<option value="newest">COM_SEARCH_NEWEST_FIRST</option>
+				<option value="oldest">COM_SEARCH_OLDEST_FIRST</option>
+				<option value="popular">COM_SEARCH_MOST_POPULAR</option>
+				<option value="alpha">COM_SEARCH_ALPHABETICAL</option>
+				<option value="category">JCATEGORY</option>
+			</field>
+
+		</fieldset>
+	</fields>
+</metadata>
