@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>hostiran</name>
+	<creationDate>Mordad 98</creationDate>
+	<author>Khashayar Pouradabi</author>
+	<authorEmail>pouradabi@hostiran.com</authorEmail>
+	<authorUrl>www.hostiran.com</authorUrl>
+	<copyright>Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>TPL_HOSTIRAN_DESCRIPTION</description>
+	<files>
+		<folder>css</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+		<folder>font</folder>
+		<folder>language</folder>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB/en-GB.tpl_hostiran.ini</language>
+		<language tag="en-GB">overrides/en-GB.override.ini</language>
+		<language tag="fa-IR">fa-IR/fa-IR.tpl_hostiran.ini</language>
+		<language tag="fa-IR">overrides/fa-IR.override.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="presetcolor" type="color" label="TPL_HOSTIRAN_PRESETCOLOR" />
+				<field name="templatecolor" type="color" label="TPL_HOSTIRAN_TEMPLATECOLOR" default="#0061ab" />
+				<field name="font" type="list" label="TPL_HOSTIRAN_FONT" default="iranyekan">
+					<option value="iranyekan">TPL_HOSTIRAN_IRANYEKAN</option>
+					<option value="iransans">TPL_HOSTIRAN_IRANSANS</option>
+					<option value="iran">TPL_HOSTIRAN_IRAN</option>
+				</field>
+			</fieldset>
+			<fieldset name="header" label="TPL_HOSTIRAN_HEADER">
+				<field name="headercontact" type="list" label="TPL_HOSTIRAN_CONTACTITEMS" class="btn-group" multiple="true">
+					<option value="phone">TPL_HOSTIRAN_PHONE</option>
+					<option value="cellphone">TPL_HOSTIRAN_CELLPHONE</option>
+					<option value="fax">TPL_HOSTIRAN_FAX</option>
+					<option value="address">TPL_HOSTIRAN_ADDRESS</option>
+					<option value="email">TPL_HOSTIRAN_EMAIL</option>
+				</field>
+				<field name="stickyHeader" type="radio" label="TPL_HOSTIRAN_STICKY" class="btn-group btn-group-yesno" default="1">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="halign" type="radio" label="TPL_HOSTIRAN_HALIGN" class="btn-group btn-group-yesno" default="center">
+					<option value="left">TPL_HOSTIRAN_LEFT</option>
+					<option value="center">TPL_HOSTIRAN_CENTER</option>
+					<option value="right">TPL_HOSTIRAN_RIGHT</option>
+				</field>
+			</fieldset>
+			<fieldset name="footer" label="TPL_HOSTIRAN_FOOTER">
+				<field name="footerbgcolor" type="color" label="TPL_HOSTIRAN_BGCOLOR" default="#141414" />
+			</fieldset>
+			<fieldset name="contact" label="TPL_HOSTIRAN_CONTACT">
+				<field name="email" type="text" label="TPL_HOSTIRAN_EMAIL" />
+				<field name="phone" type="textarea" label="TPL_HOSTIRAN_PHONE" />
+				<field name="fax" type="textarea" label="TPL_HOSTIRAN_FAX" />
+				<field name="cellphone" type="textarea" label="TPL_HOSTIRAN_CELLPHONE" />
+				<field name="addressfa" type="textarea" label="TPL_HOSTIRAN_ADDRESS_FA" />
+				<field name="addressen" type="textarea" label="TPL_HOSTIRAN_ADDRESS_EN" />
+				<field name="socials" type="repeatable" icon="list" label="TPL_HOSTIRAN_SOCIALS">
+					<fieldset hidden="true" name="slides" repeat="true">
+						<field name="icon" class="width-100" type="text" label="TPL_HOSTIRAN_ICON" />
+						<field name="link" type="text" label="TPL_HOSTIRAN_URL" />
+						<field name="title" type="text" label="TPL_HOSTIRAN_TITLE" />
+						<field name="code" type="text" label="TPL_HOSTIRAN_CODE" />
+					</fieldset>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

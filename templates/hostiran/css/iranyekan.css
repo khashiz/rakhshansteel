@@ -1,0 +1,69 @@
+﻿@font-face {
+	font-family: "Hostiran";
+	font-style: normal;
+	font-weight: bold;
+	src: url('../font/iranyekan/eot/iranyekanwebbold.eot');
+	src: url('../font/iranyekan/eot/iranyekanwebbold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/iranyekan/woff/iranyekanwebbold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/iranyekan/ttf/iranyekanwebbold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Hostiran";
+	font-style: normal;
+	font-weight: 100;
+	src: url('../font/iranyekan/eot/iranyekanwebthin.eot');
+	src: url('../font/iranyekan/eot/iranyekanwebthin.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/iranyekan/woff/iranyekanwebthin.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/iranyekan/ttf/iranyekanwebthin.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Hostiran";
+	font-style: normal;
+	font-weight: 300;
+	src: url('../font/iranyekan/eot/iranyekanweblight.eot');
+	src: url('../font/iranyekan/eot/iranyekanweblight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/iranyekan/woff/iranyekanweblight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/iranyekan/ttf/iranyekanweblight.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Hostiran";
+	font-style: normal;
+	font-weight: normal;
+	src: url('../font/iranyekan/eot/iranyekanwebregular.eot');
+	src: url('../font/iranyekan/eot/iranyekanwebregular.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/iranyekan/woff/iranyekanwebregular.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/iranyekan/ttf/iranyekanwebregular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Hostiran";
+	font-style: normal;
+	font-weight: 500;
+	src: url('../font/iranyekan/eot/iranyekanwebmedium.eot');
+	src: url('../font/iranyekan/eot/iranyekanwebmedium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/iranyekan/woff/iranyekanwebmedium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/iranyekan/ttf/iranyekanwebmedium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Hostiran";
+	font-style: normal;
+	font-weight: 800;
+	src: url('../font/iranyekan/eot/iranyekanwebextrabold.eot');
+	src: url('../font/iranyekan/eot/iranyekanwebextrabold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/iranyekan/woff/iranyekanwebextrabold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/iranyekan/ttf/iranyekanwebextrabold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Hostiran";
+	font-style: normal;
+	font-weight: 900;
+	src: url('../font/iranyekan/eot/iranyekanwebblack.eot');
+	src: url('../font/iranyekan/eot/iranyekanwebblack.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/iranyekan/woff/iranyekanwebblack.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/iranyekan/ttf/iranyekanwebblack.ttf') format('truetype');
+}

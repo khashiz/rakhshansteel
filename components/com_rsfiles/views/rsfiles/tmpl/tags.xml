@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_RSFILES_RSFILES_VIEW_TAGS" >
+		<message>
+			<![CDATA[COM_RSFILES_RSFILES_VIEW_TAGS_DESCRIPTION]]>
+		</message>
+	</layout>
+	<fields name="params">
+		<fieldset name="basic" addfieldpath="/administrator/components/com_rsfiles/models/fields">
+			<field name="tags" type="sql" sql_select="id,title" sql_from="#__rsfiles_tags" sql_where="published=1" key_field="id" value_field="title" multiple="multiple" label="COM_RSFILES_VIEW_FILE_TAGS" description="COM_RSFILES_VIEW_FILE_TAGS_DESC" />
+			<field name="filter" type="list" default="0" label="COM_RSFILES_CONF_FILTER" description="COM_RSFILES_CONF_FILTER_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="order" type="list" label="COM_RSFILES_CONF_DEFAULT_ORDER" description="COM_RSFILES_CONF_DEFAULT_ORDER_DESC" default="name">
+				<option value="name">COM_RSFILES_CONF_DEFAULT_ORDER_NAME</option>
+				<option value="date">COM_RSFILES_CONF_DEFAULT_ORDER_DATE</option>
+				<option value="hits">COM_RSFILES_CONF_DEFAULT_ORDER_HITS</option>
+			</field>
+			<field name="order_way" type="list" label="COM_RSFILES_CONF_DEFAULT_ORDER_DIR" description="COM_RSFILES_CONF_DEFAULT_ORDER_DIR_DESC" default="asc">
+				<option value="asc">COM_RSFILES_ASCENDING</option>
+				<option value="desc">COM_RSFILES_DESCENDING</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

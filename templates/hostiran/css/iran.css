@@ -1,0 +1,42 @@
+﻿@font-face {
+	font-family: "Hostiran";
+	font-style: normal;
+	font-weight: bold;
+	src: url('../font/iran/eot/IRANBold.eot');
+	src: url('../font/iran/eot/IRANBold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/iran/woff2/IRANBold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/iran/woff/IRANBold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/iran/ttf/IRANBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Hostiran";
+	font-style: normal;
+	font-weight: 900;
+	src: url('../font/iran/eot/IRANBlack.eot');
+	src: url('../font/iran/eot/IRANBlack.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/iran/woff2/IRANBlack.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/iran/woff/IRANBlack.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/iran/ttf/IRANBlack.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Hostiran";
+	font-style: normal;
+	font-weight: 600;
+	src: url('../font/iran/eot/IRAN_SemiBold.eot');
+	src: url('../font/iran/eot/IRAN_SemiBold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/iran/woff2/IRAN_SemiBold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/iran/woff/IRAN_SemiBold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/iran/ttf/IRAN_SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Hostiran";
+	font-style: normal;
+	font-weight: normal;
+	src: url('../font/iran/eot/IRAN.eot');
+	src: url('../font/iran/eot/IRAN.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/iran/woff2/IRAN.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/iran/woff/IRAN.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/iran/ttf/IRAN.ttf') format('truetype');
+}

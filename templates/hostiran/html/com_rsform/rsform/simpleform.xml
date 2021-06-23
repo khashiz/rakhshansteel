@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_RSFORM_MENU_SIMPLEFORM" >
+		<message>
+			<![CDATA[COM_RSFORM_MENU_FORM_DESC]]>
+		</message>
+	</layout>
+	<fields name="params">
+		<fieldset name="pageparams" label="TPL_HOSTIRAN_PAGEPARAMS">
+			<field name="bgcolor" type="color" label="TPL_HOSTIRAN_BGCOLOR" />
+			<field name="gridwidth" type="list" label="TPL_HOSTIRAN_GRIDWIDTH" default="normal">
+				<option value="uk-container uk-container-xsmall">TPL_HOSTIRAN_XSMALL</option>
+				<option value="uk-container uk-container-small">TPL_HOSTIRAN_SMALL</option>
+				<option value="uk-container">TPL_HOSTIRAN_NORMAL</option>
+				<option value="uk-container uk-container-large">TPL_HOSTIRAN_LARGE</option>
+				<option value="uk-container uk-container-expand">TPL_HOSTIRAN_EXPAND</option>
+			</field>
+			<field name="headerstyle" type="radio" label="TPL_HOSTIRAN_HEADERSTYLE" class="btn-group btn-group-yesno" default="normal">
+				<option value="normal">TPL_HOSTIRAN_NORMAL</option>
+				<option value="transparent">TPL_HOSTIRAN_TRANSPARENT</option>
+			</field>
+			<field name="headerbgcolor" type="color" label="TPL_HOSTIRAN_BGCOLOR" format="rgba" />
+			<field name="headerbgimage" type="media" label="TPL_HOSTIRAN_BGIMAGE" />
+			<field name="headerbgattachment" type="radio" label="TPL_HOSTIRAN_BGATTACHMENT" class="btn-group btn-group-yesno" default="normal">
+				<option value="normal">TPL_HOSTIRAN_NORMAL</option>
+				<option value="fixed">TPL_HOSTIRAN_FIXED</option>
+			</field>
+			<field name="cover" type="radio" label="TPL_HOSTIRAN_COVER" class="btn-group btn-group-yesno" default="1">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="coverbgcolor" type="color" label="TPL_HOSTIRAN_COVERBGCOLOR" format="rgba" showon="cover:1" />
+			<field type="spacer" name="spacer1" hr="true" />
+			<field type="text" name="pagetitle" label="TPL_HOSTIRAN_PAGETITLE" />
+			<field name="pagetitlecolor" type="color" label="TPL_HOSTIRAN_COLOR" />
+			<field type="text" name="pagedescription" label="TPL_HOSTIRAN_PAGEDESCRIPTION" />
+			<field name="pagedescriptioncolor" type="color" label="TPL_HOSTIRAN_COLOR" />
+		</fieldset>
+	</fields>
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_rsform/models/fields">
+			<field name="formId" type="forms" default="" label="COM_RSFORM_SELECT_FORM" description="COM_RSFORM_SELECT_FORM_DESC" onchange="generateFormLink();" />
+		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<field name="id" type="hidden" label="JGLOBAL_FIELD_ID_LABEL" description ="JGLOBAL_FIELD_ID_DESC" size="10" default="0" readonly="true" />
+	<field name="name" type="text" class="input-xxlarge" label="COM_RSFILES_RULE_NAME" description="COM_RSFILES_RULE_NAME_DESC" required="true" size="70" />
+	<field name="folder" type="rsfolders" class="input-xxlarge" label="COM_RSFILES_RULE_FOLDER" description="COM_RSFILES_RULE_FOLDER_DESC" size="70" />
+	
+	<field name="FolderCanView" type="groups" label="COM_RSFILES_RULE_FOLDER_CAN_VIEW" description="COM_RSFILES_RULE_FOLDER_CAN_VIEW_DESC" class="input-large" multiple="multiple" />
+	<field name="FolderCanCreate" type="groups" label="COM_RSFILES_FILE_CAN_CREATE" description="COM_RSFILES_FILE_CAN_CREATE_DESC" class="input-large" multiple="multiple" />
+	<field name="FolderCanUpload" type="groups" label="COM_RSFILES_FILE_CAN_UPLOAD" description="COM_RSFILES_FILE_CAN_UPLOAD_DESC" class="input-large" multiple="multiple" />
+	<field name="FolderCanDelete" type="groups" label="COM_RSFILES_RULE_FOLDER_CAN_DELETE" description="COM_RSFILES_RULE_FOLDER_CAN_DELETE_DESC" class="input-large" multiple="multiple" />
+	
+	<field name="FileCanView" type="groups" label="COM_RSFILES_RULE_FILE_CAN_VIEW" description="COM_RSFILES_RULE_FILE_CAN_VIEW_DESC" class="input-large" multiple="multiple" />
+	<field name="FileCanDownload" type="groups" label="COM_RSFILES_FILE_CAN_DOWNLOAD" description="COM_RSFILES_FILE_CAN_DOWNLOAD_DESC" class="input-large" multiple="multiple" />
+	<field name="FileCanEdit" type="groups" label="COM_RSFILES_FILE_CAN_EDIT" description="COM_RSFILES_FILE_CAN_EDIT_DESC" class="input-large" multiple="multiple" />
+	<field name="FileCanDelete" type="groups" label="COM_RSFILES_RULE_FILE_CAN_DELETE" description="COM_RSFILES_RULE_FILE_CAN_DELETE_DESC" class="input-large" multiple="multiple" />
+	
+	
+	<field name="FileStatistics" type="radio" class="btn-group" label="COM_RSFILES_FILE_FILE_STATISTICS" description="COM_RSFILES_FILE_FILE_STATISTICS_DESC" default="0">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="IdLicense" type="licenses" label="COM_RSFILES_FILE_LICENSE" description="COM_RSFILES_FILE_LICENSE_DESC" class="input-large" />
+	<field name="DownloadMethod" type="list" label="COM_RSFILES_FILE_DOWNLOAD_METHOD" description="COM_RSFILES_FILE_DOWNLOAD_METHOD_DESC" default="0">
+		<option value="0">COM_RSFILES_FILE_DOWNLOAD_METHOD_0</option>
+		<option value="1">COM_RSFILES_FILE_DOWNLOAD_METHOD_1</option>
+	</field>
+	<field name="DownloadLimit" type="text" label="COM_RSFILES_FILE_DOWNLOAD_LIMIT" description="COM_RSFILES_FILE_DOWNLOAD_LIMIT_DESC" size="10" class="input-small" default="" />
+	<field name="show_preview" type="radio" class="btn-group" label="COM_RSFILES_FILE_SHOW_PREVIEW" description="COM_RSFILES_FILE_SHOW_PREVIEW_DESC" default="1">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	
+</form>

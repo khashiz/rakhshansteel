@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field name="search" type="text" label="JSEARCH_FILTER" hint="JSEARCH_FILTER" />
+	</fields>
+
+	<fields name="list">
+		<field name="root" type="list" onchange="change_root(this.value);" class="input-medium" default="download">
+			<option value="download">COM_RSFILES_DOWNLOAD_FOLDER</option>
+			<option value="briefcase">COM_RSFILES_BRIEFCASE_FOLDER</option>
+		</field>
+		
+		<field name="fullordering" type="list" onchange="this.form.submit();" default="name DESC">
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="name ASC">COM_RSFILES_NAME_ASC</option>
+			<option value="name DESC">COM_RSFILES_NAME_DESC</option>
+			<option value="date ASC">COM_RSFILES_DATE_DESC</option>
+			<option value="date DESC">COM_RSFILES_DATE_ASC</option>
+		</field>
+
+		<field name="limit" type="limitbox" default="25" class="input-mini" onchange="this.form.submit();" />
+	</fields>
+</form>
