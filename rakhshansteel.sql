@@ -1,21 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 23, 2021 at 12:20 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 7.4.15
+-- Host: localhost:3306
+-- Generation Time: Jun 26, 2021 at 09:12 AM
+-- Server version: 5.7.32
+-- PHP Version: 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `rakhshansteel`
@@ -33,8 +26,8 @@ CREATE TABLE `b871e_action_logs` (
   `message` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `log_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `extension` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `user_id` int(11) NOT NULL DEFAULT 0,
-  `item_id` int(11) NOT NULL DEFAULT 0,
+  `user_id` int(11) NOT NULL DEFAULT '0',
+  `item_id` int(11) NOT NULL DEFAULT '0',
   `ip_address` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0.0.0.0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -2121,7 +2114,24 @@ INSERT INTO `b871e_action_logs` (`id`, `message_language_key`, `message`, `log_d
 (2058, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":101,\"title\":\"\\u0635\\u0641\\u062d\\u0647 \\u0627\\u0635\\u0644\\u06cc\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=101\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\"}', '2021-06-23 10:02:00', 'com_menus.item', 480, 101, 'COM_ACTIONLOGS_DISABLED'),
 (2059, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ARTICLE\",\"id\":19,\"title\":\"\\u0639\\u0646\\u0648\\u0627\\u0646 \\u0645\\u062d\\u0635\\u0648\\u0644\",\"itemlink\":\"index.php?option=com_content&task=article.edit&id=19\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\"}', '2021-06-23 10:08:49', 'com_content.article', 480, 19, 'COM_ACTIONLOGS_DISABLED'),
 (2060, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"480\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"table\":\"#__content\"}', '2021-06-23 10:08:49', 'com_checkin', 480, 480, 'COM_ACTIONLOGS_DISABLED'),
-(2061, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{\"action\":\"logout\",\"id\":\"480\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2021-06-23 10:20:06', 'com_users', 480, 480, 'COM_ACTIONLOGS_DISABLED');
+(2061, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{\"action\":\"logout\",\"id\":\"480\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2021-06-23 10:20:06', 'com_users', 480, 480, 'COM_ACTIONLOGS_DISABLED'),
+(2062, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2021-06-23 10:41:32', 'com_users', 480, 0, 'COM_ACTIONLOGS_DISABLED'),
+(2063, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":103,\"title\":\"\\u067e\\u0634\\u062a\\u06cc\\u0628\\u0627\\u0646\\u06cc\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=103\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\"}', '2021-06-23 10:44:15', 'com_menus.item', 480, 103, 'COM_ACTIONLOGS_DISABLED'),
+(2064, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"480\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"table\":\"#__menu\"}', '2021-06-23 10:44:15', 'com_checkin', 480, 480, 'COM_ACTIONLOGS_DISABLED'),
+(2065, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":119,\"title\":\"\\u0628\\u0644\\u0627\\u06af\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=119\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\"}', '2021-06-23 10:44:37', 'com_menus.item', 480, 119, 'COM_ACTIONLOGS_DISABLED'),
+(2066, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"480\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"table\":\"#__menu\"}', '2021-06-23 10:44:37', 'com_checkin', 480, 480, 'COM_ACTIONLOGS_DISABLED'),
+(2067, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ARTICLE\",\"id\":3,\"title\":\"\\u0645\\u0637\\u0644\\u0628 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u0633\\u0647 \\u0628\\u0644\\u0627\\u06af\",\"itemlink\":\"index.php?option=com_content&task=article.edit&id=3\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\"}', '2021-06-23 10:46:04', 'com_content.article', 480, 3, 'COM_ACTIONLOGS_DISABLED'),
+(2068, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"480\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"table\":\"#__content\"}', '2021-06-23 10:46:04', 'com_checkin', 480, 480, 'COM_ACTIONLOGS_DISABLED'),
+(2069, 'PLG_ACTIONLOG_JOOMLA_COMPONENT_CONFIG_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT_CONFIG\",\"id\":\"10009\",\"title\":\"com_rscomments\",\"extension_name\":\"com_rscomments\",\"itemlink\":\"index.php?option=com_config&task=component.edit&extension_id=10009\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\"}', '2021-06-23 10:46:57', 'com_config.component', 480, 10009, 'COM_ACTIONLOGS_DISABLED'),
+(2070, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"480\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"table\":\"#__content\"}', '2021-06-23 10:47:27', 'com_checkin', 480, 480, 'COM_ACTIONLOGS_DISABLED'),
+(2071, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2021-06-23 11:39:31', 'com_users', 480, 0, 'COM_ACTIONLOGS_DISABLED'),
+(2072, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_STYLE\",\"id\":9,\"title\":\"Rakhshan Steel\",\"extension_name\":\"Rakhshan Steel\",\"itemlink\":\"index.php?option=com_templates&task=style.edit&id=9\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\"}', '2021-06-23 11:45:34', 'com_templates.style', 480, 9, 'COM_ACTIONLOGS_DISABLED'),
+(2073, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":100,\"title\":\"Slideshow\",\"extension_name\":\"Slideshow\",\"itemlink\":\"index.php?option=com_modules&task=module.edit&id=100\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\"}', '2021-06-23 11:47:09', 'com_modules.module', 480, 100, 'COM_ACTIONLOGS_DISABLED'),
+(2074, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"480\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"table\":\"#__modules\"}', '2021-06-23 11:47:09', 'com_checkin', 480, 480, 'COM_ACTIONLOGS_DISABLED'),
+(2075, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"480\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"table\":\"#__modules\"}', '2021-06-23 11:51:46', 'com_checkin', 480, 480, 'COM_ACTIONLOGS_DISABLED'),
+(2076, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"480\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"table\":\"#__modules\"}', '2021-06-23 11:51:56', 'com_checkin', 480, 480, 'COM_ACTIONLOGS_DISABLED'),
+(2077, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UNPUBLISHED', '{\"action\":\"unpublish\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":96,\"title\":\"\\u0631\\u062e\\u0634\\u0627\\u0646 \\u0627\\u0633\\u062a\\u06cc\\u0644 \\u0627\\u0641\\u062a\\u062e\\u0627\\u0631 \\u0647\\u0645\\u06a9\\u0627\\u0631 \\u062f\\u0627\\u0634\\u062a\\u0647 \\u0627\\u0633\\u062a \\u0628\\u0627\",\"itemlink\":\"index.php?option=com_modules&task=module.edit&id=96\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\"}', '2021-06-23 11:51:56', 'com_modules.module', 480, 96, 'COM_ACTIONLOGS_DISABLED'),
+(2078, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"480\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=480\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2021-06-23 14:53:03', 'com_users', 480, 0, 'COM_ACTIONLOGS_DISABLED');
 
 -- --------------------------------------------------------
 
@@ -2227,9 +2237,9 @@ INSERT INTO `b871e_action_log_config` (`id`, `type_title`, `type_alias`, `id_hol
 
 CREATE TABLE `b871e_assets` (
   `id` int(10) UNSIGNED NOT NULL COMMENT 'Primary Key',
-  `parent_id` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set parent.',
-  `lft` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set lft.',
-  `rgt` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set rgt.',
+  `parent_id` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set parent.',
+  `lft` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set lft.',
+  `rgt` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set rgt.',
   `level` int(10) UNSIGNED NOT NULL COMMENT 'The cached level in the nested tree.',
   `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The unique name for the asset.\n',
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The descriptive title for the asset.',
@@ -2406,39 +2416,39 @@ CREATE TABLE `b871e_associations` (
 
 CREATE TABLE `b871e_banners` (
   `id` int(11) NOT NULL,
-  `cid` int(11) NOT NULL DEFAULT 0,
-  `type` int(11) NOT NULL DEFAULT 0,
+  `cid` int(11) NOT NULL DEFAULT '0',
+  `type` int(11) NOT NULL DEFAULT '0',
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
-  `imptotal` int(11) NOT NULL DEFAULT 0,
-  `impmade` int(11) NOT NULL DEFAULT 0,
-  `clicks` int(11) NOT NULL DEFAULT 0,
+  `imptotal` int(11) NOT NULL DEFAULT '0',
+  `impmade` int(11) NOT NULL DEFAULT '0',
+  `clicks` int(11) NOT NULL DEFAULT '0',
   `clickurl` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `state` tinyint(3) NOT NULL DEFAULT 0,
-  `catid` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `state` tinyint(3) NOT NULL DEFAULT '0',
+  `catid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `custombannercode` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sticky` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
-  `ordering` int(11) NOT NULL DEFAULT 0,
+  `sticky` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
+  `ordering` int(11) NOT NULL DEFAULT '0',
   `metakey` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `own_prefix` tinyint(1) NOT NULL DEFAULT 0,
+  `own_prefix` tinyint(1) NOT NULL DEFAULT '0',
   `metakey_prefix` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `purchase_type` tinyint(4) NOT NULL DEFAULT -1,
-  `track_clicks` tinyint(4) NOT NULL DEFAULT -1,
-  `track_impressions` tinyint(4) NOT NULL DEFAULT -1,
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `purchase_type` tinyint(4) NOT NULL DEFAULT '-1',
+  `track_clicks` tinyint(4) NOT NULL DEFAULT '-1',
+  `track_impressions` tinyint(4) NOT NULL DEFAULT '-1',
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `reset` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `created_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `version` int(10) UNSIGNED NOT NULL DEFAULT 1
+  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `version` int(10) UNSIGNED NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -2453,15 +2463,15 @@ CREATE TABLE `b871e_banner_clients` (
   `contact` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `extrainfo` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `state` tinyint(3) NOT NULL DEFAULT 0,
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `state` tinyint(3) NOT NULL DEFAULT '0',
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `metakey` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `own_prefix` tinyint(4) NOT NULL DEFAULT 0,
+  `own_prefix` tinyint(4) NOT NULL DEFAULT '0',
   `metakey_prefix` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `purchase_type` tinyint(4) NOT NULL DEFAULT -1,
-  `track_clicks` tinyint(4) NOT NULL DEFAULT -1,
-  `track_impressions` tinyint(4) NOT NULL DEFAULT -1
+  `purchase_type` tinyint(4) NOT NULL DEFAULT '-1',
+  `track_clicks` tinyint(4) NOT NULL DEFAULT '-1',
+  `track_impressions` tinyint(4) NOT NULL DEFAULT '-1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -2474,7 +2484,7 @@ CREATE TABLE `b871e_banner_tracks` (
   `track_date` datetime NOT NULL,
   `track_type` int(10) UNSIGNED NOT NULL,
   `banner_id` int(10) UNSIGNED NOT NULL,
-  `count` int(10) UNSIGNED NOT NULL DEFAULT 0
+  `count` int(10) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -2485,32 +2495,32 @@ CREATE TABLE `b871e_banner_tracks` (
 
 CREATE TABLE `b871e_categories` (
   `id` int(11) NOT NULL,
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
-  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `lft` int(11) NOT NULL DEFAULT 0,
-  `rgt` int(11) NOT NULL DEFAULT 0,
-  `level` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table.',
+  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `lft` int(11) NOT NULL DEFAULT '0',
+  `rgt` int(11) NOT NULL DEFAULT '0',
+  `level` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `path` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `extension` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
   `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `description` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `checked_out` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `description` mediumtext COLLATE utf8mb4_unicode_ci,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `checked_out` int(11) UNSIGNED NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `params` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `access` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `params` text COLLATE utf8mb4_unicode_ci,
   `metadesc` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'The meta description for the page.',
   `metakey` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'The meta keywords for the page.',
   `metadata` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'JSON encoded metadata properties.',
-  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `created_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `modified_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `modified_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `hits` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `version` int(10) UNSIGNED NOT NULL DEFAULT 1
+  `version` int(10) UNSIGNED NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -2552,25 +2562,25 @@ CREATE TABLE `b871e_contact_details` (
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
   `con_position` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `address` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` text COLLATE utf8mb4_unicode_ci,
   `suburb` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `state` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `country` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `postcode` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `telephone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `fax` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `misc` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `misc` mediumtext COLLATE utf8mb4_unicode_ci,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email_to` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `default_con` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `default_con` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `ordering` int(11) NOT NULL DEFAULT 0,
+  `ordering` int(11) NOT NULL DEFAULT '0',
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_id` int(11) NOT NULL DEFAULT 0,
-  `catid` int(11) NOT NULL DEFAULT 0,
-  `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `user_id` int(11) NOT NULL DEFAULT '0',
+  `catid` int(11) NOT NULL DEFAULT '0',
+  `access` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `mobile` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `webpage` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `sortname1` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -2578,19 +2588,19 @@ CREATE TABLE `b871e_contact_details` (
   `sortname3` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `language` varchar(7) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `created_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `metakey` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadesc` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadata` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `featured` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Set if contact is featured.',
+  `featured` tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Set if contact is featured.',
   `xreference` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'A reference to enable linkages to external data sets.',
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `version` int(10) UNSIGNED NOT NULL DEFAULT 1,
-  `hits` int(10) UNSIGNED NOT NULL DEFAULT 0
+  `version` int(10) UNSIGNED NOT NULL DEFAULT '1',
+  `hits` int(10) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -2601,33 +2611,33 @@ CREATE TABLE `b871e_contact_details` (
 
 CREATE TABLE `b871e_content` (
   `id` int(10) UNSIGNED NOT NULL,
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table.',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
   `introtext` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `fulltext` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `state` tinyint(3) NOT NULL DEFAULT 0,
-  `catid` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `state` tinyint(3) NOT NULL DEFAULT '0',
+  `catid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `created_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `images` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `urls` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `attribs` varchar(5120) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `version` int(10) UNSIGNED NOT NULL DEFAULT 1,
-  `ordering` int(11) NOT NULL DEFAULT 0,
+  `version` int(10) UNSIGNED NOT NULL DEFAULT '1',
+  `ordering` int(11) NOT NULL DEFAULT '0',
   `metakey` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadesc` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `access` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `hits` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `metadata` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `featured` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Set if article is featured.',
+  `featured` tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Set if article is featured.',
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The language code for the article.',
   `xreference` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'A reference to enable linkages to external data sets.',
   `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
@@ -2638,12 +2648,12 @@ CREATE TABLE `b871e_content` (
 --
 
 INSERT INTO `b871e_content` (`id`, `asset_id`, `title`, `alias`, `introtext`, `fulltext`, `state`, `catid`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `images`, `urls`, `attribs`, `version`, `ordering`, `metakey`, `metadesc`, `access`, `hits`, `metadata`, `featured`, `language`, `xreference`, `note`) VALUES
-(1, 68, 'مطلب شماره یک بلاگ', 'مطلب-شماره-یک-بلاگ', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>\r\n', '\r\n<p>چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', 1, 8, '2021-06-22 04:31:12', 480, '', '2021-06-22 23:55:21', 480, 0, '0000-00-00 00:00:00', '2021-06-22 04:31:12', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 10, 4, '', '', 1, 57, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
-(2, 69, 'مطلب شماره دو بلاگ', 'مطلب-شماره-دو-بلاگ', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت</p>\r\n', '\r\n<p>و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', 1, 8, '2021-06-22 04:31:12', 480, '', '2021-06-22 23:57:37', 480, 0, '0000-00-00 00:00:00', '2021-06-22 04:31:12', '0000-00-00 00:00:00', '{\"image_intro\":\"images\\/photo-1497436072909-60f360e1d4b1.jpg\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/photo-1497436072909-60f360e1d4b1.jpg\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 10, 3, '', '', 1, 27, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
-(3, 70, 'مطلب شماره سه بلاگ', 'مطلب-شماره-سه-بلاگ', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف</p>\r\n', '\r\n<blockquote>\r\n<p>بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n</blockquote>\r\n<p>لورم ایپسوم متن <a href=\"#\">ساختگی با تولید سادگی نامفهوم</a> از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، <strong>حال و آینده شناخت فراوان جامعه و متخصصان</strong> را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای <span>علی الخصوص طراحان خلاقی و </span><span style=\"color: #ffcc00;\">فرهنگ پیشرو در زبان فارسی</span> ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n<h3>لورم ایپسوم متن ساختگی با تولید سادگی</h3>\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', 1, 8, '2021-06-22 16:39:07', 480, '', '2021-06-22 23:55:58', 480, 0, '0000-00-00 00:00:00', '2021-06-22 16:39:07', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/sampledata\\/parks\\/animals\\/photo-1555911599-e70784b1e21d.jpg\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 20, 2, '', '', 1, 521, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
-(4, 78, 'مطلب شماره یک بلاگ (2)', 'مطلب-شماره-یک-بلاگ-2', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>\r\n', '\r\n<p>کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', 1, 8, '2021-06-22 04:31:12', 480, '', '2021-06-22 23:56:15', 480, 0, '0000-00-00 00:00:00', '2021-06-22 04:31:12', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 2, 1, '', '', 1, 21, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
-(5, 83, 'درباره ما', 'about', '<p> از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', '', 1, 9, '2019-08-17 08:49:24', 480, '', '2020-05-09 19:16:43', 480, 0, '0000-00-00 00:00:00', '2019-08-17 08:49:24', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 12, 0, '', '', 1, 300, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, 'fa-IR', '', ''),
-(6, 96, 'محصول شماره یک', 'محصول-شماره-یک', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n', '\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', 1, 14, '2019-08-24 14:23:40', 480, '', '2021-06-23 01:10:42', 480, 0, '0000-00-00 00:00:00', '2019-08-24 14:23:40', '0000-00-00 00:00:00', '{\"image_intro\":\"images\\/stainless_steel_150lb_316_32_of_57__7.jpg\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 28, 3, '', '', 1, 332, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 1, '*', '', ''),
+(1, 68, 'مطلب شماره یک بلاگ', 'مطلب-شماره-یک-بلاگ', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>\r\n', '\r\n<p>چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', 1, 8, '2021-06-22 04:31:12', 480, '', '2021-06-22 23:55:21', 480, 0, '0000-00-00 00:00:00', '2021-06-22 04:31:12', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 10, 4, '', '', 1, 59, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
+(2, 69, 'مطلب شماره دو بلاگ', 'مطلب-شماره-دو-بلاگ', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت</p>\r\n', '\r\n<p>و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', 1, 8, '2021-06-22 04:31:12', 480, '', '2021-06-22 23:57:37', 480, 0, '0000-00-00 00:00:00', '2021-06-22 04:31:12', '0000-00-00 00:00:00', '{\"image_intro\":\"images\\/photo-1497436072909-60f360e1d4b1.jpg\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/photo-1497436072909-60f360e1d4b1.jpg\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 10, 3, '', '', 1, 29, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
+(3, 70, 'مطلب شماره سه بلاگ', 'مطلب-شماره-سه-بلاگ', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف</p>\r\n', '\r\n<blockquote>\r\n<p>بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n</blockquote>\r\n<p>لورم ایپسوم متن <a href=\"#\">ساختگی با تولید سادگی نامفهوم</a> از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، <strong>حال و آینده شناخت فراوان جامعه و متخصصان</strong> را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای <span>علی الخصوص طراحان خلاقی و </span><span style=\"color: #ffcc00;\">فرهنگ پیشرو در زبان فارسی</span> ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n<h3>لورم ایپسوم متن ساختگی با تولید سادگی</h3>\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', 1, 8, '2021-06-22 16:39:07', 480, '', '2021-06-23 10:46:04', 480, 0, '0000-00-00 00:00:00', '2021-06-22 16:39:07', '0000-00-00 00:00:00', '{\"image_intro\":\"images\\/GAV66-FT_Isolation_Valve_01.jpg\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/photo-1497436072909-60f360e1d4b1.jpg\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 21, 2, '', '', 1, 525, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
+(4, 78, 'مطلب شماره یک بلاگ (2)', 'مطلب-شماره-یک-بلاگ-2', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>\r\n', '\r\n<p>کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', 1, 8, '2021-06-22 04:31:12', 480, '', '2021-06-22 23:56:15', 480, 0, '0000-00-00 00:00:00', '2021-06-22 04:31:12', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 2, 1, '', '', 1, 22, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
+(5, 83, 'درباره ما', 'about', '<p> از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', '', 1, 9, '2019-08-17 08:49:24', 480, '', '2020-05-09 19:16:43', 480, 0, '0000-00-00 00:00:00', '2019-08-17 08:49:24', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 12, 0, '', '', 1, 303, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, 'fa-IR', '', ''),
+(6, 96, 'محصول شماره یک', 'محصول-شماره-یک', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n', '\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', 1, 14, '2019-08-24 14:23:40', 480, '', '2021-06-23 01:10:42', 480, 0, '0000-00-00 00:00:00', '2019-08-24 14:23:40', '0000-00-00 00:00:00', '{\"image_intro\":\"images\\/stainless_steel_150lb_316_32_of_57__7.jpg\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 28, 3, '', '', 1, 335, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 1, '*', '', ''),
 (7, 97, 'محصول شماره یک (2)', 'محصول-شماره-یک-2', '', '', 1, 14, '2019-08-24 14:23:40', 480, '', '2021-06-23 01:10:36', 480, 0, '0000-00-00 00:00:00', '2019-08-24 14:23:40', '0000-00-00 00:00:00', '{\"image_intro\":\"images\\/stainless_steel_150lb_316_52_of_57__7.jpg\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 6, 2, '', '', 1, 23, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 1, '*', '', ''),
 (8, 98, 'محصول شماره یک (3)', 'محصول-شماره-یک-3', '', '', 1, 14, '2019-08-24 14:23:40', 480, '', '2021-06-23 01:10:30', 480, 0, '0000-00-00 00:00:00', '2019-08-24 14:23:40', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 3, 1, '', '', 1, 19, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 1, '*', '', ''),
 (9, 99, 'محصول شماره یک (4)', 'محصول-شماره-یک-4', '', '', 1, 14, '2019-08-24 14:23:40', 480, '', '2019-08-25 12:10:15', 480, 0, '0000-00-00 00:00:00', '2019-08-24 14:23:40', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 2, 0, '', '', 1, 19, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 1, '*', '', ''),
@@ -2655,7 +2665,7 @@ INSERT INTO `b871e_content` (`id`, `asset_id`, `title`, `alias`, `introtext`, `f
 (15, 134, 'تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می (4)', 'تکنولوژی-مورد-نیاز-و-کاربردهای-متنوع-با-هدف-بهبود-ابزارهای-کاربردی-می-4', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', '', 1, 22, '2019-11-26 19:23:21', 480, '', '2019-11-26 19:23:28', 0, 0, '0000-00-00 00:00:00', '2019-11-26 19:23:21', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 2, '', '', 1, 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
 (16, 135, 'تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می (5)', 'تکنولوژی-مورد-نیاز-و-کاربردهای-متنوع-با-هدف-بهبود-ابزارهای-کاربردی-می-5', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', '', 1, 22, '2019-11-26 19:23:21', 480, '', '2019-11-26 19:23:30', 0, 0, '0000-00-00 00:00:00', '2019-11-26 19:23:21', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 1, '', '', 1, 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
 (17, 136, 'تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می (6)', 'تکنولوژی-مورد-نیاز-و-کاربردهای-متنوع-با-هدف-بهبود-ابزارهای-کاربردی-می-6', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', '', 1, 22, '2019-11-26 19:23:21', 480, '', '2019-11-26 19:23:32', 0, 0, '0000-00-00 00:00:00', '2019-11-26 19:23:21', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 0, '', '', 1, 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
-(18, 138, ' مطلب تست برای بلاگ', 'مطلب-تست-برای-بلاگ', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف لورم ایپسوم متن ساختگی</p>\r\n', '\r\n<p>با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف</p>', 1, 8, '2021-06-22 00:07:57', 480, '', '2021-06-22 23:56:29', 480, 0, '0000-00-00 00:00:00', '2021-06-22 00:07:57', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 5, 0, '', '', 1, 50, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
+(18, 138, ' مطلب تست برای بلاگ', 'مطلب-تست-برای-بلاگ', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف لورم ایپسوم متن ساختگی</p>\r\n', '\r\n<p>با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف</p>', 1, 8, '2021-06-22 00:07:57', 480, '', '2021-06-22 23:56:29', 480, 0, '0000-00-00 00:00:00', '2021-06-22 00:07:57', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 5, 0, '', '', 1, 51, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
 (19, 141, 'عنوان محصول', 'عنوان-محصول', '<p>ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n', '\r\n<p>ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', 1, 11, '2019-11-27 07:17:49', 480, '', '2021-06-23 10:08:49', 480, 0, '0000-00-00 00:00:00', '2019-11-27 07:17:49', '0000-00-00 00:00:00', '{\"image_intro\":\"images\\/stainless_steel_150lb_316_32_of_57__7.jpg\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 16, 0, '', '', 1, 13, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 1, '*', '', ''),
 (20, 144, 'فرایند تولید', 'production-process', '<p>جهت تولید محصول نمیه ساخته ی ام دی اف با روکش کاغذ ملامینه،ابتدا کاغذ در دو سمت زیرین و رویین ام دی اف قرار گرفته و سپس از زیر استاتیک عبورمی کند،سپس کاغذ توسط الکتریسیته ساکن ایجاد شده به دو طرف ام دی اف به صورت موقت می چسبد.در ادامه این محصول نیم ساخته برروی میز بالابر زیر فیدر قرار می گیرد و توسط این آسانسور بالابر بالا می آید،سپس بازوهای فیدر بصورت اتوماتیک بسته شده و زیر ام دی اف یا نئوپان قرار می گیرند و با پایین رفتن آسانسور محصول بر روی فیدر قرار می گیرد.</p>\r\n<p>برروی بازوهای فیدر مکانهایی تعبیه شده است که عملیات وکیوم را توسط مکش ایجاد می کند.مکش و ایجاد وکیوم به منظور نگه داشتن موقت محصول ام دی اف انجام می شود.در ادامه بعد از عمل فوت به سوراخهای وکیوم و حرکت بازوهای فیدر، محصول بصورت اتوماتیک برروی پرس قرار داده می شود.</p>\r\n<p>در این حالت با حرکت پرس ام دی اف به سمت پایین،محصول نیمه ساخته ی ام دی اف تحت فشار اعمالی از سوی سیستم هیدرولیک قرار می گیرد و بعد از اتمام مدت زمان تنظیمی ،دستگاه پرس ام دی اف باز شده و به طرف بالا حرکت می کند.در این زمان بازوهای دشارژکننده فیدر فعال شده و محصول نیمه ساخته ی ام دی اف را از داخل پرس توسط مکنده از پلیت جدا کرده و به بیرون انتقال می دهد و محصول نهایی ام دی اف روکش شده توسط جکهای پنوماتیکی به سمت بخش تمیز سازی حرکت می نماید که در آن بخش عملیات برش دهی و تمیز کاری کاغذهای اضافی اطراف محصول ام دی اف انجام می شود و در ادامه ی کار محصول وارد بخش خنک سازی دستگاه پرس می شود و متعاقبا کنترل کیفیت با تشخیص چشمی انجام می گیرد و پس از تعیین کیفیت محصولات درجه یک از درجه دو تفکیک شده و در بخش بسته بندی قرار می گیرد.</p>', '', 1, 2, '2020-07-09 14:27:08', 480, '', '2020-07-09 14:42:17', 480, 0, '0000-00-00 00:00:00', '2020-07-09 14:27:08', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 4, 0, '', '', 1, 70, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', '');
 
@@ -2670,7 +2680,7 @@ CREATE TABLE `b871e_contentitem_tag_map` (
   `core_content_id` int(10) UNSIGNED NOT NULL COMMENT 'PK from the core content table',
   `content_item_id` int(11) NOT NULL COMMENT 'PK from the content type table',
   `tag_id` int(10) UNSIGNED NOT NULL COMMENT 'PK from the tag table',
-  `tag_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT 'Date of most recent save for this tag-item',
+  `tag_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Date of most recent save for this tag-item',
   `type_id` mediumint(8) NOT NULL COMMENT 'PK from the content_type table'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Maps items from content tables to tags';
 
@@ -2681,9 +2691,9 @@ CREATE TABLE `b871e_contentitem_tag_map` (
 INSERT INTO `b871e_contentitem_tag_map` (`type_alias`, `core_content_id`, `content_item_id`, `tag_id`, `tag_date`, `type_id`) VALUES
 ('com_content.article', 5, 1, 2, '2021-06-22 23:55:21', 1),
 ('com_content.article', 4, 2, 2, '2021-06-22 23:57:37', 1),
-('com_content.article', 1, 3, 2, '2021-06-22 23:55:58', 1),
-('com_content.article', 1, 3, 3, '2021-06-22 23:55:58', 1),
-('com_content.article', 1, 3, 4, '2021-06-22 23:55:58', 1),
+('com_content.article', 1, 3, 2, '2021-06-23 10:46:04', 1),
+('com_content.article', 1, 3, 3, '2021-06-23 10:46:04', 1),
+('com_content.article', 1, 3, 4, '2021-06-23 10:46:04', 1),
 ('com_content.article', 6, 4, 2, '2021-06-22 23:56:15', 1),
 ('com_content.article', 17, 6, 6, '2021-06-23 01:11:23', 1),
 ('com_content.article', 16, 7, 6, '2021-06-23 01:11:23', 1),
@@ -2702,8 +2712,8 @@ INSERT INTO `b871e_contentitem_tag_map` (`type_alias`, `core_content_id`, `conte
 --
 
 CREATE TABLE `b871e_content_frontpage` (
-  `content_id` int(11) NOT NULL DEFAULT 0,
-  `ordering` int(11) NOT NULL DEFAULT 0
+  `content_id` int(11) NOT NULL DEFAULT '0',
+  `ordering` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -2725,9 +2735,9 @@ INSERT INTO `b871e_content_frontpage` (`content_id`, `ordering`) VALUES
 --
 
 CREATE TABLE `b871e_content_rating` (
-  `content_id` int(11) NOT NULL DEFAULT 0,
-  `rating_sum` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `rating_count` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `content_id` int(11) NOT NULL DEFAULT '0',
+  `rating_sum` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `rating_count` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `lastip` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -2775,7 +2785,7 @@ INSERT INTO `b871e_content_types` (`type_id`, `type_title`, `type_alias`, `table
 
 CREATE TABLE `b871e_core_log_searches` (
   `search_term` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `hits` int(10) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(10) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -2786,23 +2796,23 @@ CREATE TABLE `b871e_core_log_searches` (
 
 CREATE TABLE `b871e_extensions` (
   `extension_id` int(11) NOT NULL,
-  `package_id` int(11) NOT NULL DEFAULT 0 COMMENT 'Parent package ID for extensions installed as a package.',
+  `package_id` int(11) NOT NULL DEFAULT '0' COMMENT 'Parent package ID for extensions installed as a package.',
   `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `element` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `folder` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `client_id` tinyint(3) NOT NULL,
-  `enabled` tinyint(3) NOT NULL DEFAULT 0,
-  `access` int(10) UNSIGNED NOT NULL DEFAULT 1,
-  `protected` tinyint(3) NOT NULL DEFAULT 0,
+  `enabled` tinyint(3) NOT NULL DEFAULT '0',
+  `access` int(10) UNSIGNED NOT NULL DEFAULT '1',
+  `protected` tinyint(3) NOT NULL DEFAULT '0',
   `manifest_cache` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `custom_data` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `system_data` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `ordering` int(11) DEFAULT 0,
-  `state` int(11) DEFAULT 0
+  `ordering` int(11) DEFAULT '0',
+  `state` int(11) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -2942,7 +2952,7 @@ INSERT INTO `b871e_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (449, 0, 'plg_authentication_cookie', 'plugin', 'cookie', 'authentication', 0, 1, 1, 0, '{\"name\":\"plg_authentication_cookie\",\"type\":\"plugin\",\"creationDate\":\"July 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_AUTH_COOKIE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"cookie\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (450, 0, 'plg_twofactorauth_yubikey', 'plugin', 'yubikey', 'twofactorauth', 0, 0, 1, 0, '{\"name\":\"plg_twofactorauth_yubikey\",\"type\":\"plugin\",\"creationDate\":\"September 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.2.0\",\"description\":\"PLG_TWOFACTORAUTH_YUBIKEY_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"yubikey\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (451, 0, 'plg_search_tags', 'plugin', 'tags', 'search', 0, 1, 1, 0, '{\"name\":\"plg_search_tags\",\"type\":\"plugin\",\"creationDate\":\"March 2014\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_SEARCH_TAGS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"tags\"}', '{\"search_limit\":\"50\",\"show_tagged_items\":\"1\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1624433219}', '', '', 0, '0000-00-00 00:00:00', 8, 0),
+(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1624459303}', '', '', 0, '0000-00-00 00:00:00', 8, 0),
 (453, 0, 'plg_editors-xtd_module', 'plugin', 'module', 'editors-xtd', 0, 1, 1, 0, '{\"name\":\"plg_editors-xtd_module\",\"type\":\"plugin\",\"creationDate\":\"October 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_MODULE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"module\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_stats\",\"type\":\"plugin\",\"creationDate\":\"November 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_STATS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"stats\"}', '{\"mode\":3,\"lastrun\":\"\",\"unique_id\":\"b8367c045827d2f28aeb2261e16da84af1d946f3\",\"interval\":12}', '', '', 0, '0000-00-00 00:00:00', 2, 0),
 (455, 0, 'plg_installer_packageinstaller', 'plugin', 'packageinstaller', 'installer', 0, 1, 1, 1, '{\"name\":\"plg_installer_packageinstaller\",\"type\":\"plugin\",\"creationDate\":\"May 2016\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.6.0\",\"description\":\"PLG_INSTALLER_PACKAGEINSTALLER_PLUGIN_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"packageinstaller\"}', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
@@ -3004,7 +3014,7 @@ INSERT INTO `b871e_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (10006, 0, 'plg_installer_rsform', 'plugin', 'rsform', 'installer', 0, 1, 1, 0, '{\"name\":\"plg_installer_rsform\",\"type\":\"plugin\",\"creationDate\":\"July 2015\",\"author\":\"RSJoomla!\",\"copyright\":\"(c) 2015 www.rsjoomla.com\",\"authorEmail\":\"support@rsjoomla.com\",\"authorUrl\":\"https:\\/\\/www.rsjoomla.com\",\"version\":\"1.0.0\",\"description\":\"PLG_INSTALLER_RSFORM_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"rsform\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10007, 0, 'System - RSForm! Pro Delete Submissions', 'plugin', 'rsformdeletesubmissions', 'system', 0, 1, 1, 0, '{\"name\":\"System - RSForm! Pro Delete Submissions\",\"type\":\"plugin\",\"creationDate\":\"April 2018\",\"author\":\"RSJoomla!\",\"copyright\":\"(C) 2007-2019 www.rsjoomla.com\",\"authorEmail\":\"support@rsjoomla.com\",\"authorUrl\":\"www.rsjoomla.com\",\"version\":\"1.0.0\",\"description\":\"PLG_SYSTEM_RSFORMDELETESUBMISSIONS_DESC\",\"group\":\"\",\"filename\":\"rsformdeletesubmissions\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 4, 0),
 (10008, 0, 'RSForm! Pro Module', 'module', 'mod_rsform', '', 0, 1, 0, 0, '{\"name\":\"RSForm! Pro Module\",\"type\":\"module\",\"creationDate\":\"November 2012\",\"author\":\"RSJoomla!\",\"copyright\":\"(C) 2007-2015 www.rsjoomla.com\",\"authorEmail\":\"support@rsjoomla.com\",\"authorUrl\":\"www.rsjoomla.com\",\"version\":\"2.0.0\",\"description\":\"MOD_RSFORM_DESC\",\"group\":\"\",\"filename\":\"mod_rsform\"}', '{\"formId\":\"1\",\"moduleclass_sfx\":\"\",\"cache\":\"1\",\"cache_time\":\"900\",\"cachemode\":\"static\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(10009, 0, 'com_rscomments', 'component', 'com_rscomments', '', 1, 1, 0, 0, '{\"name\":\"com_rscomments\",\"type\":\"component\",\"creationDate\":\"03.10.2012\",\"author\":\"www.rsjoomla.com\",\"copyright\":\"(C) 2010 www.rsjoomla.com\",\"authorEmail\":\"support@rsjoomla.com\",\"authorUrl\":\"www.rsjoomla.com\",\"version\":\"1.13.16\",\"description\":\"With RSComments! you can add commenting to articles, blogs and other Joomla! extensions on your website.\",\"group\":\"\",\"filename\":\"rscomments\"}', '{\"global_register_code\":\"\",\"date_format\":\"d.m.Y H:i\",\"enable_rss\":\"0\",\"load_bootstrap\":\"0\",\"backend_jquery\":\"0\",\"frontend_jquery\":\"0\",\"fontawesome\":\"0\",\"fontawesome_admin\":\"0\",\"store_ip\":\"1\",\"consent\":\"0\",\"modal\":\"1\",\"cache\":\"1\",\"comment_form_position\":\"0\",\"authorname\":\"name\",\"show_labels\":\"1\",\"enable_location\":\"0\",\"map_key\":\"\",\"anonymous\":\"0\",\"enable_name_field\":\"1\",\"enable_email_field\":\"1\",\"enable_title_field\":\"0\",\"enable_website_field\":\"0\",\"nofollow_rel\":\"1\",\"enable_smiles\":\"0\",\"enable_bbcode\":\"0\",\"enable_votes\":\"1\",\"enable_usercomments\":\"0\",\"enable_subscription\":\"0\",\"show_subcription_checkbox\":\"0\",\"terms\":\"0\",\"enable_upload\":\"0\",\"max_size\":10,\"allowed_extensions\":\"jpg\\r\\ntxt\\r\\n\",\"min_comm_len\":10,\"max_comm_len\":1000,\"show_counter\":\"0\",\"form_accordion\":\"0\",\"show_form\":\"1\",\"nr_comments\":100,\"categories\":[\"2\",\"9\"],\"avatar\":\"\",\"avatar_size\":\"60\",\"user_social_link\":\"\",\"default_order\":\"DESC\",\"show_no_comments\":\"1\",\"enable_modified\":\"0\",\"enable_reports\":\"0\",\"enable_captcha_reports\":\"0\",\"enable_email_reports\":\"0\",\"report_emails\":\"\",\"email_notification\":\"0\",\"notification_emails\":\"\",\"captcha\":\"0\",\"captcha_chars\":5,\"captcha_lines\":\"1\",\"captcha_cases\":\"0\",\"recaptcha_new_site_key\":\"\",\"recaptcha_new_secret_key\":\"\",\"recaptcha_new_theme\":\"light\",\"recaptcha_new_type\":\"image\",\"akismet_key\":\"\",\"flood_interval\":\"30\",\"word_length\":\"15\",\"negative_count\":\"10\",\"no_follow\":\"1\",\"forbiden_names\":\"admin\\r\\nadministrator\\r\\nmoderator\\r\\n\",\"censored_words\":\"\",\"replace_censored\":\"******\",\"blocked_users\":\"\",\"blocked_ips\":\"\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10009, 0, 'com_rscomments', 'component', 'com_rscomments', '', 1, 1, 0, 0, '{\"name\":\"com_rscomments\",\"type\":\"component\",\"creationDate\":\"03.10.2012\",\"author\":\"www.rsjoomla.com\",\"copyright\":\"(C) 2010 www.rsjoomla.com\",\"authorEmail\":\"support@rsjoomla.com\",\"authorUrl\":\"www.rsjoomla.com\",\"version\":\"1.13.16\",\"description\":\"With RSComments! you can add commenting to articles, blogs and other Joomla! extensions on your website.\",\"group\":\"\",\"filename\":\"rscomments\"}', '{\"global_register_code\":\"\",\"date_format\":\"d.m.Y H:i\",\"enable_rss\":\"0\",\"load_bootstrap\":\"0\",\"backend_jquery\":\"0\",\"frontend_jquery\":\"0\",\"fontawesome\":\"0\",\"fontawesome_admin\":\"0\",\"store_ip\":\"1\",\"consent\":\"0\",\"modal\":\"1\",\"cache\":\"1\",\"comment_form_position\":\"0\",\"authorname\":\"name\",\"show_labels\":\"1\",\"enable_location\":\"0\",\"map_key\":\"\",\"anonymous\":\"0\",\"enable_name_field\":\"1\",\"enable_email_field\":\"1\",\"enable_title_field\":\"0\",\"enable_website_field\":\"0\",\"nofollow_rel\":\"1\",\"enable_smiles\":\"0\",\"enable_bbcode\":\"0\",\"enable_votes\":\"1\",\"enable_usercomments\":\"0\",\"enable_subscription\":\"0\",\"show_subcription_checkbox\":\"0\",\"terms\":\"0\",\"enable_upload\":\"0\",\"max_size\":10,\"allowed_extensions\":\"jpg\\r\\ntxt\\r\\n\",\"min_comm_len\":10,\"max_comm_len\":1000,\"show_counter\":\"0\",\"form_accordion\":\"0\",\"show_form\":\"1\",\"nr_comments\":100,\"categories\":[\"2\",\"9\"],\"avatar\":\"\",\"avatar_size\":\"60\",\"user_social_link\":\"\",\"default_order\":\"DESC\",\"show_no_comments\":\"1\",\"enable_modified\":\"0\",\"enable_reports\":\"0\",\"enable_captcha_reports\":\"0\",\"enable_email_reports\":\"0\",\"report_emails\":\"\",\"email_notification\":\"0\",\"notification_emails\":\"\",\"captcha\":\"2\",\"captcha_chars\":5,\"captcha_lines\":\"1\",\"captcha_cases\":\"0\",\"recaptcha_new_site_key\":\"\",\"recaptcha_new_secret_key\":\"\",\"recaptcha_new_theme\":\"light\",\"recaptcha_new_type\":\"image\",\"akismet_key\":\"\",\"flood_interval\":\"30\",\"word_length\":\"15\",\"negative_count\":\"10\",\"no_follow\":\"1\",\"forbiden_names\":\"admin\\r\\nadministrator\\r\\nmoderator\\r\\n\",\"censored_words\":\"\",\"replace_censored\":\"******\",\"blocked_users\":\"\",\"blocked_ips\":\"\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10010, 0, 'System - RSComments', 'plugin', 'rscomments', 'system', 0, 1, 1, 0, '{\"name\":\"System - RSComments\",\"type\":\"plugin\",\"creationDate\":\"April 2015\",\"author\":\"rsjoomla.com\",\"copyright\":\"Copyright 2015 RSJoomla.com All rights reserved!\",\"authorEmail\":\"support@rsjoomla.com\",\"authorUrl\":\"http:\\/\\/www.rsjoomla.com\",\"version\":\"1.1.0\",\"description\":\"Integrate RSComments! with Joomla! components\",\"group\":\"\",\"filename\":\"rscomments\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 6, 0),
 (10011, 0, 'Content - RSComments', 'plugin', 'rscomments', 'content', 0, 1, 1, 0, '{\"name\":\"Content - RSComments\",\"type\":\"plugin\",\"creationDate\":\"April 2015\",\"author\":\"rsjoomla.com\",\"copyright\":\"Copyright 2015 RSJoomla.com All rights reserved!\",\"authorEmail\":\"support@rsjoomla.com\",\"authorUrl\":\"http:\\/\\/www.rsjoomla.com\",\"version\":\"1.2.1\",\"description\":\"Integrate RSComments! with Joomla! articles\",\"group\":\"\",\"filename\":\"rscomments\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10012, 0, 'Editor Button - RSComments! On/Off', 'plugin', 'rscomments', 'editors-xtd', 0, 1, 1, 0, '{\"name\":\"Editor Button - RSComments! On\\/Off\",\"type\":\"plugin\",\"creationDate\":\"14\\/04\\/2010\",\"author\":\"rsjoomla.com\",\"copyright\":\"Copyright 2008-2010 RSJoomla.com All rights reserved!\",\"authorEmail\":\"support@rsjoomla.com\",\"authorUrl\":\"http:\\/\\/www.rsjoomla.com\",\"version\":\"1.0.0\",\"description\":\"Enables a button which allows you to easily insert the {rscomments on\\/off} tag into an Article.\",\"group\":\"\",\"filename\":\"rscomments\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -3036,29 +3046,29 @@ INSERT INTO `b871e_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 
 CREATE TABLE `b871e_fields` (
   `id` int(10) UNSIGNED NOT NULL,
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `context` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `group_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `group_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `label` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `default_value` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `default_value` text COLLATE utf8mb4_unicode_ci,
   `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'text',
   `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `state` tinyint(1) NOT NULL DEFAULT 0,
-  `required` tinyint(1) NOT NULL DEFAULT 0,
-  `checked_out` int(11) NOT NULL DEFAULT 0,
+  `state` tinyint(1) NOT NULL DEFAULT '0',
+  `required` tinyint(1) NOT NULL DEFAULT '0',
+  `checked_out` int(11) NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `ordering` int(11) NOT NULL DEFAULT 0,
+  `ordering` int(11) NOT NULL DEFAULT '0',
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `fieldparams` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `created_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `modified_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `access` int(11) NOT NULL DEFAULT 1
+  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `access` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -3085,8 +3095,8 @@ INSERT INTO `b871e_fields` (`id`, `asset_id`, `context`, `group_id`, `title`, `n
 --
 
 CREATE TABLE `b871e_fields_categories` (
-  `field_id` int(11) NOT NULL DEFAULT 0,
-  `category_id` int(11) NOT NULL DEFAULT 0
+  `field_id` int(11) NOT NULL DEFAULT '0',
+  `category_id` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -3114,22 +3124,22 @@ INSERT INTO `b871e_fields_categories` (`field_id`, `category_id`) VALUES
 
 CREATE TABLE `b871e_fields_groups` (
   `id` int(10) UNSIGNED NOT NULL,
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `context` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `state` tinyint(1) NOT NULL DEFAULT 0,
-  `checked_out` int(11) NOT NULL DEFAULT 0,
+  `state` tinyint(1) NOT NULL DEFAULT '0',
+  `checked_out` int(11) NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `ordering` int(11) NOT NULL DEFAULT 0,
+  `ordering` int(11) NOT NULL DEFAULT '0',
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `created_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `access` int(11) NOT NULL DEFAULT 1
+  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `access` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -3151,7 +3161,7 @@ INSERT INTO `b871e_fields_groups` (`id`, `asset_id`, `context`, `title`, `note`,
 CREATE TABLE `b871e_fields_values` (
   `field_id` int(10) UNSIGNED NOT NULL,
   `item_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Allow references to items which have strings as ids, eg. none db systems.',
-  `value` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `value` text COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -3198,17 +3208,17 @@ CREATE TABLE `b871e_finder_filters` (
   `filter_id` int(10) UNSIGNED NOT NULL,
   `title` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `state` tinyint(1) NOT NULL DEFAULT 1,
+  `state` tinyint(1) NOT NULL DEFAULT '1',
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(10) UNSIGNED NOT NULL,
   `created_by_alias` varchar(255) NOT NULL,
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `map_count` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `map_count` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `data` text NOT NULL,
-  `params` mediumtext DEFAULT NULL
+  `params` mediumtext
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -3222,19 +3232,19 @@ CREATE TABLE `b871e_finder_links` (
   `url` varchar(255) NOT NULL,
   `route` varchar(255) NOT NULL,
   `title` varchar(400) DEFAULT NULL,
-  `description` text DEFAULT NULL,
+  `description` text,
   `indexdate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `md5sum` varchar(32) DEFAULT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 1,
-  `state` int(5) DEFAULT 1,
-  `access` int(5) DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '1',
+  `state` int(5) DEFAULT '1',
+  `access` int(5) DEFAULT '0',
   `language` varchar(8) NOT NULL,
   `publish_start_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_end_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `start_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `end_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `list_price` double UNSIGNED NOT NULL DEFAULT 0,
-  `sale_price` double UNSIGNED NOT NULL DEFAULT 0,
+  `list_price` double UNSIGNED NOT NULL DEFAULT '0',
+  `sale_price` double UNSIGNED NOT NULL DEFAULT '0',
   `type_id` int(11) NOT NULL,
   `object` mediumblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -3439,11 +3449,11 @@ CREATE TABLE `b871e_finder_links_termsf` (
 
 CREATE TABLE `b871e_finder_taxonomy` (
   `id` int(10) UNSIGNED NOT NULL,
-  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `title` varchar(255) NOT NULL,
-  `state` tinyint(1) UNSIGNED NOT NULL DEFAULT 1,
-  `access` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
-  `ordering` tinyint(1) UNSIGNED NOT NULL DEFAULT 0
+  `state` tinyint(1) UNSIGNED NOT NULL DEFAULT '1',
+  `access` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
+  `ordering` tinyint(1) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -3474,11 +3484,11 @@ CREATE TABLE `b871e_finder_terms` (
   `term_id` int(10) UNSIGNED NOT NULL,
   `term` varchar(75) NOT NULL,
   `stem` varchar(75) NOT NULL,
-  `common` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
-  `phrase` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
-  `weight` float UNSIGNED NOT NULL DEFAULT 0,
+  `common` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
+  `phrase` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
+  `weight` float UNSIGNED NOT NULL DEFAULT '0',
   `soundex` varchar(75) NOT NULL,
-  `links` int(10) NOT NULL DEFAULT 0,
+  `links` int(10) NOT NULL DEFAULT '0',
   `language` char(3) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -3618,10 +3628,10 @@ INSERT INTO `b871e_finder_terms_common` (`term`, `language`) VALUES
 CREATE TABLE `b871e_finder_tokens` (
   `term` varchar(75) NOT NULL,
   `stem` varchar(75) NOT NULL,
-  `common` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
-  `phrase` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
-  `weight` float UNSIGNED NOT NULL DEFAULT 1,
-  `context` tinyint(1) UNSIGNED NOT NULL DEFAULT 2,
+  `common` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
+  `phrase` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
+  `weight` float UNSIGNED NOT NULL DEFAULT '1',
+  `context` tinyint(1) UNSIGNED NOT NULL DEFAULT '2',
   `language` char(3) NOT NULL DEFAULT ''
 ) ENGINE=MEMORY DEFAULT CHARSET=utf8mb4;
 
@@ -3636,10 +3646,10 @@ CREATE TABLE `b871e_finder_tokens_aggregate` (
   `map_suffix` char(1) NOT NULL,
   `term` varchar(75) NOT NULL,
   `stem` varchar(75) NOT NULL,
-  `common` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
-  `phrase` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `common` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
+  `phrase` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
   `term_weight` float UNSIGNED NOT NULL,
-  `context` tinyint(1) UNSIGNED NOT NULL DEFAULT 2,
+  `context` tinyint(1) UNSIGNED NOT NULL DEFAULT '2',
   `context_weight` float UNSIGNED NOT NULL,
   `total_weight` float UNSIGNED NOT NULL,
   `language` char(3) NOT NULL DEFAULT ''
@@ -3665,7 +3675,7 @@ CREATE TABLE `b871e_finder_types` (
 
 CREATE TABLE `b871e_languages` (
   `lang_id` int(11) UNSIGNED NOT NULL,
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `lang_code` char(7) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `title` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `title_native` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -3675,9 +3685,9 @@ CREATE TABLE `b871e_languages` (
   `metakey` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadesc` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `sitename` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `published` int(11) NOT NULL DEFAULT 0,
-  `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `ordering` int(11) NOT NULL DEFAULT 0
+  `published` int(11) NOT NULL DEFAULT '0',
+  `access` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `ordering` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -3703,22 +3713,22 @@ CREATE TABLE `b871e_menu` (
   `path` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The computed path of the menu item based on the alias field.',
   `link` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The actually link the menu item refers to.',
   `type` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The type of link: Component, URL, Alias, Separator',
-  `published` tinyint(4) NOT NULL DEFAULT 0 COMMENT 'The published state of the menu link.',
-  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'The parent menu item in the menu tree.',
-  `level` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'The relative level in the tree.',
-  `component_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to #__extensions.id',
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to #__users.id',
+  `published` tinyint(4) NOT NULL DEFAULT '0' COMMENT 'The published state of the menu link.',
+  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT '1' COMMENT 'The parent menu item in the menu tree.',
+  `level` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'The relative level in the tree.',
+  `component_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to #__extensions.id',
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to #__users.id',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'The time the menu item was checked out.',
-  `browserNav` tinyint(4) NOT NULL DEFAULT 0 COMMENT 'The click behaviour of the link.',
-  `access` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'The access level required to view the menu item.',
+  `browserNav` tinyint(4) NOT NULL DEFAULT '0' COMMENT 'The click behaviour of the link.',
+  `access` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'The access level required to view the menu item.',
   `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The image of the menu item.',
-  `template_style_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `template_style_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'JSON encoded data for the menu item.',
-  `lft` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set lft.',
-  `rgt` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set rgt.',
-  `home` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Indicates if this menu item is the home or default page.',
+  `lft` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set lft.',
+  `rgt` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set rgt.',
+  `home` tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Indicates if this menu item is the home or default page.',
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `client_id` tinyint(4) NOT NULL DEFAULT 0
+  `client_id` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -3749,11 +3759,11 @@ INSERT INTO `b871e_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 (22, 'main', 'com_associations', 'Multilingual Associations', '', 'Multilingual Associations', 'index.php?option=com_associations', 'component', 1, 1, 1, 34, 0, '0000-00-00 00:00:00', 0, 0, 'class:associations', 0, '', 65, 66, 0, '*', 1),
 (101, 'mainmenu', 'صفحه اصلی', 'home', '', 'home', 'index.php?option=com_content&view=featured', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"featured_categories\":[\"\"],\"layout_type\":\"blog\",\"num_leading_articles\":\"8\",\"num_intro_articles\":\"\",\"num_columns\":\"4\",\"num_links\":\"\",\"multi_column_order\":\"1\",\"orderby_pri\":\"\",\"orderby_sec\":\"front\",\"order_date\":\"\",\"show_pagination\":\"2\",\"show_pagination_results\":\"1\",\"page_subheading\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"0\",\"info_block_position\":\"0\",\"info_block_show_title\":\"0\",\"show_category\":\"0\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"0\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"0\",\"show_item_navigation\":\"0\",\"show_vote\":\"0\",\"show_readmore\":\"0\",\"show_readmore_title\":\"\",\"show_icons\":\"0\",\"show_print_icon\":\"0\",\"show_email_icon\":\"\",\"show_hits\":\"0\",\"show_tags\":\"0\",\"show_noauth\":\"\",\"show_feed_link\":\"1\",\"feed_summary\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"1\",\"page_heading\":\"\\u0645\\u062d\\u0635\\u0648\\u0644\\u0627\\u062a \\u0648\\u06cc\\u0698\\u0647\",\"pageclass_sfx\":\"home\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 11, 12, 1, '*', 0),
 (102, 'mainmenu', 'خدمات', 'services', '', 'services', 'index.php?option=com_content&view=featured', 'component', -2, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"featured_categories\":[\"\"],\"layout_type\":\"blog\",\"num_leading_articles\":\"1\",\"num_intro_articles\":\"3\",\"num_columns\":\"3\",\"num_links\":\"0\",\"multi_column_order\":\"1\",\"orderby_pri\":\"\",\"orderby_sec\":\"front\",\"order_date\":\"\",\"show_pagination\":\"2\",\"show_pagination_results\":\"1\",\"page_subheading\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_readmore\":\"\",\"show_readmore_title\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"show_feed_link\":\"1\",\"feed_summary\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"1\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 67, 68, 0, '*', 0),
-(103, 'mainmenu', 'پشتیبانی', 'support', '', 'support', 'index.php?option=com_rsform&view=rsform&layout=hostiran:simpleform&formId=5', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"bgcolor\":\"\",\"gridwidth\":\"uk-container uk-container-xsmall\",\"headerstyle\":\"normal\",\"headerbgcolor\":\"\",\"headerbgimage\":\"images\\/wood-flooring-PZVC3VX.jpg\",\"headerbgattachment\":\"normal\",\"cover\":\"1\",\"coverbgcolor\":\"\",\"pagetitle\":\"\",\"pagetitlecolor\":\"\",\"pagedescription\":\"\\u0686\\u0646\\u0627\\u0646\\u0686\\u0647 \\u0628\\u0631\\u0627\\u06cc \\u0645\\u062d\\u0635\\u0648\\u0644 \\u062e\\u0631\\u06cc\\u062f\\u0627\\u0631\\u06cc \\u0634\\u062f\\u0647 \\u0646\\u06cc\\u0627\\u0632 \\u0628\\u0647 \\u067e\\u0634\\u062a\\u06cc\\u0628\\u0627\\u0646\\u06cc \\u062f\\u0627\\u0631\\u06cc\\u062f \\u0627\\u0632 \\u0637\\u0631\\u06cc\\u0642 \\u0641\\u0631\\u0645 \\u0632\\u06cc\\u0631 \\u0645\\u0637\\u0631\\u062d \\u0646\\u0645\\u0627\\u06cc\\u06cc\\u062f.\",\"pagedescriptioncolor\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"1\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 27, 28, 0, '*', 0),
+(103, 'mainmenu', 'پشتیبانی', 'support', '', 'support', 'index.php?option=com_rsform&view=rsform&layout=hostiran:simpleform&formId=5', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"bgcolor\":\"\",\"gridwidth\":\"uk-container uk-container-xsmall\",\"headerstyle\":\"normal\",\"headerbgcolor\":\"\",\"headerbgimage\":\"images\\/metals-minerals-background-image-scaled.jpg\",\"headerbgattachment\":\"normal\",\"cover\":\"1\",\"coverbgcolor\":\"\",\"pagetitle\":\"\",\"pagetitlecolor\":\"\",\"pagedescription\":\"\\u0686\\u0646\\u0627\\u0646\\u0686\\u0647 \\u0628\\u0631\\u0627\\u06cc \\u0645\\u062d\\u0635\\u0648\\u0644 \\u062e\\u0631\\u06cc\\u062f\\u0627\\u0631\\u06cc \\u0634\\u062f\\u0647 \\u0646\\u06cc\\u0627\\u0632 \\u0628\\u0647 \\u067e\\u0634\\u062a\\u06cc\\u0628\\u0627\\u0646\\u06cc \\u062f\\u0627\\u0631\\u06cc\\u062f \\u0627\\u0632 \\u0637\\u0631\\u06cc\\u0642 \\u0641\\u0631\\u0645 \\u0632\\u06cc\\u0631 \\u0645\\u0637\\u0631\\u062d \\u0646\\u0645\\u0627\\u06cc\\u06cc\\u062f.\",\"pagedescriptioncolor\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"1\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 27, 28, 0, '*', 0),
 (104, 'mainmenu', 'محصولات', 'products', '', 'products', 'index.php?option=com_content&view=category&layout=hostiran:products&id=10', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"bgcolor\":\"#ffffff\",\"gridwidth\":\"uk-container\",\"headerstyle\":\"transparent\",\"headerbgcolor\":\"\",\"headerbgimage\":\"images\\/579e1e18f3494ab8bac6ee1b276603e0.jpg\",\"headerbgattachment\":\"normal\",\"cover\":\"1\",\"coverbgcolor\":\"rgba(0, 0, 0, 0.8)\",\"pagetitle\":\"\\u0645\\u062d\\u0635\\u0648\\u0644\\u0627\\u062a \\u0631\\u062e\\u0634\\u0627\\u0646 \\u0627\\u0633\\u062a\\u06cc\\u0644\",\"pagetitlecolor\":\"#ffffff\",\"pagedescription\":\"\\u0628\\u0627 \\u0637\\u06cc\\u0641 \\u06af\\u0633\\u062a\\u0631\\u062f\\u0647 \\u0645\\u062d\\u0635\\u0648\\u0644\\u0627\\u062a \\u0645\\u0627 \\u0622\\u0634\\u0646\\u0627 \\u0634\\u0648\\u06cc\\u062f\",\"pagedescriptioncolor\":\"#dbdbdb\",\"layout_type\":\"blog\",\"show_category_heading_title_text\":\"0\",\"show_category_title\":\"1\",\"show_description\":\"1\",\"show_description_image\":\"1\",\"maxLevel\":\"-1\",\"show_empty_categories\":\"1\",\"show_no_articles\":\"\",\"show_subcat_desc\":\"\",\"show_cat_num_articles\":\"1\",\"show_cat_tags\":\"\",\"page_subheading\":\"\",\"num_leading_articles\":\"\",\"num_intro_articles\":\"\",\"num_columns\":\"\",\"num_links\":\"\",\"multi_column_order\":\"1\",\"show_subcategory_content\":\"\",\"orderby_pri\":\"\",\"orderby_sec\":\"front\",\"order_date\":\"\",\"show_pagination\":\"2\",\"show_pagination_results\":\"1\",\"show_featured\":\"\",\"article_layout\":\"hostiran:product\",\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_readmore\":\"\",\"show_readmore_title\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"show_feed_link\":\"1\",\"feed_summary\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"1\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 13, 26, 0, '*', 0),
 (105, 'mainmenu', 'درباره ما', 'about', '', 'about', 'index.php?option=com_content&view=article&layout=hostiran:about&id=5', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"bgcolor\":\"#f0f0f0\",\"gridwidth\":\"uk-container\",\"headerstyle\":\"transparent\",\"headerbgcolor\":\"\",\"headerbgimage\":\"images\\/metals-minerals-background-image-scaled.jpg\",\"headerbgattachment\":\"normal\",\"cover\":\"1\",\"coverbgcolor\":\"\",\"pagetitle\":\"\",\"pagetitlecolor\":\"\",\"pagedescription\":\"\\u062f\\u0631\\u0628\\u0627\\u0631\\u0647 \\u0631\\u062e\\u0634\\u0627\\u0646 \\u0627\\u0633\\u062a\\u06cc\\u0644 \\u0628\\u06cc\\u0634\\u062a\\u0631 \\u0628\\u062f\\u0627\\u0646\\u06cc\\u062f ...\",\"pagedescriptioncolor\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"1\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 31, 32, 0, '*', 0),
 (118, 'mainmenu', 'تماس با ما', 'contact', '', 'contact', 'index.php?option=com_rsform&view=rsform&layout=hostiran:contacttwo&formId=4', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"bgcolor\":\"\",\"gridwidth\":\"uk-container\",\"headerstyle\":\"normal\",\"headerbgcolor\":\"\",\"headerbgimage\":\"images\\/contact.jpg\",\"headerbgattachment\":\"normal\",\"cover\":\"1\",\"coverbgcolor\":\"\",\"map\":\"1\",\"latitude\":\"35.688120\",\"longitude\":\"51.422293\",\"pagetitle\":\"\",\"pagetitlecolor\":\"\",\"pagedescription\":\"\",\"pagedescriptioncolor\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 35, 36, 0, '*', 0),
-(119, 'mainmenu', 'بلاگ', 'blog', '', 'blog', 'index.php?option=com_content&view=category&layout=hostiran:articles&id=8', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"bgcolor\":\"\",\"gridwidth\":\"uk-container uk-container-small\",\"headerstyle\":\"normal\",\"headerbgcolor\":\"\",\"headerbgimage\":\"images\\/wood-flooring-PZVC3VX.jpg\",\"headerbgattachment\":\"normal\",\"cover\":\"1\",\"coverbgcolor\":\"rgba(0, 0, 0, 0.65)\",\"pagetitle\":\"\\u0627\\u062e\\u0628\\u0627\\u0631 \\u0648 \\u0645\\u0642\\u0627\\u0644\\u0627\\u062a\",\"pagetitlecolor\":\"\",\"pagedescription\":\"\\u0622\\u062e\\u0631\\u06cc\\u0646 \\u0627\\u062e\\u0628\\u0627\\u0631 \\u0648 \\u0627\\u0637\\u0644\\u0627\\u0639\\u06cc\\u0647\\u200c\\u0647\\u0627\\u06cc \\u0631\\u062e\\u0634\\u0627\\u0646 \\u0627\\u0633\\u062a\\u06cc\\u0644\",\"pagedescriptioncolor\":\"\",\"layout_type\":\"blog\",\"show_category_heading_title_text\":\"\",\"show_category_title\":\"\",\"show_description\":\"\",\"show_description_image\":\"\",\"maxLevel\":\"\",\"show_empty_categories\":\"\",\"show_no_articles\":\"\",\"show_subcat_desc\":\"\",\"show_cat_num_articles\":\"\",\"show_cat_tags\":\"\",\"page_subheading\":\"\",\"num_leading_articles\":\"\",\"num_intro_articles\":\"\",\"num_columns\":\"\",\"num_links\":\"\",\"multi_column_order\":\"1\",\"show_subcategory_content\":\"\",\"orderby_pri\":\"\",\"orderby_sec\":\"front\",\"order_date\":\"\",\"show_pagination\":\"2\",\"show_pagination_results\":\"\",\"show_featured\":\"\",\"article_layout\":\"hostiran:article\",\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"0\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_readmore\":\"0\",\"show_readmore_title\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"show_feed_link\":\"1\",\"feed_summary\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"1\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 29, 30, 0, '*', 0),
+(119, 'mainmenu', 'بلاگ', 'blog', '', 'blog', 'index.php?option=com_content&view=category&layout=hostiran:articles&id=8', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"bgcolor\":\"\",\"gridwidth\":\"uk-container uk-container-small\",\"headerstyle\":\"normal\",\"headerbgcolor\":\"\",\"headerbgimage\":\"images\\/17mittal-1-videoSixteenByNineJumbo1600.jpg\",\"headerbgattachment\":\"normal\",\"cover\":\"1\",\"coverbgcolor\":\"rgba(0, 0, 0, 0.65)\",\"pagetitle\":\"\\u0627\\u062e\\u0628\\u0627\\u0631 \\u0648 \\u0645\\u0642\\u0627\\u0644\\u0627\\u062a\",\"pagetitlecolor\":\"\",\"pagedescription\":\"\\u0622\\u062e\\u0631\\u06cc\\u0646 \\u0627\\u062e\\u0628\\u0627\\u0631 \\u0648 \\u0627\\u0637\\u0644\\u0627\\u0639\\u06cc\\u0647\\u200c\\u0647\\u0627\\u06cc \\u0631\\u062e\\u0634\\u0627\\u0646 \\u0627\\u0633\\u062a\\u06cc\\u0644\",\"pagedescriptioncolor\":\"\",\"layout_type\":\"blog\",\"show_category_heading_title_text\":\"\",\"show_category_title\":\"\",\"show_description\":\"\",\"show_description_image\":\"\",\"maxLevel\":\"\",\"show_empty_categories\":\"\",\"show_no_articles\":\"\",\"show_subcat_desc\":\"\",\"show_cat_num_articles\":\"\",\"show_cat_tags\":\"\",\"page_subheading\":\"\",\"num_leading_articles\":\"\",\"num_intro_articles\":\"\",\"num_columns\":\"\",\"num_links\":\"\",\"multi_column_order\":\"1\",\"show_subcategory_content\":\"\",\"orderby_pri\":\"\",\"orderby_sec\":\"front\",\"order_date\":\"\",\"show_pagination\":\"2\",\"show_pagination_results\":\"\",\"show_featured\":\"\",\"article_layout\":\"hostiran:article\",\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"0\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_readmore\":\"0\",\"show_readmore_title\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"show_feed_link\":\"1\",\"feed_summary\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"1\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 29, 30, 0, '*', 0),
 (120, 'mainmenu', 'تماس با ما (3)', 'contact-3', '', 'products/contact-3', 'index.php?option=com_content&view=featured', 'component', -2, 104, 2, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"featured_categories\":[\"\"],\"layout_type\":\"blog\",\"num_leading_articles\":\"1\",\"num_intro_articles\":\"3\",\"num_columns\":\"3\",\"num_links\":\"0\",\"multi_column_order\":\"1\",\"orderby_pri\":\"\",\"orderby_sec\":\"front\",\"order_date\":\"\",\"show_pagination\":\"2\",\"show_pagination_results\":\"1\",\"page_subheading\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_readmore\":\"\",\"show_readmore_title\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"show_feed_link\":\"1\",\"feed_summary\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"1\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 14, 15, 0, '*', 0),
 (121, 'mainmenu', 'تماس با ما (4)', 'contact-4', '', 'products/contact-4', 'index.php?option=com_content&view=featured', 'component', -2, 104, 2, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"featured_categories\":[\"\"],\"layout_type\":\"blog\",\"num_leading_articles\":\"1\",\"num_intro_articles\":\"3\",\"num_columns\":\"3\",\"num_links\":\"0\",\"multi_column_order\":\"1\",\"orderby_pri\":\"\",\"orderby_sec\":\"front\",\"order_date\":\"\",\"show_pagination\":\"2\",\"show_pagination_results\":\"1\",\"page_subheading\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_readmore\":\"\",\"show_readmore_title\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"show_feed_link\":\"1\",\"feed_summary\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"1\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 16, 17, 0, '*', 0),
 (134, 'main', 'COM_RSCOMMENTS', 'com_rscomments', '', 'com_rscomments', 'index.php?option=com_rscomments', 'component', 1, 1, 1, 10009, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 69, 84, 0, '', 1),
@@ -3815,11 +3825,11 @@ INSERT INTO `b871e_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 
 CREATE TABLE `b871e_menu_types` (
   `id` int(10) UNSIGNED NOT NULL,
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `menutype` varchar(24) COLLATE utf8mb4_unicode_ci NOT NULL,
   `title` varchar(48) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `client_id` int(11) NOT NULL DEFAULT 0
+  `client_id` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -3838,12 +3848,12 @@ INSERT INTO `b871e_menu_types` (`id`, `asset_id`, `menutype`, `title`, `descript
 
 CREATE TABLE `b871e_messages` (
   `message_id` int(10) UNSIGNED NOT NULL,
-  `user_id_from` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `user_id_to` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `folder_id` tinyint(3) UNSIGNED NOT NULL DEFAULT 0,
+  `user_id_from` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `user_id_to` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `folder_id` tinyint(3) UNSIGNED NOT NULL DEFAULT '0',
   `date_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `state` tinyint(1) NOT NULL DEFAULT 0,
-  `priority` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `state` tinyint(1) NOT NULL DEFAULT '0',
+  `priority` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
   `subject` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `message` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -3855,7 +3865,7 @@ CREATE TABLE `b871e_messages` (
 --
 
 CREATE TABLE `b871e_messages_cfg` (
-  `user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `cfg_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `cfg_value` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -3868,22 +3878,22 @@ CREATE TABLE `b871e_messages_cfg` (
 
 CREATE TABLE `b871e_modules` (
   `id` int(11) NOT NULL,
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table.',
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `content` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `ordering` int(11) NOT NULL DEFAULT 0,
+  `content` text COLLATE utf8mb4_unicode_ci,
+  `ordering` int(11) NOT NULL DEFAULT '0',
   `position` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `module` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `showtitle` tinyint(3) UNSIGNED NOT NULL DEFAULT 1,
+  `access` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `showtitle` tinyint(3) UNSIGNED NOT NULL DEFAULT '1',
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `client_id` tinyint(4) NOT NULL DEFAULT 0,
+  `client_id` tinyint(4) NOT NULL DEFAULT '0',
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -3916,11 +3926,11 @@ INSERT INTO `b871e_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orde
 (93, 65, 'Search', '', '', 1, 'search', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_search', 1, 0, '{\"label\":\"\",\"width\":\"\",\"text\":\"\",\"button\":0,\"button_pos\":\"left\",\"imagebutton\":0,\"button_text\":\"\",\"opensearch\":1,\"opensearch_title\":\"\",\"set_itemid\":0,\"layout\":\"hostiran:navbar\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"itemid\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, '*'),
 (94, 66, 'Mobile Search', '', '', 1, 'mobilesearch', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_search', 1, 0, '{\"label\":\"\",\"width\":\"\",\"text\":\"\",\"button\":0,\"button_pos\":\"left\",\"imagebutton\":0,\"button_text\":\"\",\"opensearch\":1,\"opensearch_title\":\"\",\"set_itemid\":0,\"layout\":\"hostiran:mobile\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"itemid\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, '*'),
 (95, 75, 'Related Items', '', '', 1, 'related', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_related_items_joomir', 1, 0, '{\"showDate\":\"1\",\"maximum\":\"3\",\"layout\":\"hostiran:related\",\"moduleclass_sfx\":\"\",\"owncache\":\"1\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, '*'),
-(96, 84, 'رخشان استیل افتخار همکار داشته است با', '', '<p>frfefewfefwrrfefrfefef</p>', 4, 'bottom', 0, '0000-00-00 00:00:00', '2021-06-22 23:37:35', '0000-00-00 00:00:00', 1, 'mod_carousel', 1, 1, '{\"title\":\"\",\"items\":\"{\\\"logo\\\":[\\\"images\\/logo.png\\\",\\\"images\\/logo2.png\\\",\\\"images\\/logo.png\\\",\\\"images\\/logo4.png\\\",\\\"images\\/logo.png\\\",\\\"images\\/logo3.png\\\",\\\"images\\/logo.png\\\",\\\"images\\/logo2.png\\\"],\\\"caption\\\":[\\\"Logo One\\\",\\\"\\\",\\\"Logo Two\\\",\\\"\\\",\\\"Logo Three\\\",\\\"\\\",\\\"\\\",\\\"\\\"],\\\"url\\\":[\\\"#\\\",\\\"\\\",\\\"#\\\",\\\"\\\",\\\"#\\\",\\\"\\\",\\\"\\\",\\\"\\\"]}\",\"bgcolor\":\"\",\"gridwidth\":\"uk-container\",\"paddingtop\":\"100\",\"paddingbottom\":\"100\",\"prepare_content\":0,\"backgroundimage\":\"\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"static\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"uk-text-center uk-position-relative uk-margin-large-top font uk-h3 uk-text-bold moduleHead\",\"style\":\"System-html5\"}', 0, 'fa-IR'),
+(96, 84, 'رخشان استیل افتخار همکار داشته است با', '', '<p>frfefewfefwrrfefrfefef</p>', 4, 'bottom', 0, '0000-00-00 00:00:00', '2021-06-22 23:37:35', '0000-00-00 00:00:00', 0, 'mod_carousel', 1, 1, '{\"title\":\"\",\"items\":\"{\\\"logo\\\":[\\\"images\\/logo.png\\\",\\\"images\\/logo2.png\\\",\\\"images\\/logo.png\\\",\\\"images\\/logo4.png\\\",\\\"images\\/logo.png\\\",\\\"images\\/logo3.png\\\",\\\"images\\/logo.png\\\",\\\"images\\/logo2.png\\\"],\\\"caption\\\":[\\\"Logo One\\\",\\\"\\\",\\\"Logo Two\\\",\\\"\\\",\\\"Logo Three\\\",\\\"\\\",\\\"\\\",\\\"\\\"],\\\"url\\\":[\\\"#\\\",\\\"\\\",\\\"#\\\",\\\"\\\",\\\"#\\\",\\\"\\\",\\\"\\\",\\\"\\\"]}\",\"bgcolor\":\"\",\"gridwidth\":\"uk-container\",\"paddingtop\":\"100\",\"paddingbottom\":\"100\",\"prepare_content\":0,\"backgroundimage\":\"\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"static\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"uk-text-center uk-position-relative uk-margin-large-top font uk-h3 uk-text-bold moduleHead\",\"style\":\"System-html5\"}', 0, 'fa-IR'),
 (97, 100, 'دسته‌بندی محصولات', '', '', 1, 'productside', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_articles_categories', 1, 1, '{\"parent\":10,\"show_description\":0,\"numitems\":1,\"show_children\":0,\"count\":0,\"maxlevel\":0,\"layout\":\"hostiran:productside\",\"item_heading\":\"4\",\"moduleclass_sfx\":\"\",\"owncache\":1,\"cache_time\":900,\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"moduleTitle\",\"style\":\"0\"}', 0, 'fa-IR'),
 (98, 101, 'پربازدیدترین محصولات', '', '', 1, 'productside', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_articles_news', 1, 1, '{\"catid\":[10,11,12,13,14,15],\"image\":1,\"img_intro_full\":\"intro\",\"item_title\":1,\"link_titles\":1,\"item_heading\":\"h5\",\"triggerevents\":0,\"showLastSeparator\":0,\"show_introtext\":0,\"readmore\":0,\"count\":5,\"show_featured\":\"\",\"ordering\":\"a.hits\",\"direction\":1,\"layout\":\"hostiran:productside\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"itemid\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"moduleTitle\",\"style\":\"0\"}', 0, 'fa-IR'),
 (99, 103, 'Related Products', '', '', 1, 'relatedproducts', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_related_items_joomir', 1, 0, '{\"showDate\":\"0\",\"maximum\":\"4\",\"layout\":\"hostiran:relatedproducts\",\"moduleclass_sfx\":\"\",\"owncache\":\"1\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, '*'),
-(100, 119, 'Slideshow', '', '', 1, 'top', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_slideshow', 1, 0, '{\"slides\":\"{\\\"media\\\":[\\\"images\\/17mittal-1-videoSixteenByNineJumbo1600.jpg\\\",\\\"images\\/Steel-Industry-Electric-Motors-Industrial-Fan-Blowers-Stiavelli-FTA.jpg\\\"],\\\"video\\\":[\\\"\\\",\\\"\\\"],\\\"title\\\":[\\\"\\u0631\\u062e\\u0634\\u0627\\u0646 \\u0627\\u0633\\u062a\\u06cc\\u0644 \\u06a9\\u0631\\u06cc\\u0645\\u06cc\\\",\\\"\\u062a\\u0648\\u0644\\u06cc\\u062f \\u06a9\\u0646\\u0646\\u062f\\u0647 \\u0645\\u062d\\u0635\\u0648\\u0644\\u0627\\u062a \\u0627\\u0633\\u062a\\u06cc\\u0644\\\"],\\\"text\\\":[\\\"\\u0627\\u0631\\u0627\\u0626\\u0647 \\u062f\\u0647\\u0646\\u062f\\u0647 \\u0627\\u0646\\u0648\\u0627\\u0639 \\u0648\\u0631\\u0642 \\u0647\\u0627\\u06cc \\u0641\\u0644\\u0632\\u06cc \\u060c \\u0645\\u06cc\\u0644\\u06af\\u0631\\u062f \\u060c \\u0627\\u062a\\u0635\\u0627\\u0644\\u0627\\u062a \\u0648 ...\\\",\\\"\\u0634\\u0627\\u0645\\u0644 \\u0627\\u0646\\u0648\\u0627\\u0639 \\u0648\\u0631\\u0642 \\u060c \\u0645\\u06cc\\u0644\\u06af\\u0631\\u062f \\u060c \\u0627\\u062a\\u0635\\u0627\\u0644\\u0627\\u062a \\u0648 ...\\\"],\\\"btnlabel\\\":[\\\"\\\",\\\"\\\"],\\\"link\\\":[\\\"\\\",\\\"\\\"],\\\"align\\\":[\\\" center\\\",\\\" center\\\"],\\\"target\\\":[\\\"self\\\",\\\"self\\\"],\\\"cover\\\":[\\\"0\\\",\\\"1\\\"]}\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"slideshow\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"static\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, '*'),
+(100, 119, 'Slideshow', '', '', 1, 'top', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_slideshow', 1, 0, '{\"slides\":\"{\\\"media\\\":[\\\"images\\/17mittal-1-videoSixteenByNineJumbo1600.jpg\\\",\\\"images\\/Steel-Industry-Electric-Motors-Industrial-Fan-Blowers-Stiavelli-FTA.jpg\\\"],\\\"video\\\":[\\\"\\\",\\\"\\\"],\\\"title\\\":[\\\"\\u0631\\u062e\\u0634\\u0627\\u0646 \\u0627\\u0633\\u062a\\u06cc\\u0644 \\u06a9\\u0631\\u06cc\\u0645\\u06cc\\\",\\\"\\u062a\\u0648\\u0644\\u06cc\\u062f \\u06a9\\u0646\\u0646\\u062f\\u0647 \\u0645\\u062d\\u0635\\u0648\\u0644\\u0627\\u062a \\u0627\\u0633\\u062a\\u06cc\\u0644\\\"],\\\"text\\\":[\\\"\\u062a\\u0647\\u06cc\\u0647 \\u0648 \\u062a\\u0648\\u0632\\u06cc\\u0639 \\u0627\\u0646\\u0648\\u0627\\u0639 \\u0627\\u0633\\u062a\\u0646\\u0644\\u0633 \\u0627\\u0633\\u062a\\u06cc\\u0644 \\u060c \\u0646\\u0628\\u0634\\u06cc \\u060c \\u0648\\u0631\\u0642 \\u0648 \\u0644\\u0648\\u0644\\u0647 \\u060c \\u0645\\u06cc\\u0644\\u06af\\u0631\\u062f \\u060c \\u067e\\u0631\\u0648\\u0641\\u06cc\\u0644 \\u0648 \\u0627\\u062a\\u0635\\u0627\\u0644\\u0627\\u062a\\\",\\\"\\u0634\\u0627\\u0645\\u0644 \\u0627\\u0646\\u0648\\u0627\\u0639 \\u0648\\u0631\\u0642 \\u060c \\u0645\\u06cc\\u0644\\u06af\\u0631\\u062f \\u060c \\u0627\\u062a\\u0635\\u0627\\u0644\\u0627\\u062a \\u0648 ...\\\"],\\\"btnlabel\\\":[\\\"\\\",\\\"\\\"],\\\"link\\\":[\\\"\\\",\\\"\\\"],\\\"align\\\":[\\\" center\\\",\\\" center\\\"],\\\"target\\\":[\\\"self\\\",\\\"self\\\"],\\\"cover\\\":[\\\"0\\\",\\\"1\\\"]}\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"slideshow\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"static\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, '*'),
 (101, 120, 'Brands', '', '', 2, 'top', 0, '0000-00-00 00:00:00', '2021-06-22 23:37:32', '0000-00-00 00:00:00', 0, 'mod_carousel', 1, 0, '{\"title\":\"\\u0628\\u0631\\u0646\\u062f \\u0647\\u0627\",\"items\":\"{\\\"logo\\\":[\\\"images\\/logo.png\\\",\\\"images\\/logo2.png\\\",\\\"images\\/logo.png\\\",\\\"images\\/logo4.png\\\",\\\"images\\/logo.png\\\",\\\"images\\/logo3.png\\\",\\\"images\\/logo.png\\\",\\\"images\\/logo2.png\\\"],\\\"caption\\\":[\\\"Logo One\\\",\\\"\\\",\\\"Logo Two\\\",\\\"\\\",\\\"Logo Three\\\",\\\"\\\",\\\"\\\",\\\"\\\"],\\\"url\\\":[\\\"#\\\",\\\"\\\",\\\"#\\\",\\\"\\\",\\\"#\\\",\\\"\\\",\\\"\\\",\\\"\\\"]}\",\"bgcolor\":\"#ffffff\",\"gridwidth\":\"uk-container\",\"paddingtop\":\"100\",\"paddingbottom\":\"100\",\"prepare_content\":0,\"backgroundimage\":\"\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"static\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, 'fa-IR'),
 (102, 121, 'Statistics', '', '', 3, 'bottom', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_statistics', 1, 0, '{\"items\":\"{\\\"title\\\":[\\\"\\u0633\\u0627\\u0644 \\u0633\\u0627\\u0628\\u0642\\u0647\\\",\\\"\\u062a\\u0646\\u0648\\u0639 \\u0645\\u062d\\u0635\\u0648\\u0644\\\",\\\"\\u0645\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627\\u0636\\u06cc\\\",\\\"\\u0645\\u0627\\u0647 \\u062e\\u062f\\u0645\\u0627\\u062a\\\"],\\\"number\\\":[\\\"\\u06f2\\u06f0\\\",\\\"+\\u06f4\\u06f0\\u06f0\\\",\\\"\\u06f1\\u06f0\\u06f0\\\",\\\"\\u06f1\\u06f2\\\"]}\",\"bgcolor\":\"#e0ae45\",\"gridwidth\":\"uk-container\",\"paddingtop\":\"70\",\"paddingbottom\":\"70\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"statistics\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"static\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, '*'),
 (103, 122, 'پشتیبانی محصولات', '', '', 1, 'bottom', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_parallax', 1, 0, '{\"paddingtop\":\"140\",\"paddingbottom\":\"140\",\"bgcolor\":\"rgba(242, 242, 242, 1)\",\"bgimage\":\"images\\/metals-minerals-background-image-scaled.jpg\",\"cover\":1,\"covercolor\":\"rgba(0, 0, 0, 0.7)\",\"gridsize\":\"xsmall\",\"align\":\"center\",\"parallax\":\"1\",\"title\":\"\\u067e\\u0634\\u062a\\u06cc\\u0628\\u0627\\u0646\\u06cc \\u0645\\u062d\\u0635\\u0648\\u0644\\u0627\\u062a \\u0648 \\u062e\\u062f\\u0645\\u0627\\u062a\",\"titlecolor\":\"rgba(255, 255, 255, 1)\",\"desc\":\"<p>\\u0686\\u0646\\u0627\\u0646\\u0686\\u0647 \\u0627\\u0632 \\u0645\\u0627 \\u0645\\u062d\\u0635\\u0648\\u0644\\u06cc \\u062e\\u0631\\u06cc\\u062f\\u0627\\u0631\\u06cc \\u06a9\\u0631\\u062f\\u0647\\u200c\\u0627\\u06cc\\u062f \\u06cc\\u0627 \\u062e\\u062f\\u0645\\u0627\\u062a\\u06cc \\u062f\\u0631\\u06cc\\u0627\\u0641\\u062a \\u06a9\\u0631\\u062f\\u0647\\u200c\\u0627\\u06cc\\u062f \\u0648 \\u0633\\u0648\\u0627\\u0644 \\u06cc\\u0627 \\u0645\\u0634\\u06a9\\u0644\\u06cc \\u062f\\u0627\\u0631\\u06cc\\u062f \\u0645\\u06cc\\u200c\\u062a\\u0648\\u0627\\u0646\\u06cc\\u062f \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0641\\u0631\\u0645 \\u067e\\u0634\\u062a\\u06cc\\u0628\\u0627\\u0646\\u06cc \\u062f\\u0631\\u062e\\u0648\\u0627\\u0633\\u062a \\u062e\\u0648\\u062f \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0645\\u0627 \\u0627\\u0631\\u0633\\u0627\\u0644 \\u0646\\u0645\\u0627\\u06cc\\u06cc\\u062f.<\\/p>\",\"desccolor\":\"rgba(214, 214, 214, 1)\",\"buttons\":\"{\\\"label\\\":[\\\"\\u0641\\u0631\\u0645 \\u067e\\u0634\\u062a\\u06cc\\u0628\\u0627\\u0646\\u06cc\\\"],\\\"url\\\":[\\\"support\\\"],\\\"type\\\":[\\\"default\\\"],\\\"width\\\":[\\\"medium\\\"],\\\"size\\\":[\\\"normal\\\"]}\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"static\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, 'fa-IR'),
@@ -3934,8 +3944,8 @@ INSERT INTO `b871e_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orde
 --
 
 CREATE TABLE `b871e_modules_menu` (
-  `moduleid` int(11) NOT NULL DEFAULT 0,
-  `menuid` int(11) NOT NULL DEFAULT 0
+  `moduleid` int(11) NOT NULL DEFAULT '0',
+  `menuid` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -3988,26 +3998,26 @@ INSERT INTO `b871e_modules_menu` (`moduleid`, `menuid`) VALUES
 --
 
 CREATE TABLE `b871e_newsfeeds` (
-  `catid` int(11) NOT NULL DEFAULT 0,
+  `catid` int(11) NOT NULL DEFAULT '0',
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
   `link` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `numarticles` int(10) UNSIGNED NOT NULL DEFAULT 1,
-  `cache_time` int(10) UNSIGNED NOT NULL DEFAULT 3600,
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `numarticles` int(10) UNSIGNED NOT NULL DEFAULT '1',
+  `cache_time` int(10) UNSIGNED NOT NULL DEFAULT '3600',
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `ordering` int(11) NOT NULL DEFAULT 0,
-  `rtl` tinyint(4) NOT NULL DEFAULT 0,
-  `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `ordering` int(11) NOT NULL DEFAULT '0',
+  `rtl` tinyint(4) NOT NULL DEFAULT '0',
+  `access` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `created_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `metakey` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadesc` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadata` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -4015,8 +4025,8 @@ CREATE TABLE `b871e_newsfeeds` (
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `version` int(10) UNSIGNED NOT NULL DEFAULT 1,
-  `hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `version` int(10) UNSIGNED NOT NULL DEFAULT '1',
+  `hits` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `images` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -4041,19 +4051,19 @@ CREATE TABLE `b871e_overrider` (
 
 CREATE TABLE `b871e_postinstall_messages` (
   `postinstall_message_id` bigint(20) UNSIGNED NOT NULL,
-  `extension_id` bigint(20) NOT NULL DEFAULT 700 COMMENT 'FK to #__extensions',
+  `extension_id` bigint(20) NOT NULL DEFAULT '700' COMMENT 'FK to #__extensions',
   `title_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'Lang key for the title',
   `description_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'Lang key for description',
   `action_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `language_extension` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'com_postinstall' COMMENT 'Extension holding lang keys',
-  `language_client_id` tinyint(3) NOT NULL DEFAULT 1,
+  `language_client_id` tinyint(3) NOT NULL DEFAULT '1',
   `type` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'link' COMMENT 'Message type - message, link, action',
   `action_file` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT 'RAD URI to the PHP file containing action method',
   `action` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT 'Action method name or URL',
   `condition_file` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'RAD URI to file holding display condition method',
   `condition_method` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Display condition method, must return boolean',
   `version_introduced` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '3.2.0' COMMENT 'Version when this message was introduced',
-  `enabled` tinyint(3) NOT NULL DEFAULT 1
+  `enabled` tinyint(3) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -4084,12 +4094,12 @@ INSERT INTO `b871e_postinstall_messages` (`postinstall_message_id`, `extension_i
 
 CREATE TABLE `b871e_privacy_consents` (
   `id` int(10) UNSIGNED NOT NULL,
-  `user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `state` int(10) NOT NULL DEFAULT 1,
+  `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `state` int(10) NOT NULL DEFAULT '1',
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `subject` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `body` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remind` tinyint(4) NOT NULL DEFAULT 0,
+  `remind` tinyint(4) NOT NULL DEFAULT '0',
   `token` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -4103,7 +4113,7 @@ CREATE TABLE `b871e_privacy_requests` (
   `id` int(10) UNSIGNED NOT NULL,
   `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `requested_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `status` tinyint(4) NOT NULL DEFAULT '0',
   `request_type` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `confirm_token` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `confirm_token_created_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
@@ -4121,11 +4131,11 @@ CREATE TABLE `b871e_redirect_links` (
   `new_url` varchar(2048) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `referer` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
   `comment` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `hits` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `published` tinyint(4) NOT NULL,
   `created_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `header` smallint(3) NOT NULL DEFAULT 301
+  `header` smallint(3) NOT NULL DEFAULT '301'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -4136,27 +4146,27 @@ CREATE TABLE `b871e_redirect_links` (
 
 CREATE TABLE `b871e_rscomments_comments` (
   `IdComment` int(15) NOT NULL,
-  `IdParent` int(15) NOT NULL DEFAULT 0,
+  `IdParent` int(15) NOT NULL DEFAULT '0',
   `name` varchar(255) NOT NULL DEFAULT '',
   `email` varchar(255) NOT NULL DEFAULT '',
   `subject` varchar(255) NOT NULL DEFAULT '',
   `website` varchar(255) NOT NULL DEFAULT '',
   `comment` text NOT NULL,
-  `uid` int(5) NOT NULL DEFAULT 0,
+  `uid` int(5) NOT NULL DEFAULT '0',
   `ip` varchar(15) NOT NULL DEFAULT '',
   `hash` varchar(32) NOT NULL DEFAULT '',
   `sid` varchar(255) NOT NULL DEFAULT '',
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(11) NOT NULL DEFAULT 0,
+  `modified_by` int(11) NOT NULL DEFAULT '0',
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `option` varchar(100) NOT NULL DEFAULT '',
-  `id` int(5) NOT NULL DEFAULT 0,
+  `id` int(5) NOT NULL DEFAULT '0',
   `url` text NOT NULL,
   `file` varchar(255) NOT NULL DEFAULT '',
   `location` varchar(255) NOT NULL DEFAULT '',
   `coordinates` varchar(255) NOT NULL DEFAULT '',
-  `anonymous` tinyint(2) NOT NULL DEFAULT 0,
-  `published` int(2) NOT NULL DEFAULT 0
+  `anonymous` tinyint(2) NOT NULL DEFAULT '0',
+  `published` int(2) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -4213,7 +4223,7 @@ INSERT INTO `b871e_rscomments_emoticons` (`id`, `replace`, `with`) VALUES
 CREATE TABLE `b871e_rscomments_groups` (
   `IdGroup` int(2) NOT NULL,
   `GroupName` varchar(255) NOT NULL DEFAULT '',
-  `gid` int(5) NOT NULL DEFAULT 0,
+  `gid` int(5) NOT NULL DEFAULT '0',
   `permissions` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -4257,8 +4267,8 @@ INSERT INTO `b871e_rscomments_messages` (`id`, `type`, `tag`, `content`) VALUES
 CREATE TABLE `b871e_rscomments_reports` (
   `id` int(11) NOT NULL,
   `report` text NOT NULL,
-  `IdComment` int(11) NOT NULL DEFAULT 0,
-  `uid` int(11) NOT NULL DEFAULT 0,
+  `IdComment` int(11) NOT NULL DEFAULT '0',
+  `uid` int(11) NOT NULL DEFAULT '0',
   `ip` varchar(15) NOT NULL DEFAULT '',
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -4271,7 +4281,7 @@ CREATE TABLE `b871e_rscomments_reports` (
 
 CREATE TABLE `b871e_rscomments_subscriptions` (
   `IdSubscription` int(10) NOT NULL,
-  `id` int(10) NOT NULL DEFAULT 0,
+  `id` int(10) NOT NULL DEFAULT '0',
   `option` varchar(255) NOT NULL DEFAULT '',
   `name` varchar(255) NOT NULL DEFAULT '',
   `email` varchar(255) NOT NULL DEFAULT ''
@@ -4286,7 +4296,7 @@ CREATE TABLE `b871e_rscomments_subscriptions` (
 CREATE TABLE `b871e_rscomments_threads` (
   `IdThread` int(5) NOT NULL,
   `option` varchar(255) NOT NULL DEFAULT '',
-  `id` int(10) NOT NULL DEFAULT 0
+  `id` int(10) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -4297,8 +4307,8 @@ CREATE TABLE `b871e_rscomments_threads` (
 
 CREATE TABLE `b871e_rscomments_votes` (
   `IdVote` int(5) NOT NULL,
-  `IdComment` int(15) NOT NULL DEFAULT 0,
-  `uid` int(5) NOT NULL DEFAULT 0,
+  `IdComment` int(15) NOT NULL DEFAULT '0',
+  `uid` int(5) NOT NULL DEFAULT '0',
   `ip` varchar(32) NOT NULL DEFAULT '',
   `value` enum('positive','negative') NOT NULL DEFAULT 'positive'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -4318,7 +4328,7 @@ INSERT INTO `b871e_rscomments_votes` (`IdVote`, `IdComment`, `uid`, `ip`, `value
 
 CREATE TABLE `b871e_rsfiles_bookmarks` (
   `id` int(11) NOT NULL,
-  `uid` int(11) NOT NULL DEFAULT 0,
+  `uid` int(11) NOT NULL DEFAULT '0',
   `file` varchar(255) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -4339,7 +4349,7 @@ CREATE TABLE `b871e_rsfiles_config` (
 --
 
 INSERT INTO `b871e_rsfiles_config` (`IdConfig`, `ConfigName`, `ConfigValue`) VALUES
-(1, 'download_folder', 'F:\\rakhshansteel\\downloads'),
+(1, 'download_folder', '/Applications/MAMP/htdocs/rakhshansteel/downloads'),
 (2, 'license_code', ''),
 (3, 'global_date', 'd/m/Y H:i:s'),
 (4, 'preview_files', 'jpg,txt,png,pdf,gif'),
@@ -4425,8 +4435,8 @@ CREATE TABLE `b871e_rsfiles_emails` (
   `id` int(11) NOT NULL,
   `type` varchar(255) NOT NULL DEFAULT '',
   `lang` varchar(255) NOT NULL DEFAULT '',
-  `enable` tinyint(1) NOT NULL DEFAULT 0,
-  `mode` tinyint(1) NOT NULL DEFAULT 0,
+  `enable` tinyint(1) NOT NULL DEFAULT '0',
+  `mode` tinyint(1) NOT NULL DEFAULT '0',
   `to` varchar(255) NOT NULL DEFAULT '',
   `subject` varchar(255) NOT NULL DEFAULT '',
   `message` text NOT NULL
@@ -4456,7 +4466,7 @@ CREATE TABLE `b871e_rsfiles_email_downloads` (
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `email` varchar(255) NOT NULL DEFAULT '',
   `name` varchar(255) NOT NULL DEFAULT '',
-  `IdFile` int(11) NOT NULL DEFAULT 0,
+  `IdFile` int(11) NOT NULL DEFAULT '0',
   `downloaded` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -4471,18 +4481,18 @@ CREATE TABLE `b871e_rsfiles_files` (
   `FileName` varchar(255) NOT NULL DEFAULT '',
   `DownloadName` varchar(255) NOT NULL DEFAULT '',
   `FilePath` varchar(255) NOT NULL DEFAULT '',
-  `briefcase` tinyint(1) NOT NULL DEFAULT 0,
+  `briefcase` tinyint(1) NOT NULL DEFAULT '0',
   `FileSize` varchar(255) NOT NULL DEFAULT '',
   `FileVersion` varchar(255) NOT NULL DEFAULT '',
-  `FileStatistics` int(2) NOT NULL DEFAULT 0,
+  `FileStatistics` int(2) NOT NULL DEFAULT '0',
   `FileDescription` text NOT NULL,
   `DateAdded` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `ModifiedDate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `IdLicense` int(11) NOT NULL DEFAULT 0,
-  `IdUser` int(3) NOT NULL DEFAULT 0,
-  `DownloadMethod` int(2) NOT NULL DEFAULT 0,
-  `DownloadLimit` int(11) NOT NULL DEFAULT 0,
-  `Downloads` int(11) NOT NULL DEFAULT 0,
+  `IdLicense` int(11) NOT NULL DEFAULT '0',
+  `IdUser` int(3) NOT NULL DEFAULT '0',
+  `DownloadMethod` int(2) NOT NULL DEFAULT '0',
+  `DownloadLimit` int(11) NOT NULL DEFAULT '0',
+  `Downloads` int(11) NOT NULL DEFAULT '0',
   `FileThumb` varchar(255) NOT NULL DEFAULT '',
   `CanDownload` varchar(255) NOT NULL DEFAULT '',
   `CanView` varchar(255) NOT NULL DEFAULT '',
@@ -4490,10 +4500,10 @@ CREATE TABLE `b871e_rsfiles_files` (
   `metadescription` text NOT NULL,
   `metakeywords` text NOT NULL,
   `hash` varchar(255) NOT NULL DEFAULT '',
-  `hits` int(15) NOT NULL DEFAULT 0,
-  `published` int(2) NOT NULL DEFAULT 1,
+  `hits` int(15) NOT NULL DEFAULT '0',
+  `published` int(2) NOT NULL DEFAULT '1',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `FileType` tinyint(1) NOT NULL DEFAULT 0,
+  `FileType` tinyint(1) NOT NULL DEFAULT '0',
   `FileParent` text NOT NULL,
   `ScreenshotsTags` varchar(255) NOT NULL DEFAULT '',
   `CanCreate` varchar(225) NOT NULL DEFAULT '',
@@ -4501,7 +4511,7 @@ CREATE TABLE `b871e_rsfiles_files` (
   `CanDelete` varchar(225) NOT NULL DEFAULT '',
   `CanEdit` varchar(255) NOT NULL DEFAULT '',
   `preview` varchar(255) NOT NULL DEFAULT '',
-  `show_preview` tinyint(2) NOT NULL DEFAULT 0,
+  `show_preview` tinyint(2) NOT NULL DEFAULT '0',
   `poster` varchar(255) NOT NULL DEFAULT '',
   `icon` varchar(10) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -4527,16 +4537,16 @@ CREATE TABLE `b871e_rsfiles_groups` (
   `GroupName` varchar(255) NOT NULL DEFAULT '',
   `jgroups` text NOT NULL,
   `jusers` text NOT NULL,
-  `CanDownloadBriefcase` tinyint(4) NOT NULL DEFAULT 0,
-  `CanUploadBriefcase` tinyint(4) NOT NULL DEFAULT 0,
-  `CanDeleteBriefcase` tinyint(4) NOT NULL DEFAULT 0,
-  `CanMaintainBriefcase` tinyint(4) NOT NULL DEFAULT 0,
-  `MaxFilesNo` int(11) NOT NULL DEFAULT 0,
-  `MaxFilesSize` int(11) NOT NULL DEFAULT 0,
-  `MaxFileSize` int(11) NOT NULL DEFAULT 0,
-  `moderate` tinyint(2) NOT NULL DEFAULT 0,
-  `editown` tinyint(2) NOT NULL DEFAULT 0,
-  `deleteown` tinyint(2) NOT NULL DEFAULT 0
+  `CanDownloadBriefcase` tinyint(4) NOT NULL DEFAULT '0',
+  `CanUploadBriefcase` tinyint(4) NOT NULL DEFAULT '0',
+  `CanDeleteBriefcase` tinyint(4) NOT NULL DEFAULT '0',
+  `CanMaintainBriefcase` tinyint(4) NOT NULL DEFAULT '0',
+  `MaxFilesNo` int(11) NOT NULL DEFAULT '0',
+  `MaxFilesSize` int(11) NOT NULL DEFAULT '0',
+  `MaxFileSize` int(11) NOT NULL DEFAULT '0',
+  `moderate` tinyint(2) NOT NULL DEFAULT '0',
+  `editown` tinyint(2) NOT NULL DEFAULT '0',
+  `deleteown` tinyint(2) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -4549,7 +4559,7 @@ CREATE TABLE `b871e_rsfiles_licenses` (
   `IdLicense` int(3) NOT NULL,
   `LicenseName` varchar(255) NOT NULL DEFAULT '',
   `LicenseText` text NOT NULL,
-  `published` int(2) NOT NULL DEFAULT 1
+  `published` int(2) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -4560,7 +4570,7 @@ CREATE TABLE `b871e_rsfiles_licenses` (
 
 CREATE TABLE `b871e_rsfiles_mirrors` (
   `IdMirror` int(3) NOT NULL,
-  `IdFile` int(3) NOT NULL DEFAULT 0,
+  `IdFile` int(3) NOT NULL DEFAULT '0',
   `MirrorName` varchar(255) NOT NULL DEFAULT '',
   `MirrorURL` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -4573,9 +4583,9 @@ CREATE TABLE `b871e_rsfiles_mirrors` (
 
 CREATE TABLE `b871e_rsfiles_reports` (
   `IdReport` int(5) NOT NULL,
-  `IdFile` int(5) NOT NULL DEFAULT 0,
+  `IdFile` int(5) NOT NULL DEFAULT '0',
   `ReportMessage` text NOT NULL,
-  `uid` int(11) NOT NULL DEFAULT 0,
+  `uid` int(11) NOT NULL DEFAULT '0',
   `ip` varchar(15) NOT NULL DEFAULT '',
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -4598,12 +4608,12 @@ CREATE TABLE `b871e_rsfiles_rules` (
   `FolderCanCreate` varchar(255) NOT NULL DEFAULT '',
   `FolderCanUpload` varchar(255) NOT NULL DEFAULT '',
   `FolderCanDelete` varchar(255) NOT NULL DEFAULT '',
-  `FileStatistics` tinyint(2) NOT NULL DEFAULT 0,
-  `IdLicense` tinyint(2) NOT NULL DEFAULT 0,
-  `DownloadMethod` tinyint(2) NOT NULL DEFAULT 0,
-  `DownloadLimit` int(11) NOT NULL DEFAULT 0,
-  `show_preview` tinyint(2) NOT NULL DEFAULT 0,
-  `ordering` int(11) NOT NULL DEFAULT 0
+  `FileStatistics` tinyint(2) NOT NULL DEFAULT '0',
+  `IdLicense` tinyint(2) NOT NULL DEFAULT '0',
+  `DownloadMethod` tinyint(2) NOT NULL DEFAULT '0',
+  `DownloadLimit` int(11) NOT NULL DEFAULT '0',
+  `show_preview` tinyint(2) NOT NULL DEFAULT '0',
+  `ordering` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -4614,7 +4624,7 @@ CREATE TABLE `b871e_rsfiles_rules` (
 
 CREATE TABLE `b871e_rsfiles_screenshots` (
   `IdScreenshot` int(3) NOT NULL,
-  `IdFile` int(3) NOT NULL DEFAULT 0,
+  `IdFile` int(3) NOT NULL DEFAULT '0',
   `Path` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -4626,10 +4636,10 @@ CREATE TABLE `b871e_rsfiles_screenshots` (
 
 CREATE TABLE `b871e_rsfiles_statistics` (
   `IdStatistic` int(3) NOT NULL,
-  `IdFile` int(5) NOT NULL DEFAULT 0,
+  `IdFile` int(5) NOT NULL DEFAULT '0',
   `Date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `Ip` varchar(255) NOT NULL DEFAULT '',
-  `UserId` int(5) NOT NULL DEFAULT 0,
+  `UserId` int(5) NOT NULL DEFAULT '0',
   `referer` varchar(500) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -4651,8 +4661,8 @@ INSERT INTO `b871e_rsfiles_statistics` (`IdStatistic`, `IdFile`, `Date`, `Ip`, `
 CREATE TABLE `b871e_rsfiles_tags` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL DEFAULT '',
-  `created_by` int(10) NOT NULL DEFAULT 0,
-  `published` tinyint(2) NOT NULL DEFAULT 1
+  `created_by` int(10) NOT NULL DEFAULT '0',
+  `published` tinyint(2) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -4663,8 +4673,8 @@ CREATE TABLE `b871e_rsfiles_tags` (
 
 CREATE TABLE `b871e_rsfiles_tag_relation` (
   `id` int(11) NOT NULL,
-  `file` int(11) NOT NULL DEFAULT 0,
-  `tag` int(11) NOT NULL DEFAULT 0
+  `file` int(11) NOT NULL DEFAULT '0',
+  `tag` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -4696,10 +4706,10 @@ CREATE TABLE `b871e_rsform_calculations` (
 
 CREATE TABLE `b871e_rsform_components` (
   `ComponentId` int(11) NOT NULL,
-  `FormId` int(11) NOT NULL DEFAULT 0,
-  `ComponentTypeId` int(11) NOT NULL DEFAULT 0,
-  `Order` int(11) NOT NULL DEFAULT 0,
-  `Published` tinyint(1) NOT NULL DEFAULT 1
+  `FormId` int(11) NOT NULL DEFAULT '0',
+  `ComponentTypeId` int(11) NOT NULL DEFAULT '0',
+  `Order` int(11) NOT NULL DEFAULT '0',
+  `Published` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -4765,12 +4775,12 @@ INSERT INTO `b871e_rsform_component_types` (`ComponentTypeId`, `ComponentTypeNam
 --
 
 CREATE TABLE `b871e_rsform_component_type_fields` (
-  `ComponentTypeId` int(11) NOT NULL DEFAULT 0,
+  `ComponentTypeId` int(11) NOT NULL DEFAULT '0',
   `FieldName` text NOT NULL,
   `FieldType` varchar(32) NOT NULL DEFAULT 'hidden',
   `FieldValues` text NOT NULL,
   `Properties` text NOT NULL,
-  `Ordering` int(11) NOT NULL DEFAULT 0
+  `Ordering` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -5090,7 +5100,7 @@ INSERT INTO `b871e_rsform_config` (`SettingName`, `SettingValue`) VALUES
 ('calculations.nodecimals', '2'),
 ('calculations.thousands', ','),
 ('deleteafter.interval', '10'),
-('deleteafter.last_run', '1624443097'),
+('deleteafter.last_run', '1624459983'),
 ('disposable_domains', ''),
 ('export.mask', 'export-{formId}-{domain}-{date}'),
 ('global.codemirror', '0'),
@@ -5183,24 +5193,24 @@ CREATE TABLE `b871e_rsform_forms` (
   `FormLayout` longtext NOT NULL,
   `GridLayout` mediumtext NOT NULL,
   `FormLayoutName` text NOT NULL,
-  `LoadFormLayoutFramework` tinyint(1) NOT NULL DEFAULT 1,
-  `FormLayoutAutogenerate` tinyint(1) NOT NULL DEFAULT 1,
-  `FormLayoutFlow` tinyint(1) NOT NULL DEFAULT 0,
-  `DisableSubmitButton` tinyint(1) NOT NULL DEFAULT 0,
-  `RemoveCaptchaLogged` tinyint(1) NOT NULL DEFAULT 0,
+  `LoadFormLayoutFramework` tinyint(1) NOT NULL DEFAULT '1',
+  `FormLayoutAutogenerate` tinyint(1) NOT NULL DEFAULT '1',
+  `FormLayoutFlow` tinyint(1) NOT NULL DEFAULT '0',
+  `DisableSubmitButton` tinyint(1) NOT NULL DEFAULT '0',
+  `RemoveCaptchaLogged` tinyint(1) NOT NULL DEFAULT '0',
   `CSS` text NOT NULL,
   `JS` text NOT NULL,
   `FormTitle` text NOT NULL,
-  `ShowFormTitle` tinyint(1) NOT NULL DEFAULT 1,
-  `Published` tinyint(1) NOT NULL DEFAULT 1,
+  `ShowFormTitle` tinyint(1) NOT NULL DEFAULT '1',
+  `Published` tinyint(1) NOT NULL DEFAULT '1',
   `Lang` varchar(255) NOT NULL DEFAULT '',
   `ReturnUrl` text NOT NULL,
-  `ShowSystemMessage` tinyint(1) NOT NULL DEFAULT 1,
-  `ShowThankyou` tinyint(1) NOT NULL DEFAULT 1,
-  `ScrollToThankYou` tinyint(1) NOT NULL DEFAULT 0,
-  `ThankYouMessagePopUp` tinyint(1) NOT NULL DEFAULT 0,
+  `ShowSystemMessage` tinyint(1) NOT NULL DEFAULT '1',
+  `ShowThankyou` tinyint(1) NOT NULL DEFAULT '1',
+  `ScrollToThankYou` tinyint(1) NOT NULL DEFAULT '0',
+  `ThankYouMessagePopUp` tinyint(1) NOT NULL DEFAULT '0',
   `Thankyou` text NOT NULL,
-  `ShowContinue` tinyint(1) NOT NULL DEFAULT 1,
+  `ShowContinue` tinyint(1) NOT NULL DEFAULT '1',
   `UserEmailText` text NOT NULL,
   `UserEmailTo` text NOT NULL,
   `UserEmailCC` varchar(255) NOT NULL,
@@ -5209,7 +5219,7 @@ CREATE TABLE `b871e_rsform_forms` (
   `UserEmailReplyTo` varchar(255) NOT NULL,
   `UserEmailFromName` varchar(255) NOT NULL DEFAULT '',
   `UserEmailSubject` varchar(255) NOT NULL DEFAULT '',
-  `UserEmailMode` tinyint(4) NOT NULL DEFAULT 1,
+  `UserEmailMode` tinyint(4) NOT NULL DEFAULT '1',
   `UserEmailAttach` tinyint(4) NOT NULL,
   `UserEmailAttachFile` varchar(255) NOT NULL,
   `AdminEmailText` text NOT NULL,
@@ -5220,7 +5230,7 @@ CREATE TABLE `b871e_rsform_forms` (
   `AdminEmailReplyTo` varchar(255) NOT NULL,
   `AdminEmailFromName` varchar(255) NOT NULL DEFAULT '',
   `AdminEmailSubject` varchar(255) NOT NULL DEFAULT '',
-  `AdminEmailMode` tinyint(4) NOT NULL DEFAULT 1,
+  `AdminEmailMode` tinyint(4) NOT NULL DEFAULT '1',
   `DeletionEmailText` text NOT NULL,
   `DeletionEmailTo` text NOT NULL,
   `DeletionEmailCC` varchar(255) NOT NULL,
@@ -5229,7 +5239,7 @@ CREATE TABLE `b871e_rsform_forms` (
   `DeletionEmailReplyTo` varchar(255) NOT NULL,
   `DeletionEmailFromName` varchar(255) NOT NULL DEFAULT '',
   `DeletionEmailSubject` varchar(255) NOT NULL DEFAULT '',
-  `DeletionEmailMode` tinyint(4) NOT NULL DEFAULT 1,
+  `DeletionEmailMode` tinyint(4) NOT NULL DEFAULT '1',
   `ScriptProcess` text NOT NULL,
   `ScriptProcess2` text NOT NULL,
   `ScriptBeforeDisplay` text NOT NULL,
@@ -5244,7 +5254,7 @@ CREATE TABLE `b871e_rsform_forms` (
   `Required` varchar(255) NOT NULL DEFAULT '(*)',
   `ErrorMessage` text NOT NULL,
   `MultipleSeparator` varchar(64) NOT NULL DEFAULT '\\n',
-  `TextareaNewLines` tinyint(1) NOT NULL DEFAULT 1,
+  `TextareaNewLines` tinyint(1) NOT NULL DEFAULT '1',
   `CSSClass` varchar(255) NOT NULL,
   `CSSId` varchar(255) NOT NULL DEFAULT 'userForm',
   `CSSName` varchar(255) NOT NULL,
@@ -5252,11 +5262,11 @@ CREATE TABLE `b871e_rsform_forms` (
   `CSSAdditionalAttributes` text NOT NULL,
   `AjaxValidation` tinyint(1) NOT NULL,
   `ScrollToError` tinyint(1) NOT NULL,
-  `Keepdata` tinyint(1) NOT NULL DEFAULT 1,
-  `KeepIP` tinyint(1) NOT NULL DEFAULT 1,
-  `DeleteSubmissionsAfter` int(11) NOT NULL DEFAULT 0,
+  `Keepdata` tinyint(1) NOT NULL DEFAULT '1',
+  `KeepIP` tinyint(1) NOT NULL DEFAULT '1',
+  `DeleteSubmissionsAfter` int(11) NOT NULL DEFAULT '0',
   `Backendmenu` tinyint(1) NOT NULL,
-  `ConfirmSubmission` tinyint(1) NOT NULL DEFAULT 0,
+  `ConfirmSubmission` tinyint(1) NOT NULL DEFAULT '0',
   `ConfirmSubmissionUrl` text NOT NULL,
   `Access` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -5328,7 +5338,7 @@ INSERT INTO `b871e_rsform_posts` (`form_id`, `enabled`, `method`, `fields`, `sil
 
 CREATE TABLE `b871e_rsform_properties` (
   `PropertyId` int(11) NOT NULL,
-  `ComponentId` int(11) NOT NULL DEFAULT 0,
+  `ComponentId` int(11) NOT NULL DEFAULT '0',
   `PropertyName` text NOT NULL,
   `PropertyValue` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -5567,7 +5577,7 @@ INSERT INTO `b871e_rsform_properties` (`PropertyId`, `ComponentId`, `PropertyNam
 
 CREATE TABLE `b871e_rsform_submissions` (
   `SubmissionId` int(11) NOT NULL,
-  `FormId` int(11) NOT NULL DEFAULT 0,
+  `FormId` int(11) NOT NULL DEFAULT '0',
   `DateSubmitted` datetime NOT NULL,
   `UserIp` varchar(255) NOT NULL DEFAULT '',
   `Username` varchar(255) NOT NULL DEFAULT '',
@@ -5771,7 +5781,7 @@ CREATE TABLE `b871e_rsform_submission_columns` (
 CREATE TABLE `b871e_rsform_submission_values` (
   `SubmissionValueId` int(11) NOT NULL,
   `FormId` int(11) NOT NULL,
-  `SubmissionId` int(11) NOT NULL DEFAULT 0,
+  `SubmissionId` int(11) NOT NULL DEFAULT '0',
   `FieldName` text NOT NULL,
   `FieldValue` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -6901,10 +6911,10 @@ INSERT INTO `b871e_rsform_translations` (`id`, `form_id`, `lang_code`, `referenc
 
 CREATE TABLE `b871e_rsseo_broken_links` (
   `id` int(11) NOT NULL,
-  `pid` int(11) NOT NULL DEFAULT 0,
+  `pid` int(11) NOT NULL DEFAULT '0',
   `url` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `code` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `published` tinyint(1) NOT NULL DEFAULT 0
+  `published` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -6916,20 +6926,20 @@ CREATE TABLE `b871e_rsseo_broken_links` (
 CREATE TABLE `b871e_rsseo_competitors` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `parent_id` int(11) NOT NULL DEFAULT 0,
-  `age` int(11) NOT NULL DEFAULT 0,
-  `alexa` int(11) NOT NULL DEFAULT -1,
-  `technorati` int(11) NOT NULL DEFAULT -1,
-  `googlep` int(11) NOT NULL DEFAULT -1,
-  `bingp` int(11) NOT NULL DEFAULT -1,
-  `googleb` int(11) NOT NULL DEFAULT -1,
-  `bingb` int(11) NOT NULL DEFAULT -1,
-  `googler` int(11) NOT NULL DEFAULT -1,
+  `parent_id` int(11) NOT NULL DEFAULT '0',
+  `age` int(11) NOT NULL DEFAULT '0',
+  `alexa` int(11) NOT NULL DEFAULT '-1',
+  `technorati` int(11) NOT NULL DEFAULT '-1',
+  `googlep` int(11) NOT NULL DEFAULT '-1',
+  `bingp` int(11) NOT NULL DEFAULT '-1',
+  `googleb` int(11) NOT NULL DEFAULT '-1',
+  `bingb` int(11) NOT NULL DEFAULT '-1',
+  `googler` int(11) NOT NULL DEFAULT '-1',
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `tags` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `mozpagerank` int(11) NOT NULL DEFAULT 0,
-  `mozpa` int(11) NOT NULL DEFAULT 0,
-  `mozda` int(11) NOT NULL DEFAULT 0
+  `mozpagerank` int(11) NOT NULL DEFAULT '0',
+  `mozpa` int(11) NOT NULL DEFAULT '0',
+  `mozda` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -6952,12 +6962,12 @@ CREATE TABLE `b871e_rsseo_data` (
 CREATE TABLE `b871e_rsseo_errors` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `error` int(5) NOT NULL DEFAULT 0,
-  `type` tinyint(1) NOT NULL DEFAULT 0,
+  `error` int(5) NOT NULL DEFAULT '0',
+  `type` tinyint(1) NOT NULL DEFAULT '0',
   `url` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `layout` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `itemid` int(11) NOT NULL DEFAULT 0,
-  `published` tinyint(1) NOT NULL DEFAULT 0
+  `itemid` int(11) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -6969,8 +6979,8 @@ CREATE TABLE `b871e_rsseo_errors` (
 CREATE TABLE `b871e_rsseo_error_links` (
   `id` int(11) NOT NULL,
   `url` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `code` int(11) NOT NULL DEFAULT 0,
-  `count` int(11) NOT NULL DEFAULT 0
+  `code` int(11) NOT NULL DEFAULT '0',
+  `count` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -7665,7 +7675,7 @@ INSERT INTO `b871e_rsseo_error_links` (`id`, `url`, `code`, `count`) VALUES
 
 CREATE TABLE `b871e_rsseo_error_links_referer` (
   `id` int(11) NOT NULL,
-  `idl` int(11) NOT NULL DEFAULT 0,
+  `idl` int(11) NOT NULL DEFAULT '0',
   `referer` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -8276,7 +8286,7 @@ CREATE TABLE `b871e_rsseo_gkeywords` (
 
 CREATE TABLE `b871e_rsseo_gkeywords_data` (
   `id` int(11) NOT NULL,
-  `idk` int(11) NOT NULL DEFAULT 0,
+  `idk` int(11) NOT NULL DEFAULT '0',
   `date` date NOT NULL DEFAULT '0000-00-00',
   `page` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `device` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -8297,9 +8307,9 @@ CREATE TABLE `b871e_rsseo_keywords` (
   `id` int(11) NOT NULL,
   `keyword` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `importance` enum('low','relevant','important','critical') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'low',
-  `bold` int(2) NOT NULL DEFAULT 0,
-  `underline` int(2) NOT NULL DEFAULT 0,
-  `limit` int(3) NOT NULL DEFAULT 0,
+  `bold` int(2) NOT NULL DEFAULT '0',
+  `underline` int(2) NOT NULL DEFAULT '0',
+  `limit` int(3) NOT NULL DEFAULT '0',
   `attributes` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `link` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `lastcheck` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
@@ -8313,8 +8323,8 @@ CREATE TABLE `b871e_rsseo_keywords` (
 
 CREATE TABLE `b871e_rsseo_keyword_position` (
   `id` int(11) NOT NULL,
-  `idk` int(11) NOT NULL DEFAULT 0,
-  `position` int(11) NOT NULL DEFAULT 0,
+  `idk` int(11) NOT NULL DEFAULT '0',
+  `position` int(11) NOT NULL DEFAULT '0',
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -8347,13 +8357,13 @@ CREATE TABLE `b871e_rsseo_pages` (
   `keywords` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `keywordsdensity` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sitemap` tinyint(1) NOT NULL DEFAULT 0,
-  `insitemap` int(2) NOT NULL DEFAULT 0,
-  `crawled` tinyint(1) NOT NULL DEFAULT 0,
+  `sitemap` tinyint(1) NOT NULL DEFAULT '0',
+  `insitemap` int(2) NOT NULL DEFAULT '0',
+  `crawled` tinyint(1) NOT NULL DEFAULT '0',
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified` int(3) NOT NULL DEFAULT 0,
-  `level` tinyint(4) NOT NULL DEFAULT 0,
-  `grade` float(10,2) NOT NULL DEFAULT -1.00,
+  `modified` int(3) NOT NULL DEFAULT '0',
+  `level` tinyint(4) NOT NULL DEFAULT '0',
+  `grade` float(10,2) NOT NULL DEFAULT '-1.00',
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `densityparams` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `canonical` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -8362,16 +8372,16 @@ CREATE TABLE `b871e_rsseo_pages` (
   `priority` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `imagesnoalt` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `imagesnowh` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `hits` int(11) NOT NULL DEFAULT 0,
+  `hits` int(11) NOT NULL DEFAULT '0',
   `custom` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `parent` varchar(333) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `external` int(11) NOT NULL DEFAULT 0,
-  `internal` int(11) NOT NULL DEFAULT 0,
+  `external` int(11) NOT NULL DEFAULT '0',
+  `internal` int(11) NOT NULL DEFAULT '0',
   `customhead` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `scripts` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `css` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` int(5) NOT NULL DEFAULT 0,
-  `published` tinyint(2) NOT NULL DEFAULT 1
+  `status` int(5) NOT NULL DEFAULT '0',
+  `published` tinyint(2) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -8422,8 +8432,8 @@ CREATE TABLE `b871e_rsseo_redirects` (
   `from` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `to` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `type` enum('301','302') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '301',
-  `hits` int(11) NOT NULL DEFAULT 0,
-  `published` int(2) NOT NULL DEFAULT 0
+  `hits` int(11) NOT NULL DEFAULT '0',
+  `published` int(2) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -8434,7 +8444,7 @@ CREATE TABLE `b871e_rsseo_redirects` (
 
 CREATE TABLE `b871e_rsseo_redirects_referer` (
   `id` int(11) NOT NULL,
-  `rid` int(11) NOT NULL DEFAULT 0,
+  `rid` int(11) NOT NULL DEFAULT '0',
   `referer` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `url` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
@@ -8450,18 +8460,18 @@ CREATE TABLE `b871e_rsseo_statistics` (
   `id` int(11) NOT NULL,
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `age` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `googlep` int(11) NOT NULL DEFAULT 0,
-  `googleb` int(11) NOT NULL DEFAULT 0,
-  `googler` int(11) NOT NULL DEFAULT 0,
-  `bingp` int(11) NOT NULL DEFAULT 0,
-  `bingb` int(11) NOT NULL DEFAULT 0,
-  `alexa` int(11) NOT NULL DEFAULT 0,
-  `fb_share_count` int(11) NOT NULL DEFAULT 0,
-  `fb_like_count` int(11) NOT NULL DEFAULT 0,
-  `linkedin` int(11) NOT NULL DEFAULT 0,
-  `mozpagerank` int(11) NOT NULL DEFAULT 0,
-  `mozpa` int(11) NOT NULL DEFAULT 0,
-  `mozda` int(11) NOT NULL DEFAULT 0
+  `googlep` int(11) NOT NULL DEFAULT '0',
+  `googleb` int(11) NOT NULL DEFAULT '0',
+  `googler` int(11) NOT NULL DEFAULT '0',
+  `bingp` int(11) NOT NULL DEFAULT '0',
+  `bingb` int(11) NOT NULL DEFAULT '0',
+  `alexa` int(11) NOT NULL DEFAULT '0',
+  `fb_share_count` int(11) NOT NULL DEFAULT '0',
+  `fb_like_count` int(11) NOT NULL DEFAULT '0',
+  `linkedin` int(11) NOT NULL DEFAULT '0',
+  `mozpagerank` int(11) NOT NULL DEFAULT '0',
+  `mozpa` int(11) NOT NULL DEFAULT '0',
+  `mozda` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -8483,7 +8493,7 @@ CREATE TABLE `b871e_rsseo_visitors` (
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `time` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `ip` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `user_id` int(11) NOT NULL DEFAULT 0,
+  `user_id` int(11) NOT NULL DEFAULT '0',
   `agent` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `referer` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `page` text COLLATE utf8mb4_unicode_ci NOT NULL
@@ -8516,10 +8526,10 @@ INSERT INTO `b871e_schemas` (`extension_id`, `version_id`) VALUES
 CREATE TABLE `b871e_session` (
   `session_id` varbinary(192) NOT NULL,
   `client_id` tinyint(3) UNSIGNED DEFAULT NULL,
-  `guest` tinyint(3) UNSIGNED DEFAULT 1,
-  `time` int(11) NOT NULL DEFAULT 0,
-  `data` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `userid` int(11) DEFAULT 0,
+  `guest` tinyint(3) UNSIGNED DEFAULT '1',
+  `time` int(11) NOT NULL DEFAULT '0',
+  `data` mediumtext COLLATE utf8mb4_unicode_ci,
+  `userid` int(11) DEFAULT '0',
   `username` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -8528,8 +8538,8 @@ CREATE TABLE `b871e_session` (
 --
 
 INSERT INTO `b871e_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-(0x6639753034617370736c34336c716a76726c626b693438397230, 0, 1, 1624443476, 'joomla|s:1012:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo1ODtzOjU6InRva2VuIjtzOjMyOiJtMnJHNTBXcXFhb0VyZHM5MktsbTVaTzh0MEgydXBTTiI7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNjI0NDQxOTI0O3M6NDoibGFzdCI7aToxNjI0NDQzNDc1O3M6Mzoibm93IjtpOjE2MjQ0NDM0NzY7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6MDp7fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO2k6MDt9czoxNDoiY29tX3JzY29tbWVudHMiO086ODoic3RkQ2xhc3MiOjI6e3M6OToiSWRDb21tZW50IjtOO3M6MTA6InNlY3VyaW1hZ2UiO086ODoic3RkQ2xhc3MiOjE6e3M6MzY6ImZvcm00YzZkZWFkMTRjYjZiMmIwZDk2ODRjZTFhMGI5NDUyMCI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo1OiJ2YWx1ZSI7czo1OiJoVGVBaCI7czo1OiJjdGltZSI7aToxNjI0NDQzNDc2O319fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9\";', 0, ''),
-(0x696e6d623837746f346b6670326230666236396c696b76706a67, 1, 1, 1624443606, 'joomla|s:736:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTYyNDQ0MzYwNjtzOjQ6Imxhc3QiO2k6MTYyNDQ0MzYwNjtzOjM6Im5vdyI7aToxNjI0NDQzNjA2O31zOjU6InRva2VuIjtzOjMyOiJXeDRYNzg1Z2RyNDNrN29xUTFNR0dqbzB4d3haYzRRciI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";', 0, '');
+(0x353461706b65363732727566366e61696d67387072727071746c, 1, 0, 1624459998, 'joomla|s:868:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo0O3M6NToidG9rZW4iO3M6MzI6ImRGRHZhc25EVUtleHFQSE1WRzFVVEVGOEdJcFc0WWxqIjtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE2MjQ0NTk5ODM7czo0OiJsYXN0IjtpOjE2MjQ0NTk5ODQ7czozOiJub3ciO2k6MTYyNDQ1OTk4NTt9fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjoxOntzOjEzOiJjb21faW5zdGFsbGVyIjtPOjg6InN0ZENsYXNzIjoyOntzOjc6Im1lc3NhZ2UiO3M6MDoiIjtzOjE3OiJleHRlbnNpb25fbWVzc2FnZSI7czowOiIiO319czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7czozOiI0ODAiO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";', 480, 'developer'),
+(0x6e31613369736e38756f3738753975736f3337366e7030626a37, 0, 1, 1624450050, 'joomla|s:816:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToyNDtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE2MjQ0NDgzNzU7czo0OiJsYXN0IjtpOjE2MjQ0NDk5MDY7czozOiJub3ciO2k6MTYyNDQ1MDA0ODt9czo1OiJ0b2tlbiI7czozMjoiREZoMzVmNDg2TDI4REZUZ0NvaG8xd1hDMWtDdjRIR0wiO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6MDp7fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO2k6MDt9czoxNDoiY29tX3JzY29tbWVudHMiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiSWRDb21tZW50IjtOO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";', 0, '');
 
 -- --------------------------------------------------------
 
@@ -8539,33 +8549,33 @@ INSERT INTO `b871e_session` (`session_id`, `client_id`, `guest`, `time`, `data`,
 
 CREATE TABLE `b871e_tags` (
   `id` int(10) UNSIGNED NOT NULL,
-  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `lft` int(11) NOT NULL DEFAULT 0,
-  `rgt` int(11) NOT NULL DEFAULT 0,
-  `level` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `lft` int(11) NOT NULL DEFAULT '0',
+  `rgt` int(11) NOT NULL DEFAULT '0',
+  `level` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `path` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
   `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `description` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `checked_out` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `checked_out` int(11) UNSIGNED NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `access` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadesc` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The meta description for the page.',
   `metakey` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The meta keywords for the page.',
   `metadata` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'JSON encoded metadata properties.',
-  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `created_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `modified_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `modified_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `modified_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `images` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `urls` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `hits` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `version` int(10) UNSIGNED NOT NULL DEFAULT 1,
+  `version` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -8591,7 +8601,7 @@ INSERT INTO `b871e_tags` (`id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `tit
 CREATE TABLE `b871e_template_styles` (
   `id` int(10) UNSIGNED NOT NULL,
   `template` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `client_id` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `client_id` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
   `home` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL
@@ -8606,7 +8616,7 @@ INSERT INTO `b871e_template_styles` (`id`, `template`, `client_id`, `home`, `tit
 (5, 'hathor', 1, '0', 'Hathor - Default', '{\"showSiteName\":\"0\",\"colourChoice\":\"\",\"boldText\":\"0\"}'),
 (7, 'protostar', 0, '0', 'protostar - Default', '{\"templateColor\":\"\",\"logoFile\":\"\",\"googleFont\":\"1\",\"googleFontName\":\"Open+Sans\",\"fluidContainer\":\"0\"}'),
 (8, 'isis', 1, '1', 'isis - Default', '{\"templateColor\":\"\",\"logoFile\":\"\"}'),
-(9, 'hostiran', 0, '1', 'Rakhshan Steel', '{\"presetcolor\":\"#e0ae45\",\"templatecolor\":\"#e0ae45\",\"font\":\"iranyekan\",\"headercontact\":[\"phone\",\"cellphone\",\"email\"],\"stickyHeader\":\"1\",\"halign\":\"center\",\"footerbgcolor\":\"#141414\",\"email\":\"info@rakhshansteel.com\",\"phone\":\"\\u06f0\\u06f2\\u06f1 \\u06f2\\u06f3\\u06f4\\u06f5 \\u06f6\\u06f7\\u06f8\\u06f9\",\"fax\":\"\\u06f0\\u06f2\\u06f1 \\u06f9\\u06f8\\u06f7\\u06f6 \\u06f5\\u06f4\\u06f3\\u06f2\",\"cellphone\":\"\\u06f0\\u06f9\\u06f1\\u06f2 \\u06f3\\u06f4\\u06f5 \\u06f6\\u06f7\\u06f8\\u06f9\",\"addressfa\":\"\\u062a\\u0647\\u0631\\u0627\\u0646 \\u060c \\u062e\\u06cc\\u0627\\u0628\\u0627\\u0646 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u06cc\\u06a9 \\u060c \\u06a9\\u0648\\u0686\\u0647 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u062f\\u0648\",\"addressen\":\"\",\"socials\":\"{\\\"icon\\\":[\\\"fab fa-facebook-f\\\",\\\"fab fa-instagram\\\",\\\"fab fa-telegram-plane\\\"],\\\"link\\\":[\\\"https:\\/\\/facebook.com\\/rashsanatkhazar\\\",\\\"https:\\/\\/www.instagram.com\\/p\\/B9EPKUcjpiD\\/?igshid=eky3xew787fj\\\",\\\"https:\\/\\/t.me\\/rashsanatkhazar\\\"],\\\"title\\\":[\\\"Facebbok\\\",\\\"Instagram\\\",\\\"Telegram\\\"],\\\"code\\\":[\\\"fb\\\",\\\"ig\\\",\\\"tl\\\"]}\"}');
+(9, 'hostiran', 0, '1', 'Rakhshan Steel', '{\"presetcolor\":\"#e0ae45\",\"templatecolor\":\"#e0ae45\",\"font\":\"iranyekan\",\"headercontact\":[\"phone\",\"cellphone\",\"email\"],\"stickyHeader\":\"1\",\"halign\":\"center\",\"footerbgcolor\":\"#141414\",\"email\":\"info@rakhshansteel.com\",\"phone\":\"\\u06f0\\u06f2\\u06f1 \\u06f6\\u06f6\\u06f3\\u06f9 \\u06f2\\u06f1\\u06f2\\u06f5\\r\\n\\u06f0\\u06f2\\u06f1 \\u06f6\\u06f6\\u06f3\\u06f9 \\u06f2\\u06f1\\u06f2\\u06f7\",\"fax\":\"\",\"cellphone\":\"\\u06f0\\u06f9\\u06f1\\u06f2 \\u06f3\\u06f0\\u06f2 \\u06f8\\u06f6\\u06f6\\u06f5\\r\\n\\u06f0\\u06f9\\u06f1\\u06f2 \\u06f6\\u06f3\\u06f0 \\u06f8\\u06f8\\u06f7\\u06f0\",\"addressfa\":\"\\u0628\\u0632\\u0631\\u06af\\u0631\\u0627\\u0647 \\u0641\\u062a\\u062d \\u060c \\u06a9\\u06cc\\u0644\\u0648\\u0645\\u062a\\u0631 \\u06f4 \\u060c \\u0645\\u062c\\u062a\\u0645\\u0639 \\u062a\\u062c\\u0627\\u0631\\u062a \\u0627\\u0633\\u062a\\u06cc\\u0644 \\u0627\\u06cc\\u0631\\u0627\\u0646 \\u060c \\u067e\\u0644\\u0627\\u06a9 \\u06f1\\u06f8\\u06f1\",\"addressen\":\"\",\"socials\":\"{\\\"icon\\\":[\\\"fab fa-facebook-f\\\",\\\"fab fa-instagram\\\",\\\"fab fa-telegram-plane\\\"],\\\"link\\\":[\\\"https:\\/\\/facebook.com\\/rashsanatkhazar\\\",\\\"https:\\/\\/www.instagram.com\\/p\\/B9EPKUcjpiD\\/?igshid=eky3xew787fj\\\",\\\"https:\\/\\/t.me\\/rashsanatkhazar\\\"],\\\"title\\\":[\\\"Facebbok\\\",\\\"Instagram\\\",\\\"Telegram\\\"],\\\"code\\\":[\\\"fb\\\",\\\"ig\\\",\\\"tl\\\"]}\"}');
 
 -- --------------------------------------------------------
 
@@ -8649,34 +8659,34 @@ CREATE TABLE `b871e_ucm_content` (
   `core_type_alias` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'FK to the content types table',
   `core_title` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `core_alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
-  `core_body` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `core_state` tinyint(1) NOT NULL DEFAULT 0,
+  `core_body` mediumtext COLLATE utf8mb4_unicode_ci,
+  `core_state` tinyint(1) NOT NULL DEFAULT '0',
   `core_checked_out_time` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `core_checked_out_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `core_access` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `core_params` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `core_featured` tinyint(4) UNSIGNED NOT NULL DEFAULT 0,
+  `core_checked_out_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `core_access` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `core_params` text COLLATE utf8mb4_unicode_ci,
+  `core_featured` tinyint(4) UNSIGNED NOT NULL DEFAULT '0',
   `core_metadata` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'JSON encoded metadata properties.',
-  `core_created_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `core_created_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `core_created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `core_created_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `core_modified_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Most recent user that modified',
+  `core_modified_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Most recent user that modified',
   `core_modified_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `core_language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `core_publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `core_publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `core_content_item_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'ID from the individual type table',
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
-  `core_images` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `core_urls` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `core_hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `core_version` int(10) UNSIGNED NOT NULL DEFAULT 1,
-  `core_ordering` int(11) NOT NULL DEFAULT 0,
-  `core_metakey` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `core_metadesc` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `core_catid` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `core_content_item_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'ID from the individual type table',
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table.',
+  `core_images` text COLLATE utf8mb4_unicode_ci,
+  `core_urls` text COLLATE utf8mb4_unicode_ci,
+  `core_hits` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `core_version` int(10) UNSIGNED NOT NULL DEFAULT '1',
+  `core_ordering` int(11) NOT NULL DEFAULT '0',
+  `core_metakey` text COLLATE utf8mb4_unicode_ci,
+  `core_metadesc` text COLLATE utf8mb4_unicode_ci,
+  `core_catid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `core_xreference` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'A reference to enable linkages to external data sets.',
-  `core_type_id` int(10) UNSIGNED NOT NULL DEFAULT 0
+  `core_type_id` int(10) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Contains core content data in name spaced fields';
 
 --
@@ -8684,7 +8694,7 @@ CREATE TABLE `b871e_ucm_content` (
 --
 
 INSERT INTO `b871e_ucm_content` (`core_content_id`, `core_type_alias`, `core_title`, `core_alias`, `core_body`, `core_state`, `core_checked_out_time`, `core_checked_out_user_id`, `core_access`, `core_params`, `core_featured`, `core_metadata`, `core_created_user_id`, `core_created_by_alias`, `core_created_time`, `core_modified_user_id`, `core_modified_time`, `core_language`, `core_publish_up`, `core_publish_down`, `core_content_item_id`, `asset_id`, `core_images`, `core_urls`, `core_hits`, `core_version`, `core_ordering`, `core_metakey`, `core_metadesc`, `core_catid`, `core_xreference`, `core_type_id`) VALUES
-(1, 'com_content.article', 'مطلب شماره سه بلاگ', 'مطلب-شماره-سه-بلاگ', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف</p>\r\n', 1, '0000-00-00 00:00:00', 0, 1, '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 480, '', '2021-06-22 16:39:07', 480, '2021-06-22 23:55:58', '*', '2021-06-22 16:39:07', '0000-00-00 00:00:00', 3, 71, '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/sampledata\\/parks\\/animals\\/photo-1555911599-e70784b1e21d.jpg\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', 520, 20, 2, '', '', 8, '', 1),
+(1, 'com_content.article', 'مطلب شماره سه بلاگ', 'مطلب-شماره-سه-بلاگ', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف</p>\r\n', 1, '0000-00-00 00:00:00', 0, 1, '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 480, '', '2021-06-22 16:39:07', 480, '2021-06-23 10:46:04', '*', '2021-06-22 16:39:07', '0000-00-00 00:00:00', 3, 71, '{\"image_intro\":\"images\\/GAV66-FT_Isolation_Valve_01.jpg\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/photo-1497436072909-60f360e1d4b1.jpg\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', 522, 21, 2, '', '', 8, '', 1),
 (4, 'com_content.article', 'مطلب شماره دو بلاگ', 'مطلب-شماره-دو-بلاگ', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت</p>\r\n', 1, '0000-00-00 00:00:00', 0, 1, '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 480, '', '2021-06-22 04:31:12', 480, '2021-06-22 23:57:37', '*', '2021-06-22 04:31:12', '0000-00-00 00:00:00', 2, 76, '{\"image_intro\":\"images\\/photo-1497436072909-60f360e1d4b1.jpg\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/photo-1497436072909-60f360e1d4b1.jpg\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', 25, 10, 3, '', '', 8, '', 1),
 (5, 'com_content.article', 'مطلب شماره یک بلاگ', 'مطلب-شماره-یک-بلاگ', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>\r\n', 1, '0000-00-00 00:00:00', 0, 1, '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 480, '', '2021-06-22 04:31:12', 480, '2021-06-22 23:55:21', '*', '2021-06-22 04:31:12', '0000-00-00 00:00:00', 1, 77, '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', 56, 10, 4, '', '', 8, '', 1),
 (6, 'com_content.article', 'مطلب شماره یک بلاگ (2)', 'مطلب-شماره-یک-بلاگ-2', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>\r\n', 1, '0000-00-00 00:00:00', 0, 1, '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 480, '', '2021-06-22 04:31:12', 480, '2021-06-22 23:56:15', '*', '2021-06-22 04:31:12', '0000-00-00 00:00:00', 4, 79, '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', 21, 2, 1, '', '', 8, '', 1),
@@ -8708,11 +8718,11 @@ CREATE TABLE `b871e_ucm_history` (
   `ucm_type_id` int(10) UNSIGNED NOT NULL,
   `version_note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'Optional version name',
   `save_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `editor_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `character_count` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Number of characters in this version.',
+  `editor_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `character_count` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Number of characters in this version.',
   `sha1_hash` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'SHA1 hash of the version_data column.',
   `version_data` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'json-encoded string of version data',
-  `keep_forever` tinyint(4) NOT NULL DEFAULT 0 COMMENT '0=auto delete; 1=keep'
+  `keep_forever` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0=auto delete; 1=keep'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -8730,11 +8740,10 @@ INSERT INTO `b871e_ucm_history` (`version_id`, `ucm_item_id`, `ucm_type_id`, `ve
 (7, 1, 1, '', '2019-08-07 15:35:19', 480, 12278, '9996a74d91be41a6bca01c6369515b56592fbe15', '{\"id\":1,\"asset_id\":\"68\",\"title\":\"\\u0645\\u0637\\u0644\\u0628 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u06cc\\u06a9 \\u0628\\u0644\\u0627\\u06af\",\"alias\":\"\\u0645\\u0637\\u0644\\u0628-\\u0634\\u0645\\u0627\\u0631\\u0647-\\u06cc\\u06a9-\\u0628\\u0644\\u0627\\u06af\",\"introtext\":\"<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f.<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<p>\\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\",\"state\":1,\"catid\":\"8\",\"created\":\"2019-08-07 04:31:12\",\"created_by\":\"480\",\"created_by_alias\":\"\",\"modified\":\"2019-08-07 15:35:19\",\"modified_by\":\"480\",\"checked_out\":\"480\",\"checked_out_time\":\"2019-08-07 15:34:59\",\"publish_up\":\"2019-08-07 04:31:12\",\"publish_down\":\"0000-00-00 00:00:00\",\"images\":\"{\\\"image_intro\\\":\\\"\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":false,\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":false,\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":false,\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_associations\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_icons\\\":\\\"\\\",\\\"show_print_icon\\\":\\\"\\\",\\\"show_email_icon\\\":\\\"\\\",\\\"show_vote\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":3,\"ordering\":\"1\",\"metakey\":\"\",\"metadesc\":\"\",\"access\":\"1\",\"hits\":\"0\",\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\",\\\"xreference\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"xreference\":\"\",\"note\":\"\"}', 0);
 INSERT INTO `b871e_ucm_history` (`version_id`, `ucm_item_id`, `ucm_type_id`, `version_note`, `save_date`, `editor_user_id`, `character_count`, `sha1_hash`, `version_data`, `keep_forever`) VALUES
 (8, 2, 1, '', '2019-08-07 15:37:53', 480, 12324, '2a5ad24ba14c39cc0057314bf4d081f430d3c33e', '{\"id\":2,\"asset_id\":\"69\",\"title\":\"\\u0645\\u0637\\u0644\\u0628 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u062f\\u0648 \\u0628\\u0644\\u0627\\u06af\",\"alias\":\"\\u0645\\u0637\\u0644\\u0628-\\u0634\\u0645\\u0627\\u0631\\u0647-\\u062f\\u0648-\\u0628\\u0644\\u0627\\u06af\",\"introtext\":\"<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<p>\\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\",\"state\":1,\"catid\":\"8\",\"created\":\"2019-08-07 04:31:12\",\"created_by\":\"480\",\"created_by_alias\":\"\",\"modified\":\"2019-08-07 15:37:53\",\"modified_by\":\"480\",\"checked_out\":\"480\",\"checked_out_time\":\"2019-08-07 15:37:43\",\"publish_up\":\"2019-08-07 04:31:12\",\"publish_down\":\"0000-00-00 00:00:00\",\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/sampledata\\\\\\/fruitshop\\\\\\/apple.jpg\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":false,\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":false,\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":false,\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_associations\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_icons\\\":\\\"\\\",\\\"show_print_icon\\\":\\\"\\\",\\\"show_email_icon\\\":\\\"\\\",\\\"show_vote\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":4,\"ordering\":\"0\",\"metakey\":\"\",\"metadesc\":\"\",\"access\":\"1\",\"hits\":\"3\",\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\",\\\"xreference\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"xreference\":\"\",\"note\":\"\"}', 0),
-(15, 3, 1, '', '2019-08-10 16:30:51', 480, 9481, 'd30c2bfd0de69117a176040dc4b9bf3829e67868', '{\"id\":3,\"asset_id\":\"70\",\"title\":\"\\u0645\\u0637\\u0644\\u0628 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u0633\\u0647 \\u0628\\u0644\\u0627\\u06af\",\"alias\":\"\\u0645\\u0637\\u0644\\u0628-\\u0634\\u0645\\u0627\\u0631\\u0647-\\u0633\\u0647-\\u0628\\u0644\\u0627\\u06af\",\"introtext\":\"<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<blockquote>\\r\\n<p>\\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<\\/blockquote>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\",\"state\":1,\"catid\":\"8\",\"created\":\"2019-08-07 16:39:07\",\"created_by\":\"480\",\"created_by_alias\":\"\",\"modified\":\"2019-08-10 16:30:51\",\"modified_by\":\"480\",\"checked_out\":\"480\",\"checked_out_time\":\"2019-08-10 16:30:17\",\"publish_up\":\"2019-08-07 16:39:07\",\"publish_down\":\"0000-00-00 00:00:00\",\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/800px_wobbegong.jpg\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/photo-1555911599-e70784b1e21d.jpg\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\\u0644\\\\u0648\\\\u0631\\\\u0645 \\\\u0627\\\\u06cc\\\\u067e\\\\u0633\\\\u0648\\\\u0645 \\\\u0645\\\\u062a\\\\u0646 \\\\u0633\\\\u0627\\\\u062e\\\\u062a\\\\u06af\\\\u06cc \\\\u0628\\\\u0627 \\\\u062a\\\\u0648\\\\u0644\\\\u06cc\\\\u062f \\\\u0633\\\\u0627\\\\u062f\\\\u06af\\\\u06cc \\\\u0646\\\\u0627\\\\u0645\\\\u0641\\\\u0647\\\\u0648\\\\u0645 \\\\u0627\\\\u0632 \\\\u0635\\\\u0646\\\\u0639\\\\u062a \\\\u0686\\\\u0627\\\\u067e \\\\u0648 \\\\u0628\\\\u0627 \\\\u0627\\\\u0633\\\\u062a\\\\u0641\\\\u0627\\\\u062f\\\\u0647 \\\\u0627\\\\u0632 \\\\u0637\\\\u0631\\\\u0627\\\\u062d\\\\u0627\\\\u0646\\\"}\",\"urls\":\"{\\\"urla\\\":false,\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":false,\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":false,\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_associations\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_icons\\\":\\\"\\\",\\\"show_print_icon\\\":\\\"\\\",\\\"show_email_icon\\\":\\\"\\\",\\\"show_vote\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":7,\"ordering\":\"0\",\"metakey\":\"\",\"metadesc\":\"\",\"access\":\"1\",\"hits\":\"33\",\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\",\\\"xreference\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"xreference\":\"\",\"note\":\"\"}', 0),
 (16, 3, 1, '', '2019-08-10 18:04:47', 480, 9518, '7a6a9f48a9edde025af0eb7fcdddebcc1198336d', '{\"id\":3,\"asset_id\":\"70\",\"title\":\"\\u0645\\u0637\\u0644\\u0628 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u0633\\u0647 \\u0628\\u0644\\u0627\\u06af\",\"alias\":\"\\u0645\\u0637\\u0644\\u0628-\\u0634\\u0645\\u0627\\u0631\\u0647-\\u0633\\u0647-\\u0628\\u0644\\u0627\\u06af\",\"introtext\":\"<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<blockquote>\\r\\n<p>\\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<\\/blockquote>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 <a href=\\\"#\\\">\\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645<\\/a> \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c <strong>\\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646<\\/strong> \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\",\"state\":1,\"catid\":\"8\",\"created\":\"2019-08-07 16:39:07\",\"created_by\":\"480\",\"created_by_alias\":\"\",\"modified\":\"2019-08-10 18:04:47\",\"modified_by\":\"480\",\"checked_out\":\"480\",\"checked_out_time\":\"2019-08-10 16:30:51\",\"publish_up\":\"2019-08-07 16:39:07\",\"publish_down\":\"0000-00-00 00:00:00\",\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/800px_wobbegong.jpg\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/photo-1555911599-e70784b1e21d.jpg\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\\u0644\\\\u0648\\\\u0631\\\\u0645 \\\\u0627\\\\u06cc\\\\u067e\\\\u0633\\\\u0648\\\\u0645 \\\\u0645\\\\u062a\\\\u0646 \\\\u0633\\\\u0627\\\\u062e\\\\u062a\\\\u06af\\\\u06cc \\\\u0628\\\\u0627 \\\\u062a\\\\u0648\\\\u0644\\\\u06cc\\\\u062f \\\\u0633\\\\u0627\\\\u062f\\\\u06af\\\\u06cc \\\\u0646\\\\u0627\\\\u0645\\\\u0641\\\\u0647\\\\u0648\\\\u0645 \\\\u0627\\\\u0632 \\\\u0635\\\\u0646\\\\u0639\\\\u062a \\\\u0686\\\\u0627\\\\u067e \\\\u0648 \\\\u0628\\\\u0627 \\\\u0627\\\\u0633\\\\u062a\\\\u0641\\\\u0627\\\\u062f\\\\u0647 \\\\u0627\\\\u0632 \\\\u0637\\\\u0631\\\\u0627\\\\u062d\\\\u0627\\\\u0646\\\"}\",\"urls\":\"{\\\"urla\\\":false,\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":false,\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":false,\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_associations\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_icons\\\":\\\"\\\",\\\"show_print_icon\\\":\\\"\\\",\\\"show_email_icon\\\":\\\"\\\",\\\"show_vote\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":8,\"ordering\":\"0\",\"metakey\":\"\",\"metadesc\":\"\",\"access\":\"1\",\"hits\":\"58\",\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\",\\\"xreference\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"xreference\":\"\",\"note\":\"\"}', 0),
-(17, 3, 1, '', '2019-08-10 18:26:20', 480, 9049, '16cf36bdb25bb9ad7cb83b9b4ee7f99de949b0c2', '{\"id\":3,\"asset_id\":\"70\",\"title\":\"\\u0645\\u0637\\u0644\\u0628 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u0633\\u0647 \\u0628\\u0644\\u0627\\u06af\",\"alias\":\"\\u0645\\u0637\\u0644\\u0628-\\u0634\\u0645\\u0627\\u0631\\u0647-\\u0633\\u0647-\\u0628\\u0644\\u0627\\u06af\",\"introtext\":\"<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<blockquote>\\r\\n<p>\\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<\\/blockquote>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 <a href=\\\"#\\\">\\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645<\\/a> \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c <strong>\\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646<\\/strong> \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\",\"state\":1,\"catid\":\"8\",\"created\":\"2019-08-07 16:39:07\",\"created_by\":\"480\",\"created_by_alias\":\"\",\"modified\":\"2019-08-10 18:26:20\",\"modified_by\":\"480\",\"checked_out\":\"480\",\"checked_out_time\":\"2019-08-10 18:05:04\",\"publish_up\":\"2019-08-07 16:39:07\",\"publish_down\":\"0000-00-00 00:00:00\",\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/800px_wobbegong.jpg\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/photo-1555911599-e70784b1e21d.jpg\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":false,\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":false,\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":false,\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_associations\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_icons\\\":\\\"\\\",\\\"show_print_icon\\\":\\\"\\\",\\\"show_email_icon\\\":\\\"\\\",\\\"show_vote\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":10,\"ordering\":\"0\",\"metakey\":\"\",\"metadesc\":\"\",\"access\":\"1\",\"hits\":\"63\",\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\",\\\"xreference\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"xreference\":\"\",\"note\":\"\"}', 0);
+(17, 3, 1, '', '2019-08-10 18:26:20', 480, 9049, '16cf36bdb25bb9ad7cb83b9b4ee7f99de949b0c2', '{\"id\":3,\"asset_id\":\"70\",\"title\":\"\\u0645\\u0637\\u0644\\u0628 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u0633\\u0647 \\u0628\\u0644\\u0627\\u06af\",\"alias\":\"\\u0645\\u0637\\u0644\\u0628-\\u0634\\u0645\\u0627\\u0631\\u0647-\\u0633\\u0647-\\u0628\\u0644\\u0627\\u06af\",\"introtext\":\"<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<blockquote>\\r\\n<p>\\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<\\/blockquote>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 <a href=\\\"#\\\">\\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645<\\/a> \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c <strong>\\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646<\\/strong> \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\",\"state\":1,\"catid\":\"8\",\"created\":\"2019-08-07 16:39:07\",\"created_by\":\"480\",\"created_by_alias\":\"\",\"modified\":\"2019-08-10 18:26:20\",\"modified_by\":\"480\",\"checked_out\":\"480\",\"checked_out_time\":\"2019-08-10 18:05:04\",\"publish_up\":\"2019-08-07 16:39:07\",\"publish_down\":\"0000-00-00 00:00:00\",\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/800px_wobbegong.jpg\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/photo-1555911599-e70784b1e21d.jpg\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":false,\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":false,\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":false,\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_associations\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_icons\\\":\\\"\\\",\\\"show_print_icon\\\":\\\"\\\",\\\"show_email_icon\\\":\\\"\\\",\\\"show_vote\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":10,\"ordering\":\"0\",\"metakey\":\"\",\"metadesc\":\"\",\"access\":\"1\",\"hits\":\"63\",\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\",\\\"xreference\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"xreference\":\"\",\"note\":\"\"}', 0),
+(18, 3, 1, '', '2019-08-11 07:32:53', 480, 9063, 'b352697ddf895d78cd8485c8d6759d9f9455d18e', '{\"id\":3,\"asset_id\":\"70\",\"title\":\"\\u0645\\u0637\\u0644\\u0628 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u0633\\u0647 \\u0628\\u0644\\u0627\\u06af\",\"alias\":\"\\u0645\\u0637\\u0644\\u0628-\\u0634\\u0645\\u0627\\u0631\\u0647-\\u0633\\u0647-\\u0628\\u0644\\u0627\\u06af\",\"introtext\":\"<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<blockquote>\\r\\n<p>\\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<\\/blockquote>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 <a href=\\\"#\\\">\\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645<\\/a> \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c <strong>\\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646<\\/strong> \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 <span>\\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc<\\/span> \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\",\"state\":1,\"catid\":\"8\",\"created\":\"2019-08-07 16:39:07\",\"created_by\":\"480\",\"created_by_alias\":\"\",\"modified\":\"2019-08-11 07:32:53\",\"modified_by\":\"480\",\"checked_out\":\"480\",\"checked_out_time\":\"2019-08-11 07:32:28\",\"publish_up\":\"2019-08-07 16:39:07\",\"publish_down\":\"0000-00-00 00:00:00\",\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/800px_wobbegong.jpg\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/photo-1555911599-e70784b1e21d.jpg\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":false,\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":false,\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":false,\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_associations\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_icons\\\":\\\"\\\",\\\"show_print_icon\\\":\\\"\\\",\\\"show_email_icon\\\":\\\"\\\",\\\"show_vote\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":11,\"ordering\":\"0\",\"metakey\":\"\",\"metadesc\":\"\",\"access\":\"1\",\"hits\":\"65\",\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\",\\\"xreference\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"xreference\":\"\",\"note\":\"\"}', 0);
 INSERT INTO `b871e_ucm_history` (`version_id`, `ucm_item_id`, `ucm_type_id`, `version_note`, `save_date`, `editor_user_id`, `character_count`, `sha1_hash`, `version_data`, `keep_forever`) VALUES
-(18, 3, 1, '', '2019-08-11 07:32:53', 480, 9063, 'b352697ddf895d78cd8485c8d6759d9f9455d18e', '{\"id\":3,\"asset_id\":\"70\",\"title\":\"\\u0645\\u0637\\u0644\\u0628 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u0633\\u0647 \\u0628\\u0644\\u0627\\u06af\",\"alias\":\"\\u0645\\u0637\\u0644\\u0628-\\u0634\\u0645\\u0627\\u0631\\u0647-\\u0633\\u0647-\\u0628\\u0644\\u0627\\u06af\",\"introtext\":\"<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<blockquote>\\r\\n<p>\\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<\\/blockquote>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 <a href=\\\"#\\\">\\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645<\\/a> \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c <strong>\\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646<\\/strong> \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 <span>\\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc<\\/span> \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\",\"state\":1,\"catid\":\"8\",\"created\":\"2019-08-07 16:39:07\",\"created_by\":\"480\",\"created_by_alias\":\"\",\"modified\":\"2019-08-11 07:32:53\",\"modified_by\":\"480\",\"checked_out\":\"480\",\"checked_out_time\":\"2019-08-11 07:32:28\",\"publish_up\":\"2019-08-07 16:39:07\",\"publish_down\":\"0000-00-00 00:00:00\",\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/800px_wobbegong.jpg\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/photo-1555911599-e70784b1e21d.jpg\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":false,\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":false,\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":false,\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_associations\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_icons\\\":\\\"\\\",\\\"show_print_icon\\\":\\\"\\\",\\\"show_email_icon\\\":\\\"\\\",\\\"show_vote\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":11,\"ordering\":\"0\",\"metakey\":\"\",\"metadesc\":\"\",\"access\":\"1\",\"hits\":\"65\",\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\",\\\"xreference\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"xreference\":\"\",\"note\":\"\"}', 0),
 (19, 3, 1, '', '2019-08-11 07:33:11', 480, 9091, 'e7febbba284319dae6f89fa89f1d9773bf5d14c1', '{\"id\":3,\"asset_id\":\"70\",\"title\":\"\\u0645\\u0637\\u0644\\u0628 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u0633\\u0647 \\u0628\\u0644\\u0627\\u06af\",\"alias\":\"\\u0645\\u0637\\u0644\\u0628-\\u0634\\u0645\\u0627\\u0631\\u0647-\\u0633\\u0647-\\u0628\\u0644\\u0627\\u06af\",\"introtext\":\"<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<blockquote>\\r\\n<p>\\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<\\/blockquote>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 <a href=\\\"#\\\">\\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645<\\/a> \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c <strong>\\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646<\\/strong> \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc <span>\\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 <\\/span><span><span>\\u0641\\u0631\\u0647\\u0646\\u06af<\\/span> \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc<\\/span> \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\",\"state\":1,\"catid\":\"8\",\"created\":\"2019-08-07 16:39:07\",\"created_by\":\"480\",\"created_by_alias\":\"\",\"modified\":\"2019-08-11 07:33:11\",\"modified_by\":\"480\",\"checked_out\":\"480\",\"checked_out_time\":\"2019-08-11 07:32:53\",\"publish_up\":\"2019-08-07 16:39:07\",\"publish_down\":\"0000-00-00 00:00:00\",\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/800px_wobbegong.jpg\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/photo-1555911599-e70784b1e21d.jpg\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":false,\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":false,\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":false,\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_associations\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_icons\\\":\\\"\\\",\\\"show_print_icon\\\":\\\"\\\",\\\"show_email_icon\\\":\\\"\\\",\\\"show_vote\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":12,\"ordering\":\"0\",\"metakey\":\"\",\"metadesc\":\"\",\"access\":\"1\",\"hits\":\"66\",\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\",\\\"xreference\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"xreference\":\"\",\"note\":\"\"}', 0),
 (20, 3, 1, '', '2019-08-11 07:42:27', 480, 9103, 'b44dd7b3426f94ab1ff5eae0a6e19ac192cb375b', '{\"id\":3,\"asset_id\":\"70\",\"title\":\"\\u0645\\u0637\\u0644\\u0628 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u0633\\u0647 \\u0628\\u0644\\u0627\\u06af\",\"alias\":\"\\u0645\\u0637\\u0644\\u0628-\\u0634\\u0645\\u0627\\u0631\\u0647-\\u0633\\u0647-\\u0628\\u0644\\u0627\\u06af\",\"introtext\":\"<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<blockquote>\\r\\n<p>\\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<\\/blockquote>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 <a href=\\\"#\\\">\\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645<\\/a> \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c <strong>\\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646<\\/strong> \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc <span>\\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 <\\/span><span style=\\\"color: #ffcc00;\\\">\\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc<\\/span> \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\",\"state\":1,\"catid\":\"8\",\"created\":\"2019-08-07 16:39:07\",\"created_by\":\"480\",\"created_by_alias\":\"\",\"modified\":\"2019-08-11 07:42:27\",\"modified_by\":\"480\",\"checked_out\":\"480\",\"checked_out_time\":\"2019-08-11 07:42:03\",\"publish_up\":\"2019-08-07 16:39:07\",\"publish_down\":\"0000-00-00 00:00:00\",\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/800px_wobbegong.jpg\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/photo-1555911599-e70784b1e21d.jpg\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":false,\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":false,\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":false,\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_associations\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_icons\\\":\\\"\\\",\\\"show_print_icon\\\":\\\"\\\",\\\"show_email_icon\\\":\\\"\\\",\\\"show_vote\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":15,\"ordering\":\"0\",\"metakey\":\"\",\"metadesc\":\"\",\"access\":\"1\",\"hits\":\"66\",\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\",\\\"xreference\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"xreference\":\"\",\"note\":\"\"}', 0),
 (21, 3, 1, '', '2019-08-11 07:43:50', 480, 12545, 'bb7d4cc358874ca9aac265d037a11e7de483286b', '{\"id\":3,\"asset_id\":\"70\",\"title\":\"\\u0645\\u0637\\u0644\\u0628 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u0633\\u0647 \\u0628\\u0644\\u0627\\u06af\",\"alias\":\"\\u0645\\u0637\\u0644\\u0628-\\u0634\\u0645\\u0627\\u0631\\u0647-\\u0633\\u0647-\\u0628\\u0644\\u0627\\u06af\",\"introtext\":\"<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<blockquote>\\r\\n<p>\\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<\\/blockquote>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 <a href=\\\"#\\\">\\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645<\\/a> \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c <strong>\\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646<\\/strong> \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc <span>\\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 <\\/span><span style=\\\"color: #ffcc00;\\\">\\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc<\\/span> \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\",\"state\":1,\"catid\":\"8\",\"created\":\"2019-08-07 16:39:07\",\"created_by\":\"480\",\"created_by_alias\":\"\",\"modified\":\"2019-08-11 07:43:50\",\"modified_by\":\"480\",\"checked_out\":\"480\",\"checked_out_time\":\"2019-08-11 07:42:27\",\"publish_up\":\"2019-08-07 16:39:07\",\"publish_down\":\"0000-00-00 00:00:00\",\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/800px_wobbegong.jpg\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"images\\\\\\/sampledata\\\\\\/parks\\\\\\/animals\\\\\\/photo-1555911599-e70784b1e21d.jpg\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":false,\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":false,\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":false,\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_associations\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_icons\\\":\\\"\\\",\\\"show_print_icon\\\":\\\"\\\",\\\"show_email_icon\\\":\\\"\\\",\\\"show_vote\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":16,\"ordering\":\"0\",\"metakey\":\"\",\"metadesc\":\"\",\"access\":\"1\",\"hits\":\"68\",\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\",\\\"xreference\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"xreference\":\"\",\"note\":\"\"}', 0);
@@ -8883,6 +8892,8 @@ INSERT INTO `b871e_ucm_history` (`version_id`, `ucm_item_id`, `ucm_type_id`, `ve
 (200, 7, 1, '', '2021-06-23 00:55:25', 480, 1962, 'cf818215d4baea1ae3a86b3102c9c38cdf7c5ee9', '{\"id\":7,\"asset_id\":\"97\",\"title\":\"\\u0645\\u062d\\u0635\\u0648\\u0644 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u06cc\\u06a9 (2)\",\"alias\":\"\\u0645\\u062d\\u0635\\u0648\\u0644-\\u0634\\u0645\\u0627\\u0631\\u0647-\\u06cc\\u06a9-2\",\"introtext\":\"\",\"fulltext\":\"\",\"state\":1,\"catid\":\"14\",\"created\":\"2019-08-24 14:23:40\",\"created_by\":\"480\",\"created_by_alias\":\"\",\"modified\":\"2021-06-23 00:55:25\",\"modified_by\":\"480\",\"checked_out\":\"480\",\"checked_out_time\":\"2021-06-23 00:55:11\",\"publish_up\":\"2019-08-24 14:23:40\",\"publish_down\":\"0000-00-00 00:00:00\",\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/stainless_steel_150lb_316_52_of_57__7.jpg\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":false,\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":false,\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":false,\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_associations\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_icons\\\":\\\"\\\",\\\"show_print_icon\\\":\\\"\\\",\\\"show_email_icon\\\":\\\"\\\",\\\"show_vote\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":5,\"ordering\":\"2\",\"metakey\":\"\",\"metadesc\":\"\",\"access\":\"1\",\"hits\":\"23\",\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\",\\\"xreference\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"xreference\":\"\",\"note\":\"\"}', 0),
 (201, 6, 8, '', '2021-06-23 01:10:54', 480, 898, 'd8fd43a1b7ba959e4979cdc234ec086a0872aa68', '{\"id\":6,\"parent_id\":\"1\",\"lft\":\"9\",\"rgt\":10,\"level\":1,\"path\":null,\"title\":\"\\u0645\\u062d\\u0635\\u0648\\u0644\",\"alias\":\"\\u0645\\u062d\\u0635\\u0648\\u0644\",\"note\":\"\",\"description\":\"\",\"published\":\"1\",\"checked_out\":null,\"checked_out_time\":\"2021-06-23 01:10:54\",\"access\":\"1\",\"params\":\"{\\\"tag_layout\\\":\\\"\\\",\\\"tag_link_class\\\":\\\"label label-info\\\"}\",\"metadesc\":\"\",\"metakey\":\"\",\"metadata\":\"{\\\"author\\\":\\\"\\\",\\\"robots\\\":\\\"\\\"}\",\"created_user_id\":\"480\",\"created_time\":\"2021-06-23 01:10:54\",\"created_by_alias\":\"\",\"modified_user_id\":null,\"modified_time\":\"2021-06-23 01:10:54\",\"images\":\"{\\\"image_intro\\\":\\\"\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{}\",\"hits\":null,\"language\":\"*\",\"version\":null,\"publish_up\":\"2021-06-23 01:10:54\",\"publish_down\":\"2021-06-23 01:10:54\"}', 0),
 (202, 19, 1, '', '2021-06-23 10:08:49', 480, 6837, 'a732168b6721c62ea7000fe9117e3492f5945f9f', '{\"id\":19,\"asset_id\":\"141\",\"title\":\"\\u0639\\u0646\\u0648\\u0627\\u0646 \\u0645\\u062d\\u0635\\u0648\\u0644\",\"alias\":\"\\u0639\\u0646\\u0648\\u0627\\u0646-\\u0645\\u062d\\u0635\\u0648\\u0644\",\"introtext\":\"<p>\\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<p>\\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\",\"state\":1,\"catid\":\"11\",\"created\":\"2019-11-27 07:17:49\",\"created_by\":\"480\",\"created_by_alias\":\"\",\"modified\":\"2021-06-23 10:08:49\",\"modified_by\":\"480\",\"checked_out\":\"480\",\"checked_out_time\":\"2021-06-23 10:08:42\",\"publish_up\":\"2019-11-27 07:17:49\",\"publish_down\":\"0000-00-00 00:00:00\",\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/stainless_steel_150lb_316_32_of_57__7.jpg\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":false,\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":false,\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":false,\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_associations\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_icons\\\":\\\"\\\",\\\"show_print_icon\\\":\\\"\\\",\\\"show_email_icon\\\":\\\"\\\",\\\"show_vote\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":16,\"ordering\":\"0\",\"metakey\":\"\",\"metadesc\":\"\",\"access\":\"1\",\"hits\":\"13\",\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\",\\\"xreference\\\":\\\"\\\"}\",\"featured\":\"1\",\"language\":\"*\",\"xreference\":\"\",\"note\":\"\"}', 0);
+INSERT INTO `b871e_ucm_history` (`version_id`, `ucm_item_id`, `ucm_type_id`, `version_note`, `save_date`, `editor_user_id`, `character_count`, `sha1_hash`, `version_data`, `keep_forever`) VALUES
+(203, 3, 1, '', '2021-06-23 10:46:04', 480, 12699, 'd19e8ac8a1ed316565d354af86ad0e785ab60bff', '{\"id\":3,\"asset_id\":\"70\",\"title\":\"\\u0645\\u0637\\u0644\\u0628 \\u0634\\u0645\\u0627\\u0631\\u0647 \\u0633\\u0647 \\u0628\\u0644\\u0627\\u06af\",\"alias\":\"\\u0645\\u0637\\u0644\\u0628-\\u0634\\u0645\\u0627\\u0631\\u0647-\\u0633\\u0647-\\u0628\\u0644\\u0627\\u06af\",\"introtext\":\"<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<blockquote>\\r\\n<p>\\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<\\/blockquote>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 <a href=\\\"#\\\">\\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645<\\/a> \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c <strong>\\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646<\\/strong> \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc <span>\\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 <\\/span><span style=\\\"color: #ffcc00;\\\">\\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc<\\/span> \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\\r\\n<h3>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc<\\/h3>\\r\\n<p>\\u0644\\u0648\\u0631\\u0645 \\u0627\\u06cc\\u067e\\u0633\\u0648\\u0645 \\u0645\\u062a\\u0646 \\u0633\\u0627\\u062e\\u062a\\u06af\\u06cc \\u0628\\u0627 \\u062a\\u0648\\u0644\\u06cc\\u062f \\u0633\\u0627\\u062f\\u06af\\u06cc \\u0646\\u0627\\u0645\\u0641\\u0647\\u0648\\u0645 \\u0627\\u0632 \\u0635\\u0646\\u0639\\u062a \\u0686\\u0627\\u067e \\u0648 \\u0628\\u0627 \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0627\\u0632 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u06af\\u0631\\u0627\\u0641\\u06cc\\u06a9 \\u0627\\u0633\\u062a. \\u0686\\u0627\\u067e\\u06af\\u0631\\u0647\\u0627 \\u0648 \\u0645\\u062a\\u0648\\u0646 \\u0628\\u0644\\u06a9\\u0647 \\u0631\\u0648\\u0632\\u0646\\u0627\\u0645\\u0647 \\u0648 \\u0645\\u062c\\u0644\\u0647 \\u062f\\u0631 \\u0633\\u062a\\u0648\\u0646 \\u0648 \\u0633\\u0637\\u0631\\u0622\\u0646\\u0686\\u0646\\u0627\\u0646 \\u06a9\\u0647 \\u0644\\u0627\\u0632\\u0645 \\u0627\\u0633\\u062a \\u0648 \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0641\\u0639\\u0644\\u06cc \\u062a\\u06a9\\u0646\\u0648\\u0644\\u0648\\u0698\\u06cc \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0648 \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0645\\u062a\\u0646\\u0648\\u0639 \\u0628\\u0627 \\u0647\\u062f\\u0641 \\u0628\\u0647\\u0628\\u0648\\u062f \\u0627\\u0628\\u0632\\u0627\\u0631\\u0647\\u0627\\u06cc \\u06a9\\u0627\\u0631\\u0628\\u0631\\u062f\\u06cc \\u0645\\u06cc \\u0628\\u0627\\u0634\\u062f. \\u06a9\\u062a\\u0627\\u0628\\u0647\\u0627\\u06cc \\u0632\\u06cc\\u0627\\u062f\\u06cc \\u062f\\u0631 \\u0634\\u0635\\u062a \\u0648 \\u0633\\u0647 \\u062f\\u0631\\u0635\\u062f \\u06af\\u0630\\u0634\\u062a\\u0647\\u060c \\u062d\\u0627\\u0644 \\u0648 \\u0622\\u06cc\\u0646\\u062f\\u0647 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0641\\u0631\\u0627\\u0648\\u0627\\u0646 \\u062c\\u0627\\u0645\\u0639\\u0647 \\u0648 \\u0645\\u062a\\u062e\\u0635\\u0635\\u0627\\u0646 \\u0631\\u0627 \\u0645\\u06cc \\u0637\\u0644\\u0628\\u062f \\u062a\\u0627 \\u0628\\u0627 \\u0646\\u0631\\u0645 \\u0627\\u0641\\u0632\\u0627\\u0631\\u0647\\u0627 \\u0634\\u0646\\u0627\\u062e\\u062a \\u0628\\u06cc\\u0634\\u062a\\u0631\\u06cc \\u0631\\u0627 \\u0628\\u0631\\u0627\\u06cc \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u0631\\u0627\\u06cc\\u0627\\u0646\\u0647 \\u0627\\u06cc \\u0639\\u0644\\u06cc \\u0627\\u0644\\u062e\\u0635\\u0648\\u0635 \\u0637\\u0631\\u0627\\u062d\\u0627\\u0646 \\u062e\\u0644\\u0627\\u0642\\u06cc \\u0648 \\u0641\\u0631\\u0647\\u0646\\u06af \\u067e\\u06cc\\u0634\\u0631\\u0648 \\u062f\\u0631 \\u0632\\u0628\\u0627\\u0646 \\u0641\\u0627\\u0631\\u0633\\u06cc \\u0627\\u06cc\\u062c\\u0627\\u062f \\u06a9\\u0631\\u062f. \\u062f\\u0631 \\u0627\\u06cc\\u0646 \\u0635\\u0648\\u0631\\u062a \\u0645\\u06cc \\u062a\\u0648\\u0627\\u0646 \\u0627\\u0645\\u06cc\\u062f \\u062f\\u0627\\u0634\\u062a \\u06a9\\u0647 \\u062a\\u0645\\u0627\\u0645 \\u0648 \\u062f\\u0634\\u0648\\u0627\\u0631\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u062f\\u0631 \\u0627\\u0631\\u0627\\u0626\\u0647 \\u0631\\u0627\\u0647\\u06a9\\u0627\\u0631\\u0647\\u0627 \\u0648 \\u0634\\u0631\\u0627\\u06cc\\u0637 \\u0633\\u062e\\u062a \\u062a\\u0627\\u06cc\\u067e \\u0628\\u0647 \\u067e\\u0627\\u06cc\\u0627\\u0646 \\u0631\\u0633\\u062f \\u0648\\u0632\\u0645\\u0627\\u0646 \\u0645\\u0648\\u0631\\u062f \\u0646\\u06cc\\u0627\\u0632 \\u0634\\u0627\\u0645\\u0644 \\u062d\\u0631\\u0648\\u0641\\u0686\\u06cc\\u0646\\u06cc \\u062f\\u0633\\u062a\\u0627\\u0648\\u0631\\u062f\\u0647\\u0627\\u06cc \\u0627\\u0635\\u0644\\u06cc \\u0648 \\u062c\\u0648\\u0627\\u0628\\u06af\\u0648\\u06cc \\u0633\\u0648\\u0627\\u0644\\u0627\\u062a \\u067e\\u06cc\\u0648\\u0633\\u062a\\u0647 \\u0627\\u0647\\u0644 \\u062f\\u0646\\u06cc\\u0627\\u06cc \\u0645\\u0648\\u062c\\u0648\\u062f \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0627\\u0633\\u0627\\u0633\\u0627 \\u0645\\u0648\\u0631\\u062f \\u0627\\u0633\\u062a\\u0641\\u0627\\u062f\\u0647 \\u0642\\u0631\\u0627\\u0631 \\u06af\\u06cc\\u0631\\u062f.<\\/p>\",\"state\":1,\"catid\":\"8\",\"created\":\"2021-06-22 16:39:07\",\"created_by\":\"480\",\"created_by_alias\":\"\",\"modified\":\"2021-06-23 10:46:04\",\"modified_by\":\"480\",\"checked_out\":\"480\",\"checked_out_time\":\"2021-06-23 10:45:47\",\"publish_up\":\"2021-06-22 16:39:07\",\"publish_down\":\"0000-00-00 00:00:00\",\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/GAV66-FT_Isolation_Valve_01.jpg\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"images\\\\\\/photo-1497436072909-60f360e1d4b1.jpg\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":false,\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":false,\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":false,\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_associations\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_icons\\\":\\\"\\\",\\\"show_print_icon\\\":\\\"\\\",\\\"show_email_icon\\\":\\\"\\\",\\\"show_vote\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":21,\"ordering\":\"2\",\"metakey\":\"\",\"metadesc\":\"\",\"access\":\"1\",\"hits\":\"522\",\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\",\\\"xreference\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"xreference\":\"\",\"note\":\"\"}', 0);
 
 -- --------------------------------------------------------
 
@@ -8892,14 +8903,14 @@ INSERT INTO `b871e_ucm_history` (`version_id`, `ucm_item_id`, `ucm_type_id`, `ve
 
 CREATE TABLE `b871e_updates` (
   `update_id` int(11) NOT NULL,
-  `update_site_id` int(11) DEFAULT 0,
-  `extension_id` int(11) DEFAULT 0,
+  `update_site_id` int(11) DEFAULT '0',
+  `extension_id` int(11) DEFAULT '0',
   `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '',
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `element` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '',
   `type` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT '',
   `folder` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT '',
-  `client_id` tinyint(3) DEFAULT 0,
+  `client_id` tinyint(3) DEFAULT '0',
   `version` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT '',
   `data` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `detailsurl` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -8912,87 +8923,87 @@ CREATE TABLE `b871e_updates` (
 --
 
 INSERT INTO `b871e_updates` (`update_id`, `update_site_id`, `extension_id`, `name`, `description`, `element`, `type`, `folder`, `client_id`, `version`, `data`, `detailsurl`, `infourl`, `extra_query`) VALUES
-(1503, 2, 0, 'Armenian', '', 'pkg_hy-AM', 'package', '', 0, '3.4.4.1', '', 'https://update.joomla.org/language/details3/hy-AM_details.xml', '', ''),
-(1504, 2, 0, 'Malay', '', 'pkg_ms-MY', 'package', '', 0, '3.4.1.2', '', 'https://update.joomla.org/language/details3/ms-MY_details.xml', '', ''),
-(1505, 2, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '3.9.25.1', '', 'https://update.joomla.org/language/details3/ro-RO_details.xml', '', ''),
-(1506, 2, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/nl-BE_details.xml', '', ''),
-(1507, 2, 0, 'Chinese Traditional', '', 'pkg_zh-TW', 'package', '', 0, '3.8.0.1', '', 'https://update.joomla.org/language/details3/zh-TW_details.xml', '', ''),
-(1508, 2, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/fr-FR_details.xml', '', ''),
-(1509, 2, 0, 'Galician', '', 'pkg_gl-ES', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/gl-ES_details.xml', '', ''),
-(1510, 2, 0, 'Georgian', '', 'pkg_ka-GE', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ka-GE_details.xml', '', ''),
-(1511, 2, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/el-GR_details.xml', '', ''),
-(1512, 2, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ja-JP_details.xml', '', ''),
-(1513, 2, 0, 'Hebrew', '', 'pkg_he-IL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/he-IL_details.xml', '', ''),
-(1514, 2, 0, 'Bengali', '', 'pkg_bn-BD', 'package', '', 0, '3.8.10.1', '', 'https://update.joomla.org/language/details3/bn-BD_details.xml', '', ''),
-(1515, 2, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '3.9.19.1', '', 'https://update.joomla.org/language/details3/hu-HU_details.xml', '', ''),
-(1516, 2, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/af-ZA_details.xml', '', ''),
-(1517, 2, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ar-AA_details.xml', '', ''),
-(1518, 2, 0, 'Belarusian', '', 'pkg_be-BY', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/be-BY_details.xml', '', ''),
-(1519, 2, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '3.6.5.2', '', 'https://update.joomla.org/language/details3/bg-BG_details.xml', '', ''),
-(1520, 2, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '3.9.23.1', '', 'https://update.joomla.org/language/details3/ca-ES_details.xml', '', ''),
-(1521, 2, 0, 'Chinese Simplified', '', 'pkg_zh-CN', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/zh-CN_details.xml', '', ''),
-(1522, 2, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/hr-HR_details.xml', '', ''),
-(1523, 2, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/cs-CZ_details.xml', '', ''),
-(1524, 2, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/da-DK_details.xml', '', ''),
-(1525, 2, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/nl-NL_details.xml', '', ''),
-(1526, 2, 0, 'Esperanto', '', 'pkg_eo-XX', 'package', '', 0, '3.8.11.1', '', 'https://update.joomla.org/language/details3/eo-XX_details.xml', '', ''),
-(1527, 2, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '3.9.21.1', '', 'https://update.joomla.org/language/details3/et-EE_details.xml', '', ''),
-(1528, 2, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/it-IT_details.xml', '', ''),
-(1529, 2, 0, 'Khmer', '', 'pkg_km-KH', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/km-KH_details.xml', '', ''),
-(1530, 2, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '3.8.9.1', '', 'https://update.joomla.org/language/details3/ko-KR_details.xml', '', ''),
-(1531, 2, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '3.9.25.2', '', 'https://update.joomla.org/language/details3/lv-LV_details.xml', '', ''),
-(1532, 2, 0, 'Lithuanian', '', 'pkg_lt-LT', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/lt-LT_details.xml', '', ''),
-(1533, 2, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/mk-MK_details.xml', '', ''),
-(1534, 2, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/nb-NO_details.xml', '', ''),
-(1535, 2, 0, 'Norwegian Nynorsk', '', 'pkg_nn-NO', 'package', '', 0, '3.4.2.1', '', 'https://update.joomla.org/language/details3/nn-NO_details.xml', '', ''),
-(1536, 2, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '3.9.25.2', '', 'https://update.joomla.org/language/details3/pl-PL_details.xml', '', ''),
-(1537, 2, 0, 'Portuguese', '', 'pkg_pt-PT', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/pt-PT_details.xml', '', ''),
-(1538, 2, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ru-RU_details.xml', '', ''),
-(1539, 2, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/en-AU_details.xml', '', ''),
-(1540, 2, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sk-SK_details.xml', '', ''),
-(1541, 2, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/en-US_details.xml', '', ''),
-(1542, 2, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sv-SE_details.xml', '', ''),
-(1543, 2, 0, 'Syriac', '', 'pkg_sy-IQ', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/sy-IQ_details.xml', '', ''),
-(1544, 2, 0, 'Tamil', '', 'pkg_ta-IN', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ta-IN_details.xml', '', ''),
-(1545, 2, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/th-TH_details.xml', '', ''),
-(1546, 2, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '3.9.4.1', '', 'https://update.joomla.org/language/details3/tr-TR_details.xml', '', ''),
-(1547, 2, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '3.9.24.1', '', 'https://update.joomla.org/language/details3/uk-UA_details.xml', '', ''),
-(1548, 2, 0, 'Uyghur', '', 'pkg_ug-CN', 'package', '', 0, '3.7.5.2', '', 'https://update.joomla.org/language/details3/ug-CN_details.xml', '', ''),
-(1549, 2, 0, 'Albanian', '', 'pkg_sq-AL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/sq-AL_details.xml', '', ''),
-(1550, 2, 0, 'Basque', '', 'pkg_eu-ES', 'package', '', 0, '3.9.24.1', '', 'https://update.joomla.org/language/details3/eu-ES_details.xml', '', ''),
-(1551, 2, 0, 'Hindi', '', 'pkg_hi-IN', 'package', '', 0, '3.3.6.2', '', 'https://update.joomla.org/language/details3/hi-IN_details.xml', '', ''),
-(1552, 2, 0, 'German DE', '', 'pkg_de-DE', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/de-DE_details.xml', '', ''),
-(1553, 2, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '3.9.21.1', '', 'https://update.joomla.org/language/details3/pt-BR_details.xml', '', ''),
-(1554, 2, 0, 'Serbian Latin', '', 'pkg_sr-YU', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sr-YU_details.xml', '', ''),
-(1555, 2, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '3.9.18.1', '', 'https://update.joomla.org/language/details3/es-ES_details.xml', '', ''),
-(1556, 2, 0, 'Bosnian', '', 'pkg_bs-BA', 'package', '', 0, '3.9.24.1', '', 'https://update.joomla.org/language/details3/bs-BA_details.xml', '', ''),
-(1557, 2, 0, 'Serbian Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sr-RS_details.xml', '', ''),
-(1558, 2, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/vi-VN_details.xml', '', ''),
-(1559, 2, 0, 'Bahasa Indonesia', '', 'pkg_id-ID', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/id-ID_details.xml', '', ''),
-(1560, 2, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/fi-FI_details.xml', '', ''),
-(1561, 2, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sw-KE_details.xml', '', ''),
-(1562, 2, 0, 'Montenegrin', '', 'pkg_srp-ME', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/srp-ME_details.xml', '', ''),
-(1563, 2, 0, 'English CA', '', 'pkg_en-CA', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/en-CA_details.xml', '', ''),
-(1564, 2, 0, 'French CA', '', 'pkg_fr-CA', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/fr-CA_details.xml', '', ''),
-(1565, 2, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '3.9.27.2', '', 'https://update.joomla.org/language/details3/cy-GB_details.xml', '', ''),
-(1566, 2, 0, 'Sinhala', '', 'pkg_si-LK', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/si-LK_details.xml', '', ''),
-(1567, 2, 0, 'Dari Persian', '', 'pkg_prs-AF', 'package', '', 0, '3.4.4.3', '', 'https://update.joomla.org/language/details3/prs-AF_details.xml', '', ''),
-(1568, 2, 0, 'Turkmen', '', 'pkg_tk-TM', 'package', '', 0, '3.5.0.2', '', 'https://update.joomla.org/language/details3/tk-TM_details.xml', '', ''),
-(1569, 2, 0, 'Irish', '', 'pkg_ga-IE', 'package', '', 0, '3.8.13.1', '', 'https://update.joomla.org/language/details3/ga-IE_details.xml', '', ''),
-(1570, 2, 0, 'Dzongkha', '', 'pkg_dz-BT', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/dz-BT_details.xml', '', ''),
-(1571, 2, 0, 'Slovenian', '', 'pkg_sl-SI', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sl-SI_details.xml', '', ''),
-(1572, 2, 0, 'Spanish CO', '', 'pkg_es-CO', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/es-CO_details.xml', '', ''),
-(1573, 2, 0, 'German CH', '', 'pkg_de-CH', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/de-CH_details.xml', '', ''),
-(1574, 2, 0, 'German AT', '', 'pkg_de-AT', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/de-AT_details.xml', '', ''),
-(1575, 2, 0, 'German LI', '', 'pkg_de-LI', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/de-LI_details.xml', '', ''),
-(1576, 2, 0, 'German LU', '', 'pkg_de-LU', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/de-LU_details.xml', '', ''),
-(1577, 2, 0, 'English NZ', '', 'pkg_en-NZ', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/en-NZ_details.xml', '', ''),
-(1578, 2, 0, 'Kazakh', '', 'pkg_kk-KZ', 'package', '', 0, '3.9.23.1', '', 'https://update.joomla.org/language/details3/kk-KZ_details.xml', '', ''),
-(1579, 5, 10004, 'RSForm! Pro 3.0.4', '', 'com_rsform', 'component', '', 1, '3.0.4', '', 'https://www.rsjoomla.com/updates/com_rsform/Component/com_rsform.xml', 'https://www.rsjoomla.com/support/documentation/rsform-pro/changelog/rsform-pro-changelog.html', ''),
-(1580, 6, 10008, 'RSForm! Pro Module for Joomla! 3.x', '', 'mod_rsform', 'module', '', 0, '3.0.0', '', 'https://www.rsjoomla.com/updates/com_rsform/Modules/mod_rsform.xml', 'https://www.rsjoomla.com/blog', ''),
-(1581, 7, 10009, 'Download RSComments! 1.13.22 for Joomla! 3.x', '', 'com_rscomments', 'component', '', 1, '1.13.22', '', 'https://www.rsjoomla.com/updates/com_rscomments/Component/com_rscomments_2.5-3.0.xml', 'https://www.rsjoomla.com/blog', ''),
-(1582, 8, 10017, 'RSFiles! 1.16.27', '', 'com_rsfiles', 'component', '', 1, '1.16.27', '', 'https://www.rsjoomla.com/updates/com_rsfiles/Component/com_rsfiles_2.5-3.0.xml', 'https://www.rsjoomla.com/support/documentation/rsfiles/changelog.html', ''),
-(1583, 10, 10027, 'Download RSSeo! 1.21.10 for Joomla! 3.x', '', 'com_rsseo', 'component', '', 1, '1.21.10', '', 'https://www.rsjoomla.com/updates/com_rsseo/Component/com_rsseo_2.5-3.0.xml', 'https://www.rsjoomla.com/support/documentation/rsseo/changelog.html', '');
+(1584, 2, 0, 'Armenian', '', 'pkg_hy-AM', 'package', '', 0, '3.4.4.1', '', 'https://update.joomla.org/language/details3/hy-AM_details.xml', '', ''),
+(1585, 2, 0, 'Malay', '', 'pkg_ms-MY', 'package', '', 0, '3.4.1.2', '', 'https://update.joomla.org/language/details3/ms-MY_details.xml', '', ''),
+(1586, 2, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '3.9.25.1', '', 'https://update.joomla.org/language/details3/ro-RO_details.xml', '', ''),
+(1587, 2, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/nl-BE_details.xml', '', ''),
+(1588, 2, 0, 'Chinese Traditional', '', 'pkg_zh-TW', 'package', '', 0, '3.8.0.1', '', 'https://update.joomla.org/language/details3/zh-TW_details.xml', '', ''),
+(1589, 2, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/fr-FR_details.xml', '', ''),
+(1590, 2, 0, 'Galician', '', 'pkg_gl-ES', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/gl-ES_details.xml', '', ''),
+(1591, 2, 0, 'Georgian', '', 'pkg_ka-GE', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ka-GE_details.xml', '', ''),
+(1592, 2, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/el-GR_details.xml', '', ''),
+(1593, 2, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ja-JP_details.xml', '', ''),
+(1594, 2, 0, 'Hebrew', '', 'pkg_he-IL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/he-IL_details.xml', '', ''),
+(1595, 2, 0, 'Bengali', '', 'pkg_bn-BD', 'package', '', 0, '3.8.10.1', '', 'https://update.joomla.org/language/details3/bn-BD_details.xml', '', ''),
+(1596, 2, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '3.9.19.1', '', 'https://update.joomla.org/language/details3/hu-HU_details.xml', '', ''),
+(1597, 2, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/af-ZA_details.xml', '', ''),
+(1598, 2, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ar-AA_details.xml', '', ''),
+(1599, 2, 0, 'Belarusian', '', 'pkg_be-BY', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/be-BY_details.xml', '', ''),
+(1600, 2, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '3.6.5.2', '', 'https://update.joomla.org/language/details3/bg-BG_details.xml', '', ''),
+(1601, 2, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '3.9.23.1', '', 'https://update.joomla.org/language/details3/ca-ES_details.xml', '', ''),
+(1602, 2, 0, 'Chinese Simplified', '', 'pkg_zh-CN', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/zh-CN_details.xml', '', ''),
+(1603, 2, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/hr-HR_details.xml', '', ''),
+(1604, 2, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/cs-CZ_details.xml', '', ''),
+(1605, 2, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/da-DK_details.xml', '', ''),
+(1606, 2, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/nl-NL_details.xml', '', ''),
+(1607, 2, 0, 'Esperanto', '', 'pkg_eo-XX', 'package', '', 0, '3.8.11.1', '', 'https://update.joomla.org/language/details3/eo-XX_details.xml', '', ''),
+(1608, 2, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '3.9.21.1', '', 'https://update.joomla.org/language/details3/et-EE_details.xml', '', ''),
+(1609, 2, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/it-IT_details.xml', '', ''),
+(1610, 2, 0, 'Khmer', '', 'pkg_km-KH', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/km-KH_details.xml', '', ''),
+(1611, 2, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '3.8.9.1', '', 'https://update.joomla.org/language/details3/ko-KR_details.xml', '', ''),
+(1612, 2, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '3.9.25.2', '', 'https://update.joomla.org/language/details3/lv-LV_details.xml', '', ''),
+(1613, 2, 0, 'Lithuanian', '', 'pkg_lt-LT', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/lt-LT_details.xml', '', ''),
+(1614, 2, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/mk-MK_details.xml', '', ''),
+(1615, 2, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/nb-NO_details.xml', '', ''),
+(1616, 2, 0, 'Norwegian Nynorsk', '', 'pkg_nn-NO', 'package', '', 0, '3.4.2.1', '', 'https://update.joomla.org/language/details3/nn-NO_details.xml', '', ''),
+(1617, 2, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '3.9.25.2', '', 'https://update.joomla.org/language/details3/pl-PL_details.xml', '', ''),
+(1618, 2, 0, 'Portuguese', '', 'pkg_pt-PT', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/pt-PT_details.xml', '', ''),
+(1619, 2, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ru-RU_details.xml', '', ''),
+(1620, 2, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/en-AU_details.xml', '', ''),
+(1621, 2, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sk-SK_details.xml', '', ''),
+(1622, 2, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/en-US_details.xml', '', ''),
+(1623, 2, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sv-SE_details.xml', '', ''),
+(1624, 2, 0, 'Syriac', '', 'pkg_sy-IQ', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/sy-IQ_details.xml', '', ''),
+(1625, 2, 0, 'Tamil', '', 'pkg_ta-IN', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ta-IN_details.xml', '', ''),
+(1626, 2, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/th-TH_details.xml', '', ''),
+(1627, 2, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '3.9.4.1', '', 'https://update.joomla.org/language/details3/tr-TR_details.xml', '', ''),
+(1628, 2, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '3.9.24.1', '', 'https://update.joomla.org/language/details3/uk-UA_details.xml', '', ''),
+(1629, 2, 0, 'Uyghur', '', 'pkg_ug-CN', 'package', '', 0, '3.7.5.2', '', 'https://update.joomla.org/language/details3/ug-CN_details.xml', '', ''),
+(1630, 2, 0, 'Albanian', '', 'pkg_sq-AL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/sq-AL_details.xml', '', ''),
+(1631, 2, 0, 'Basque', '', 'pkg_eu-ES', 'package', '', 0, '3.9.24.1', '', 'https://update.joomla.org/language/details3/eu-ES_details.xml', '', ''),
+(1632, 2, 0, 'Hindi', '', 'pkg_hi-IN', 'package', '', 0, '3.3.6.2', '', 'https://update.joomla.org/language/details3/hi-IN_details.xml', '', ''),
+(1633, 2, 0, 'German DE', '', 'pkg_de-DE', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/de-DE_details.xml', '', ''),
+(1634, 2, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '3.9.21.1', '', 'https://update.joomla.org/language/details3/pt-BR_details.xml', '', ''),
+(1635, 2, 0, 'Serbian Latin', '', 'pkg_sr-YU', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sr-YU_details.xml', '', ''),
+(1636, 2, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '3.9.18.1', '', 'https://update.joomla.org/language/details3/es-ES_details.xml', '', ''),
+(1637, 2, 0, 'Bosnian', '', 'pkg_bs-BA', 'package', '', 0, '3.9.24.1', '', 'https://update.joomla.org/language/details3/bs-BA_details.xml', '', ''),
+(1638, 2, 0, 'Serbian Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sr-RS_details.xml', '', ''),
+(1639, 2, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/vi-VN_details.xml', '', ''),
+(1640, 2, 0, 'Bahasa Indonesia', '', 'pkg_id-ID', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/id-ID_details.xml', '', ''),
+(1641, 2, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/fi-FI_details.xml', '', ''),
+(1642, 2, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sw-KE_details.xml', '', ''),
+(1643, 2, 0, 'Montenegrin', '', 'pkg_srp-ME', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/srp-ME_details.xml', '', ''),
+(1644, 2, 0, 'English CA', '', 'pkg_en-CA', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/en-CA_details.xml', '', ''),
+(1645, 2, 0, 'French CA', '', 'pkg_fr-CA', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/fr-CA_details.xml', '', ''),
+(1646, 2, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '3.9.27.2', '', 'https://update.joomla.org/language/details3/cy-GB_details.xml', '', ''),
+(1647, 2, 0, 'Sinhala', '', 'pkg_si-LK', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/si-LK_details.xml', '', ''),
+(1648, 2, 0, 'Dari Persian', '', 'pkg_prs-AF', 'package', '', 0, '3.4.4.3', '', 'https://update.joomla.org/language/details3/prs-AF_details.xml', '', ''),
+(1649, 2, 0, 'Turkmen', '', 'pkg_tk-TM', 'package', '', 0, '3.5.0.2', '', 'https://update.joomla.org/language/details3/tk-TM_details.xml', '', ''),
+(1650, 2, 0, 'Irish', '', 'pkg_ga-IE', 'package', '', 0, '3.8.13.1', '', 'https://update.joomla.org/language/details3/ga-IE_details.xml', '', ''),
+(1651, 2, 0, 'Dzongkha', '', 'pkg_dz-BT', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/dz-BT_details.xml', '', ''),
+(1652, 2, 0, 'Slovenian', '', 'pkg_sl-SI', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sl-SI_details.xml', '', ''),
+(1653, 2, 0, 'Spanish CO', '', 'pkg_es-CO', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/es-CO_details.xml', '', ''),
+(1654, 2, 0, 'German CH', '', 'pkg_de-CH', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/de-CH_details.xml', '', ''),
+(1655, 2, 0, 'German AT', '', 'pkg_de-AT', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/de-AT_details.xml', '', ''),
+(1656, 2, 0, 'German LI', '', 'pkg_de-LI', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/de-LI_details.xml', '', ''),
+(1657, 2, 0, 'German LU', '', 'pkg_de-LU', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/de-LU_details.xml', '', ''),
+(1658, 2, 0, 'English NZ', '', 'pkg_en-NZ', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/en-NZ_details.xml', '', ''),
+(1659, 2, 0, 'Kazakh', '', 'pkg_kk-KZ', 'package', '', 0, '3.9.23.1', '', 'https://update.joomla.org/language/details3/kk-KZ_details.xml', '', ''),
+(1660, 5, 10004, 'RSForm! Pro 3.0.4', '', 'com_rsform', 'component', '', 1, '3.0.4', '', 'https://www.rsjoomla.com/updates/com_rsform/Component/com_rsform.xml', 'https://www.rsjoomla.com/support/documentation/rsform-pro/changelog/rsform-pro-changelog.html', ''),
+(1661, 6, 10008, 'RSForm! Pro Module for Joomla! 3.x', '', 'mod_rsform', 'module', '', 0, '3.0.0', '', 'https://www.rsjoomla.com/updates/com_rsform/Modules/mod_rsform.xml', 'https://www.rsjoomla.com/blog', ''),
+(1662, 7, 10009, 'Download RSComments! 1.13.22 for Joomla! 3.x', '', 'com_rscomments', 'component', '', 1, '1.13.22', '', 'https://www.rsjoomla.com/updates/com_rscomments/Component/com_rscomments_2.5-3.0.xml', 'https://www.rsjoomla.com/blog', ''),
+(1663, 8, 10017, 'RSFiles! 1.16.27', '', 'com_rsfiles', 'component', '', 1, '1.16.27', '', 'https://www.rsjoomla.com/updates/com_rsfiles/Component/com_rsfiles_2.5-3.0.xml', 'https://www.rsjoomla.com/support/documentation/rsfiles/changelog.html', ''),
+(1664, 10, 10027, 'Download RSSeo! 1.21.10 for Joomla! 3.x', '', 'com_rsseo', 'component', '', 1, '1.21.10', '', 'https://www.rsjoomla.com/updates/com_rsseo/Component/com_rsseo_2.5-3.0.xml', 'https://www.rsjoomla.com/support/documentation/rsseo/changelog.html', '');
 
 -- --------------------------------------------------------
 
@@ -9005,8 +9016,8 @@ CREATE TABLE `b871e_update_sites` (
   `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '',
   `type` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT '',
   `location` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `enabled` int(11) DEFAULT 0,
-  `last_check_timestamp` bigint(20) DEFAULT 0,
+  `enabled` int(11) DEFAULT '0',
+  `last_check_timestamp` bigint(20) DEFAULT '0',
   `extra_query` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Update Sites';
 
@@ -9015,16 +9026,16 @@ CREATE TABLE `b871e_update_sites` (
 --
 
 INSERT INTO `b871e_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1624440220, ''),
-(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1624433225, ''),
-(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1624433226, ''),
-(4, 'Accredited Joomla! Translations', 'collection', 'http://update.joomla.org/language/translationlist_3.xml', 1, 1624433226, ''),
-(5, 'RSForm! Pro', 'extension', 'https://www.rsjoomla.com/updates/com_rsform/Component/com_rsform.xml', 1, 1624433228, ''),
-(6, 'RSForm! Pro - Module', 'extension', 'https://www.rsjoomla.com/updates/com_rsform/Modules/mod_rsform.xml', 1, 1624433229, ''),
-(7, 'RSComments!', 'extension', 'https://www.rsjoomla.com/updates/com_rscomments/Component/com_rscomments_2.5-3.0.xml', 1, 1624433230, ''),
-(8, 'RSFiles!', 'extension', 'https://www.rsjoomla.com/updates/com_rsfiles/Component/com_rsfiles_2.5-3.0.xml', 1, 1624433231, ''),
-(9, 'WebInstaller Update Site', 'extension', 'https://appscdn.joomla.org/webapps/jedapps/webinstaller.xml', 1, 1624433232, ''),
-(10, 'RSSeo!', 'extension', 'https://www.rsjoomla.com/updates/com_rsseo/Component/com_rsseo_2.5-3.0.xml', 1, 1624433234, ''),
+(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1624459989, ''),
+(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1624459987, ''),
+(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1624459988, ''),
+(4, 'Accredited Joomla! Translations', 'collection', 'http://update.joomla.org/language/translationlist_3.xml', 1, 1624459989, ''),
+(5, 'RSForm! Pro', 'extension', 'https://www.rsjoomla.com/updates/com_rsform/Component/com_rsform.xml', 1, 1624459990, ''),
+(6, 'RSForm! Pro - Module', 'extension', 'https://www.rsjoomla.com/updates/com_rsform/Modules/mod_rsform.xml', 1, 1624459992, ''),
+(7, 'RSComments!', 'extension', 'https://www.rsjoomla.com/updates/com_rscomments/Component/com_rscomments_2.5-3.0.xml', 1, 1624459994, ''),
+(8, 'RSFiles!', 'extension', 'https://www.rsjoomla.com/updates/com_rsfiles/Component/com_rsfiles_2.5-3.0.xml', 1, 1624459995, ''),
+(9, 'WebInstaller Update Site', 'extension', 'https://appscdn.joomla.org/webapps/jedapps/webinstaller.xml', 1, 1624459996, ''),
+(10, 'RSSeo!', 'extension', 'https://www.rsjoomla.com/updates/com_rsseo/Component/com_rsseo_2.5-3.0.xml', 1, 1624459998, ''),
 (11, 'JCH Optimize Updates', 'extension', 'https://www.jch-optimize.net/index.php?option=com_ars&view=update&task=stream&format=xml&id=4&file=extension.xml', 0, 1594474019, '');
 
 -- --------------------------------------------------------
@@ -9034,8 +9045,8 @@ INSERT INTO `b871e_update_sites` (`update_site_id`, `name`, `type`, `location`, 
 --
 
 CREATE TABLE `b871e_update_sites_extensions` (
-  `update_site_id` int(11) NOT NULL DEFAULT 0,
-  `extension_id` int(11) NOT NULL DEFAULT 0
+  `update_site_id` int(11) NOT NULL DEFAULT '0',
+  `extension_id` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Links extensions to update sites';
 
 --
@@ -9063,9 +9074,9 @@ INSERT INTO `b871e_update_sites_extensions` (`update_site_id`, `extension_id`) V
 
 CREATE TABLE `b871e_usergroups` (
   `id` int(10) UNSIGNED NOT NULL COMMENT 'Primary Key',
-  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Adjacency List Reference Id',
-  `lft` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set lft.',
-  `rgt` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set rgt.',
+  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Adjacency List Reference Id',
+  `lft` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set lft.',
+  `rgt` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set rgt.',
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -9096,17 +9107,17 @@ CREATE TABLE `b871e_users` (
   `username` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `password` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `block` tinyint(4) NOT NULL DEFAULT 0,
-  `sendEmail` tinyint(4) DEFAULT 0,
+  `block` tinyint(4) NOT NULL DEFAULT '0',
+  `sendEmail` tinyint(4) DEFAULT '0',
   `registerDate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `lastvisitDate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `activation` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `lastResetTime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Date of last password reset',
-  `resetCount` int(11) NOT NULL DEFAULT 0 COMMENT 'Count of password resets since lastResetTime',
+  `resetCount` int(11) NOT NULL DEFAULT '0' COMMENT 'Count of password resets since lastResetTime',
   `otpKey` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'Two factor authentication encrypted keys',
   `otep` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'One time emergency passwords',
-  `requireReset` tinyint(4) NOT NULL DEFAULT 0 COMMENT 'Require user to reset password on next login'
+  `requireReset` tinyint(4) NOT NULL DEFAULT '0' COMMENT 'Require user to reset password on next login'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -9114,7 +9125,7 @@ CREATE TABLE `b871e_users` (
 --
 
 INSERT INTO `b871e_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-(480, 'هاست‌ایران', 'developer', 'pouradaby@gmail.com', '$2y$10$5Nsp096..Mhae51koKw9zeO3zFNU5t3NgjCaiRMI1C2x.IGu1X6xK', 0, 1, '2019-08-03 14:55:40', '2021-06-23 10:20:06', '0', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
+(480, 'هاست‌ایران', 'developer', 'pouradaby@gmail.com', '$2y$10$5Nsp096..Mhae51koKw9zeO3zFNU5t3NgjCaiRMI1C2x.IGu1X6xK', 0, 1, '2019-08-03 14:55:40', '2021-06-23 14:53:04', '0', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
 (481, 'Rahmani', 'rahmani', 'mrahmani8869@gmail.com', '$2y$10$Di626ZRVRZeZUnUcXiIVhOv1USdjAdSZNnhhumjqMzb59j6ryf5Eu', 0, 0, '2019-08-28 16:33:38', '2019-11-12 08:18:03', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0);
 
 -- --------------------------------------------------------
@@ -9141,14 +9152,14 @@ CREATE TABLE `b871e_user_keys` (
 
 CREATE TABLE `b871e_user_notes` (
   `id` int(10) UNSIGNED NOT NULL,
-  `user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `catid` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `catid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `subject` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `body` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `state` tinyint(3) NOT NULL DEFAULT 0,
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `state` tinyint(3) NOT NULL DEFAULT '0',
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `created_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_user_id` int(10) UNSIGNED NOT NULL,
   `modified_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -9167,7 +9178,7 @@ CREATE TABLE `b871e_user_profiles` (
   `user_id` int(11) NOT NULL,
   `profile_key` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `profile_value` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ordering` int(11) NOT NULL DEFAULT 0
+  `ordering` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Simple user profile storage table';
 
 -- --------------------------------------------------------
@@ -9177,8 +9188,8 @@ CREATE TABLE `b871e_user_profiles` (
 --
 
 CREATE TABLE `b871e_user_usergroup_map` (
-  `user_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Foreign Key to #__users.id',
-  `group_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Foreign Key to #__usergroups.id'
+  `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Foreign Key to #__users.id',
+  `group_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Foreign Key to #__usergroups.id'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -9196,7 +9207,7 @@ INSERT INTO `b871e_user_usergroup_map` (`user_id`, `group_id`) VALUES
 --
 
 CREATE TABLE `b871e_utf8_conversion` (
-  `converted` tinyint(4) NOT NULL DEFAULT 0
+  `converted` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -9215,7 +9226,7 @@ INSERT INTO `b871e_utf8_conversion` (`converted`) VALUES
 CREATE TABLE `b871e_viewlevels` (
   `id` int(10) UNSIGNED NOT NULL COMMENT 'Primary Key',
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `ordering` int(11) NOT NULL DEFAULT 0,
+  `ordering` int(11) NOT NULL DEFAULT '0',
   `rules` varchar(5120) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'JSON encoded access control.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -10257,7 +10268,7 @@ ALTER TABLE `b871e_viewlevels`
 -- AUTO_INCREMENT for table `b871e_action_logs`
 --
 ALTER TABLE `b871e_action_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2062;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2079;
 
 --
 -- AUTO_INCREMENT for table `b871e_action_logs_extensions`
@@ -10731,7 +10742,7 @@ ALTER TABLE `b871e_tags`
 -- AUTO_INCREMENT for table `b871e_template_styles`
 --
 ALTER TABLE `b871e_template_styles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `b871e_ucm_content`
@@ -10743,13 +10754,13 @@ ALTER TABLE `b871e_ucm_content`
 -- AUTO_INCREMENT for table `b871e_ucm_history`
 --
 ALTER TABLE `b871e_ucm_history`
-  MODIFY `version_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=203;
+  MODIFY `version_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
 
 --
 -- AUTO_INCREMENT for table `b871e_updates`
 --
 ALTER TABLE `b871e_updates`
-  MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1584;
+  MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1665;
 
 --
 -- AUTO_INCREMENT for table `b871e_update_sites`
@@ -10786,8 +10797,3 @@ ALTER TABLE `b871e_user_notes`
 --
 ALTER TABLE `b871e_viewlevels`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=7;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
