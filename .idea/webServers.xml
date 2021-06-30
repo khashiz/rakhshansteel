@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="10db46c7-1ae9-498f-9dcb-23d3d9238829" name="Rakhshan Steel" url="https://rakhshansteel.com">
+        <fileTransfer rootFolder="/public_html" host="rakhshansteel.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

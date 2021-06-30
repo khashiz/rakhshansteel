@@ -21,7 +21,7 @@ $pageclass = $pageparams->get( 'pageclass_sfx' );
 $socialsicons = json_decode( $params->get('socials'),true);
 $total = count($socialsicons['icon']);
 ?>
-<section id="map_rc0cxe" class="pageHeader <?php if ($pageparams->get('map')) { echo 'tall'; }?> uk-position-relative <?php echo $pageparams->get('headerstyle', 'normal'); if ($pageparams->get('headerbgattachment') == 'fixed') { echo ' uk-background-fixed'; } ?> uk-flex uk-flex-center uk-flex-middle" style="<?php if (!empty($pageparams->get('headerbgcolor'))) {echo 'background-color:'.$pageparams->get('headerbgcolor').';';}  ?>">
+<section id="map" class="pageHeader uk-position-relative <?php if ($pageparams->get('map')) { echo 'tall'; }?> <?php echo $pageparams->get('headerstyle', 'normal'); if ($pageparams->get('headerbgattachment') == 'fixed') { echo ' uk-background-fixed'; } ?> uk-flex uk-flex-center uk-flex-middle" style="<?php if (!empty($pageparams->get('headerbgcolor'))) {echo 'background-color:'.$pageparams->get('headerbgcolor').'; ';}  if (!empty($pageparams->get('headerbgimage'))) {echo 'background-image:url('.$pageparams->get('headerbgimage').');';}  ?>">
     <?php if ($pageparams->get('cover')) { ?><div class="uk-position-absolute uk-position-cover" style="background-color: <?php echo $pageparams->get('coverbgcolor', 'rgba(0, 0, 0, .6)'); ?>;"></div><?php } ?>
     <?php if ($pageparams->get('map') == 0) { ?>
     <div class="uk-position-relative uk-container">
@@ -95,7 +95,7 @@ $total = count($socialsicons['icon']);
                             </div>
                             <div>
                                 <div data-uk-lightbox>
-                                    <a class="font map uk-flex uk-flex-middle" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481.465955990377!2d51.424407646701866!3d35.72858013600734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e015a366e3341%3A0xab0431d39d295be4!2sHostiran!5e0!3m2!1sen!2suk!4v1565423124188!5m2!1sen!2suk" data-caption="" data-type="iframe"><?php echo JTEXT::_('SEELOCATIONONMAP'); ?><i class="fas fa-arrow-left uk-margin-small-<?php echo $languageCode == 'fa' ? 'right' : 'left'; ?> uk-visible@m"></i></a>
+                                    <a class="font map uk-flex uk-flex-middle" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d810.2710083470595!2d51.29955342924263!3d35.674932788193665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8dffbdee53ef3b%3A0x9a7e538b36d6c9e5!2z2YXYsdqp2LIg2b7Yrti0INin2YbZiNin2Lkg2YjYsdmCINin2LPYqtuM2YQg2K_YsSDYs9ix2KfYs9ixINin24zYsdin2YY!5e0!3m2!1sen!2s!4v1625012997235!5m2!1sen!2s" data-caption="" data-type="iframe"><?php echo JTEXT::_('SEELOCATIONONMAP'); ?><i class="fas fa-arrow-left uk-margin-small-<?php echo $languageCode == 'fa' ? 'right' : 'left'; ?> uk-visible@m"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -108,71 +108,21 @@ $total = count($socialsicons['icon']);
 
 <?php if ($pageparams->get('map')) { ?>
 <script>
-    function myMap() {
-        var mapProp= {
-            center:new google.maps.LatLng(51.508742,-0.120850),
-            zoom:5,
-        };
-        var map = new google.maps.Map(document.getElementById("mapWrapper"),mapProp);
+    // Initialize and add the map
+    function initMap() {
+        // The location of Uluru
+        const uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+        });
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly" async></script>
 <?php } ?>
-
-
-
-
-
-
-
-
-<!-- CedarMap CSS SDK -->
-<link href='https://api.cedarmaps.com/cedarmaps.js/v1.8.1/cedarmaps.css' rel='stylesheet' />
-
-<script>
-    function contactMap() {
-        // Map options
-        var cm_options = {"center":{"lat":37.4467056,"lng":49.6037977},"maptype":"light","scrollWheelZoom":false,"zoomControl":true,"zoom":13,"minZoom":6,"maxZoom":17,"legendControl":false,"attributionControl":false}
-        // Initialized CedarMap
-        var map = window.L.cedarmaps.map('map_rc0cxe', 'https://api.cedarmaps.com/v1/tiles/cedarmaps.streets.json?access_token=5256866fe5dbe63006370d837dc4e5554d6ec7f9', cm_options);
-        // Markers options
-        var markers = [{"popupContent":"موقعیت مکانی شما","center":{"lat":35.674856,"lng":51.300682},"iconOpts":{"iconUrl":"https://api.cedarmaps.com/v1/markers/marker-default.png","iconRetinaUrl":"https://api.cedarmaps.com/v1/markers/marker-default@2x.png","iconSize":[82,98]}}];
-        var markersLeaflet = [];
-        var _marker = null;
-
-        map.setView(cm_options.center, cm_options.zoom);
-        // Add Markers on Map
-        if (markers.length === 0) return;
-        markers.map(function(marker) {
-            var iconOpts = {
-                iconUrl: marker.iconOpts.iconUrl,
-                iconRetinaUrl: marker.iconOpts.iconRetinaUrl,
-                iconSize: marker.iconOpts.iconSize,
-                popupAnchor: [0, -49]
-            };
-
-            const markerIcon = {
-                icon: window.L.icon(iconOpts)
-            };
-
-            _marker = new window.L.marker(marker.center, markerIcon);
-            markersLeaflet.push(_marker);
-            if (marker.popupContent) {
-                _marker.bindPopup(marker.popupContent);
-            }
-            _marker.addTo(map);
-        });
-        // Bounding Map to Markers
-        if (markers.length > 1) {
-            var group = new window.L.featureGroup(markersLeaflet);
-            map.fitBounds(group.getBounds(), { padding: [30, 30] });
-        }
-    };
-
-    (function(c,e,d,a){
-        var p = c.createElement(e);
-        p.async = 1; p.src = d;
-        p.onload = a;
-        c.body.appendChild(p);
-    })(document, 'script', 'https://api.cedarmaps.com/cedarmaps.js/v1.8.1/cedarmaps.js', contactMap);
-</script>
