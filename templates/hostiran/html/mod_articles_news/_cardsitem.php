@@ -51,7 +51,6 @@ defined('_JEXEC') or die;
             <h3 class="uk-card-title uk-margin-remove">
                 <a class="hovercolor" href="<?php echo $item->link; ?>"><?php echo $item->title; ?></a>
             </h3>
-            <?php if (!empty($item->introtext)) {echo $item->introtext;} ?>
         </div>
     </div>
 </div>

@@ -9,7 +9,7 @@
 
 defined('_JEXEC') or die;
 ?>
-
+<h4 class="uk-text-center uk-text-bold uk-margin-medium color font"><?php echo JText::sprintf('OTHERPRODUCTS'); ?></h4>
 <div>
     <div class="uk-child-width-1-1 uk-child-width-1-4@m" data-uk-grid>
         <?php foreach ($list as $item) : ?>

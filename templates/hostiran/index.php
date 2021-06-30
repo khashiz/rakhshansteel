@@ -130,12 +130,14 @@ $cells = explode("\n", $params->get('cellphone'));
         <div class="logoNav<?php if ($pageparams->get('headerstyle') == 'normal') {echo ' uk-box-shadow-small';} ?>"<?php if ($params->get('stickyHeader')) echo ' data-uk-sticky'; ?>>
             <div class="uk-container">
                 <div data-uk-grid>
-                    <div class="uk-width-expand uk-hidden@m icon mobileIcon uk-flex uk-flex-middle uk-flex-center"><a href="#"><i class="fas fa-bars"></i></a></div>
-                    <div class="uk-width-auto logo">
+                    <div class="uk-width-expand uk-hidden@m icon mobileIcon uk-flex uk-flex-middle uk-flex-center">
+                        <a href="#hamMenu" data-uk-toggle class="uk-button uk-button-default uk-padding-remove uk-flex uk-flex-center uk-flex-middle uk-text-zero uk-line-height-zero uk-border-rounded uk-box-shadow-small"><i class="fas fa-bars"></i></a>
+                    </div>
+                    <div class="uk-width-auto uk-flex uk-flex-middle logo">
                         <h1 class="uk-margin-remove">
                             <a href="<?php echo JURI::base(); ?>" title="<?php echo $sitename; ?>" class="uk-flex uk-flex-center uk-flex-middle">
                                 <span class="shape"><img src="<?php echo JURI::base().'images/logo.svg'; ?>" width="105" height="60" alt="<?php echo $sitename; ?>"></span>
-                                <span class="color"><?php echo $sitename; ?></span>
+                                <span class="color uk-visible@m"><?php echo $sitename; ?></span>
                             </a>
                         </h1>
                     </div>
@@ -151,10 +153,10 @@ $cells = explode("\n", $params->get('cellphone'));
                     <?php } ?>
                     <?php if ($this->countModules( 'mobilesearch' )) { ?>
                         <div class="mobToggle uk-width-expand uk-hidden@m icon mobileIcon uk-flex uk-flex-middle uk-flex-center">
-                            <a class="uk-text-zero" data-uk-toggle="target: .mobToggle; animation: uk-animation-fade" href="#"><i class="fas fa-fw fa-search"></i></a>
+                            <a class="uk-button uk-button-default uk-padding-remove uk-flex uk-flex-center uk-flex-middle uk-text-zero uk-line-height-zero uk-border-rounded uk-box-shadow-small" data-uk-toggle="target: .mobToggle; animation: uk-animation-fade" href="#"><i class="fas fa-fw fa-search"></i></a>
                         </div>
                         <div class="mobToggle uk-width-expand uk-hidden@m icon mobileIcon uk-flex uk-flex-middle uk-flex-center" hidden>
-                            <a class="uk-text-zero" data-uk-toggle="target: .mobToggle; animation: uk-animation-fade" href="#"><i class="fas fa-fw fa-times"></i></a>
+                            <a class="uk-button uk-button-default uk-padding-remove uk-flex uk-flex-center uk-flex-middle uk-text-zero uk-line-height-zero uk-border-rounded uk-box-shadow-small" data-uk-toggle="target: .mobToggle; animation: uk-animation-fade" href="#"><i class="fas fa-fw fa-times"></i></a>
                         </div>
                     <?php } ?>
                 </div>
@@ -179,23 +181,23 @@ $cells = explode("\n", $params->get('cellphone'));
                         <div class="modulebody contact">
                             <div class="uk-grid-small" data-uk-grid>
                                 <?php if (!empty($params->get('phone'))) { ?>
-                                    <div class="uk-width-1-2 uk-width-1-2@m">
+                                    <div class="uk-width-1-2 uk-width-1-2@m uk-text-center uk-text-right@m">
                                         <div class="uk-grid-small" data-uk-grid>
                                             <div class="uk-width-1-1 uk-width-auto@m"><i class="fas fa-fw fa-phone"></i></div>
-                                            <div class="uk-width-expand"><a href="tel:<?php echo $phones[0]; ?>" class="font"><span class="uk-display-inline-block ltr fnu"><?php echo nl2br($params->get('phone')); ?></span></a></div>
+                                            <div class="uk-width-1-1 uk-width-expand@m"><a href="tel:<?php echo $phones[0]; ?>" class="font"><span class="uk-display-inline-block ltr fnu"><?php echo nl2br($params->get('phone')); ?></span></a></div>
                                         </div>
                                     </div>
                                 <?php } ?>
                                 <?php if (!empty($params->get('cellphone'))) { ?>
-                                    <div class="uk-width-1-2 uk-width-1-2@m">
+                                    <div class="uk-width-1-2 uk-width-1-2@m uk-text-center uk-text-right@m">
                                         <div class="uk-grid-small" data-uk-grid>
                                             <div class="uk-width-1-1 uk-width-auto@m"><i class="fas fa-fw fa-mobile"></i></div>
-                                            <div class="uk-width-expand"><a href="tel:<?php echo $cells[0]; ?>" class="font"><span class="uk-display-inline-block ltr"><?php echo nl2br($params->get('cellphone')); ?></span></a></div>
+                                            <div class="uk-width-1-1 uk-width-expand@m"><a href="tel:<?php echo $cells[0]; ?>" class="font"><span class="uk-display-inline-block ltr"><?php echo nl2br($params->get('cellphone')); ?></span></a></div>
                                         </div>
                                     </div>
                                 <?php } ?>
                                 <?php if (!empty($params->get('fax'))) { ?>
-                                    <div class="uk-width-1-2">
+                                    <div class="uk-width-1-1 uk-width-1-2@m uk-text-center uk-text-right@m">
                                         <div class="uk-grid-small" data-uk-grid>
                                             <div class="uk-width-1-1 uk-width-auto@m"><i class="fas fa-fw fa-fax"></i></div>
                                             <div class="uk-width-expand"><a href="#" class="font"><span class="uk-display-inline-block ltr"><?php echo $params->get('fax'); ?></span></a></div>
@@ -203,7 +205,7 @@ $cells = explode("\n", $params->get('cellphone'));
                                     </div>
                                 <?php } ?>
                                 <?php if (!empty($params->get('email'))) { ?>
-                                    <div class="uk-width-1-2">
+                                    <div class="uk-width-1-1 uk-width-1-2@m uk-text-center uk-text-right@m">
                                         <div class="uk-grid-small" data-uk-grid>
                                             <div class="uk-width-1-1 uk-width-auto@m"><i class="fas fa-fw fa-envelope"></i></div>
                                             <div class="uk-width-expand"><a href="mailto:<?php echo $params->get('email'); ?>" class="font"><?php echo $params->get('email'); ?></a></div>
@@ -211,7 +213,7 @@ $cells = explode("\n", $params->get('cellphone'));
                                     </div>
                                 <?php } ?>
                                 <?php if (!empty($params->get('address'.$languageCode))) { ?>
-                                    <div class="uk-width-1-1">
+                                    <div class="uk-width-1-1 uk-text-center uk-text-right@m">
                                         <div class="uk-grid-small" data-uk-grid>
                                             <div class="uk-width-1-1 uk-width-auto@m"><i class="fas fa-fw fa-map"></i></div>
                                             <div class="uk-width-expand"><address class="font"><?php echo $params->get('address'.$languageCode); ?></address></div>
@@ -255,6 +257,26 @@ $cells = explode("\n", $params->get('cellphone'));
         </div>
     </div>
 </footer>
+
+<div id="hamMenu" data-uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-card uk-card-default uk-padding-remove bgWhite">
+        <div class="uk-flex uk-flex-column uk-height-1-1">
+            <div class="uk-width-expand">
+                <div class="offcanvasTop uk-box-shadow-small uk-position-relative uk-flex-stretch background">
+                    <div class="uk-grid-collapse uk-height-1-1 uk-grid uk-grid-stack" data-uk-grid="">
+                        <div class="uk-flex uk-width-1-3 uk-flex uk-flex-center uk-flex-middle"><a onclick="UIkit.offcanvas('#hamMenu').hide();" class="uk-flex uk-flex-center uk-flex-middle uk-height-1-1 uk-width-1-1 uk-margin-remove"><img src="<?php echo JURI::base().'images/sprite.svg#chevron-right'; ?>" width="24" height="24" data-uk-svg></a></div>
+                        <div class="uk-flex uk-width-1-3 uk-flex uk-flex-center uk-flex-middle"><a href="<?php echo JUri::base(); ?>" class="uk-flex uk-flex-center uk-flex-middle uk-height-1-1 uk-width-1-1 uk-margin-remove"><img src="<?php echo JURI::base().'images/sprite.svg#home'; ?>" width="28" height="28" data-uk-svg></a></div>
+                        <div class="uk-flex uk-width-1-3 uk-flex uk-flex-center uk-flex-middle"><a href="tel:<?php echo $phones[0]; ?>" class="uk-flex uk-flex-center uk-flex-middle uk-height-1-1 uk-width-1-1 uk-margin-remove"><img src="<?php echo JURI::base().'images/sprite.svg#phone'; ?>" width="24" height="24" data-uk-svg></a></div>
+                    </div>
+                </div>
+                <div class="uk-padding-small"><jdoc:include type="modules" name="offcanvas" style="xhtml" /></div>
+            </div>
+            <div class="uk-text-center uk-padding">
+                <a href="<?php echo JURI::base(); ?>" title="<?php echo $sitename; ?>" class="uk-display-inline-block logo" target="_self"><img src="<?php echo JURI::base().'images/logo.svg'; ?>" width="105" height="60" alt="<?php echo $sitename; ?>"></a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php if ($this->direction == 'rtl') { ?>
     <script type="text/javascript">

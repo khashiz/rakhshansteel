@@ -5,15 +5,13 @@
 * @license GPL, http://www.gnu.org/copyleft/gpl.html
 */
 defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
-    <div>
-        <div class="rsfiles-layout">
+<div ggggg><div class="rsfiles-layout">
             <?php if (!empty($this->items)) { ?>
                 <?php foreach ($this->items as $i => $item) { ?>
                     <?php $canDownload = rsfilesHelper::permissions('CanDownload',$item->fullpath); ?>
                     <?php if (!empty($item->DownloadLimit) && $item->Downloads >= $item->DownloadLimit) $canDownload = false; ?>
                     <div>
                         <div class="uk-box-shadow-small uk-border-rounded uk-padding-small uk-text-center">
-                            <div></div>
                             <i class="uk-margin-small-top uk-margin-small-bottom uk-display-block rsfiles-file-icon <?php echo $item->icon; ?>"></i>
                             <?php if ($item->isnew) { ?>
                                 <span class="badge badge-info"><?php echo JText::_('COM_RSFILES_NEW'); ?></span>
@@ -107,7 +105,4 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 
                 <?php } ?>
             <?php } ?>
-        </div>
-    </div>
-
-<?php /* if ($this->config->modal == 1) echo JHtml::_('bootstrap.renderModal', 'rsfRsfilesModal', array('title' => '', 'bodyHeight' => 70)); */ ?>
+        </div></div>

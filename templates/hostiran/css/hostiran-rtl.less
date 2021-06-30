@@ -4,6 +4,9 @@
 .font{
   font-family: "Hostiran", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
+.uk-line-height-zero{
+  line-height: 0;
+}
 .uk-text-zero{
   font-size: 0;
 }
@@ -152,6 +155,11 @@ header{
             i{
               font-size: 24px;
             }
+            &.uk-button-default{
+              width: 50px;
+              height: 50px;
+              color: #222 !important;
+            }
           }
           &.mobileIcon{
             a{
@@ -166,6 +174,7 @@ header{
           outline: none;
           font-size: 16px;
           font-weight: 300;
+          background-color: transparent;
         }
         &.mobile{
           height: 60px;
@@ -254,6 +263,9 @@ header{
         }
       }
     }
+  }
+  &.uk-position-z-index{
+    z-index: 1000;
   }
 }
 div{
@@ -495,7 +507,7 @@ div{
     }
   }
   &.productCategoryDesc{
-    p{
+    p,ul{
       color: #000;
       font-size: 14px;
       line-height: 2;
@@ -693,6 +705,11 @@ div{
   &.productDownloads{}
   &.productFAQ{}
   &.productRelated{}
+  &.productTabsHeadersWrapper{
+    @media(max-width: 959px){
+      padding: 0 !important;
+    }
+  }
 }
 main{
   &.view-article{
@@ -714,6 +731,9 @@ section{
     background-size: cover;
     min-height: 250px;
     padding-bottom: 70px;
+    @media(max-width: 959px){
+      min-height: 180px;
+    }
     &.transparent{
       padding-top: 109px;
       @media(max-width: 959px){
@@ -722,6 +742,9 @@ section{
     }
     &.tall{
       min-height: 350px;
+      @media(max-width: 959px){
+        min-height: 280px;
+      }
     }
     >div{
       h1{
@@ -1342,4 +1365,75 @@ aside{
 
 .uk-sticky-fixed{
   z-index: 1001;
+}
+
+div{
+  &.uk-offcanvas{
+    &:before{
+      background-color: rgba(0, 0, 0, .5);
+    }
+    div{
+      &.uk-offcanvas-bar{
+        background-color: #fff;
+        a{
+          &.logo{
+            color: #e0e0e0;
+          }
+        }
+        div{
+          &.offcanvasTop{
+            height: 70px;
+            a{
+              color: #fff;
+            }
+            &.active{
+              height: 60px;
+            }
+          }
+        }
+        ul{
+          &.uk-nav{
+            >li{
+              > a{
+                font-size: 16px;
+                padding: 15px 0;
+                color: #000;
+                .font;
+                font-weight: 700;
+              }
+              ul{
+                >li{
+                  >a{
+                    font-size: 14px;
+                    display: block;
+                    padding: 0 15px 20px 0;
+                    color: #333;
+                    .font;
+                  }
+                }
+              }
+              &.uk-parent{
+                > a{
+                  &:after{
+                    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23666%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23666%22%20width%3D%221%22%20height%3D%2213%22%20x%3D%226%22%20y%3D%220%22%20%2F%3E%0A%3C%2Fsvg%3E");
+                    opacity: .3;
+                  }
+                }
+                &.uk-open{
+                  > a{
+                    &:after{
+                      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23666%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%3C%2Fsvg%3E");
+                    }
+                  }
+                }
+              }
+              &:not(:first-child){
+                border-top: 1px solid #f0f0f0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

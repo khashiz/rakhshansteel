@@ -20,7 +20,7 @@ $total = count($items['number']);
         <div>
             <div>
                 <div class="uk-position-relative">
-                    <ul class="uk-child-width-1-4@m uk-grid-large uk-grid-divider" data-uk-grid>
+                    <ul class="uk-child-width-1-2 uk-child-width-1-4@m uk-grid-large uk-grid-divider" data-uk-grid>
                         <?php for ($i=0;$i<$total;$i++) { ?>
                             <li>
                                 <div class="uk-light">

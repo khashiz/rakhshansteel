@@ -113,11 +113,11 @@ endforeach;
             <div class="uk-width-1-1">
                 <div>
                     <div class="productTabsTitlesWrapper uk-position-relative uk-flex uk-flex-center uk-margin-medium-bottom">
-                        <div class="uk-position-relative uk-padding uk-padding-remove-vertical">
-                            <ul class="uk-subnav uk-subnav-pill uk-flex-center uk-margin-remove-bottom" data-uk-switcher="connect: .uk-switcher; animation: uk-animation-fade productTabsTitles">
-                                <li><a href="#" class="uk-button uk-width-small uk-button-default uk-border-rounded uk-box-shadow-small font"><?php echo JTEXT::_('PRODUCTDETAILS'); ?></a></li>
-                                <li><a href="#" class="uk-button uk-width-small uk-button-default uk-border-rounded uk-box-shadow-small font"><?php echo JTEXT::_('DOWNLOADS'); ?></a></li>
-                                <li><a href="#" class="uk-button uk-width-small uk-button-default uk-border-rounded uk-box-shadow-small font"><?php echo JTEXT::_('FAQ'); ?></a></li>
+                        <div class="uk-position-relative uk-padding uk-padding-remove-vertical productTabsHeadersWrapper">
+                            <ul class="uk-subnav uk-subnav-pill uk-flex-center uk-margin-remove-bottom uk-child-width-1-3 uk-child-width-auto@m" data-uk-grid data-uk-switcher="connect: .uk-switcher; animation: uk-animation-fade productTabsTitles">
+                                <li><a href="#" class="uk-button uk-width-small uk-button-default uk-border-rounded uk-width-1-1 uk-height-1-1 uk-box-shadow-small font"><?php echo JTEXT::_('PRODUCTDETAILS'); ?></a></li>
+                                <li><a href="#" class="uk-button uk-width-small uk-button-default uk-border-rounded uk-width-1-1 uk-height-1-1 uk-box-shadow-small font"><?php echo JTEXT::_('DOWNLOADS'); ?></a></li>
+                                <li><a href="#" class="uk-button uk-width-small uk-button-default uk-border-rounded uk-width-1-1 uk-height-1-1 uk-box-shadow-small font"><?php echo JTEXT::_('FAQ'); ?></a></li>
                             </ul>
                         </div>
                     </div>
@@ -154,7 +154,7 @@ endforeach;
                     </div>
                 </div>
             </div>
-            <div class="uk-width-1-1"><hr class="uk-margin-remove"></div>
+            <div class="uk-width-1-1"><hr class="uk-margin-remove uk-divider-icon"></div>
             <div class="uk-width-1-1 productRelated"><?php echo JHTML::_('content.prepare','{loadposition relatedproducts}'); ?></div>
         </div>
     </div>

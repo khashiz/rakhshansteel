@@ -78,51 +78,52 @@ $pageclass = $pageparams->get( 'pageclass_sfx' );
             <?php } ?>
             <?php if ($this->maxLevel != 0 && !empty($this->children[$this->category->id])) : ?>
                 <div class="productCategorySubcat">
-                    <div class="uk-child-width-1-1 uk-child-width-1-3@m uk-grid-match" data-uk-grid><?php echo $this->loadTemplate('children'); ?></div>
+                    <div class="uk-child-width-1-1 uk-child-width-1-<?php echo $this->params->get('num_columns'); ?>@m" data-uk-grid><?php echo $this->loadTemplate('children'); ?></div>
                 </div>
             <?php endif; ?>
 
-            <div>
-                <?php if (empty($this->lead_items) && $this->category->level > 1 && empty($this->children[$this->category->id])) : ?>
+            <?php if (empty($this->lead_items) && $this->category->level > 1 && empty($this->children[$this->category->id])) : ?>
+                <div>
                     <?php if ($this->params->get('show_no_articles', 1)) : ?>
-                    <div class="uk-text-center uk-margin-large-top uk-margin-large-bottom emptyCat">
-                        <div class="uk-margin-bottom"><i class="fas fa-5x fa-box-open"></i></div>
-                        <p class="font uk-margin-remove"><?php echo JText::_('NOPRODUCTSYET'); ?></p>
-                    </div>
+                        <div class="uk-text-center uk-margin-large-top uk-margin-large-bottom emptyCat">
+                            <div class="uk-margin-bottom"><i class="fas fa-5x fa-box-open"></i></div>
+                            <p class="font uk-margin-remove"><?php echo JText::_('NOPRODUCTSYET'); ?></p>
+                        </div>
                     <?php endif; ?>
-                <?php endif; ?>
-                <?php if (!empty($this->lead_items) && $this->category->level > 1) : ?>
-                <div class="uk-grid-divider" data-uk-grid>
-                    <?php if (!empty(JHTML::_('content.prepare','{loadposition productside}'))) { ?>
-                    <div class="uk-width-1-4">
-                        <aside>
-                            <div class="uk-child-width-1-1" data-uk-grid><?php echo JHTML::_('content.prepare','{loadposition productside}'); ?></div>
-                        </aside>
-                    </div>
-                    <?php } ?>
-                    <div class="uk-width-expand">
-                        <div>
-                            <div class="uk-child-width-1-1 uk-child-width-1-3@m uk-grid-match" data-uk-grid>
-                                <?php foreach ($this->lead_items as &$item) : ?>
-                                    <div class="<?php echo $item->state == 0 ? ' system-unpublished' : null; ?>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-                                        <?php $this->item = &$item; echo $this->loadTemplate('item'); ?>
-                                    </div>
-                                <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+            <?php if (!empty($this->lead_items) && $this->category->level > 1) : ?>
+                <div>
+                    <div class="uk-grid-divider" data-uk-grid>
+                        <?php if (!empty(JHTML::_('content.prepare','{loadposition productside}'))) { ?>
+                            <div class="uk-width-1-4 uk-visible@m">
+                                <aside>
+                                    <div class="uk-child-width-1-1" data-uk-grid><?php echo JHTML::_('content.prepare','{loadposition productside}'); ?></div>
+                                </aside>
                             </div>
-                            <?php if (($this->params->def('show_pagination', 1) == 1 || ($this->params->get('show_pagination') == 2)) && ($this->pagination->get('pages.total') > 1)) : ?>
-                                <div class="pagination">
-                                    <?php if ($this->params->def('show_pagination_results', 1)) : ?>
-                                        <p> <?php echo $this->pagination->getPagesCounter(); ?> </p>
-                                    <?php endif; ?>
-                                    <?php echo $this->pagination->getPagesLinks(); ?>
+                        <?php } ?>
+                        <div class="uk-width-1-1 uk-width-expand@m">
+                            <div>
+                                <div class="uk-child-width-1-1 uk-child-width-1-3@m" data-uk-grid>
+                                    <?php foreach ($this->lead_items as &$item) : ?>
+                                        <div class="<?php echo $item->state == 0 ? ' system-unpublished' : null; ?>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                                            <?php $this->item = &$item; echo $this->loadTemplate('item'); ?>
+                                        </div>
+                                    <?php endforeach; ?>
                                 </div>
-                            <?php endif; ?>
+                                <?php if (($this->params->def('show_pagination', 1) == 1 || ($this->params->get('show_pagination') == 2)) && ($this->pagination->get('pages.total') > 1)) : ?>
+                                    <div class="pagination">
+                                        <?php if ($this->params->def('show_pagination_results', 1)) : ?>
+                                            <p> <?php echo $this->pagination->getPagesCounter(); ?> </p>
+                                        <?php endif; ?>
+                                        <?php echo $this->pagination->getPagesLinks(); ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <?php endif; ?>
-            </div>
-
+            <?php endif; ?>
         </div>
     </div>
 </section>
