@@ -14,9 +14,9 @@ class JConfig {
 	public $debug_lang_const = '1';
 	public $dbtype = 'mysqli';
 	public $host = 'localhost';
-	public $user = 'rakhshansteel';
-	public $password = '123456';
-	public $db = 'rakhshansteel';
+	public $user = 'rakhsha3_un';
+	public $password = 'cmyI6*C~Mp-_';
+	public $db = 'rakhsha3_db';
 	public $dbprefix = 'b871e_';
 	public $live_site = '';
 	public $secret = '6T0IPadhwB6WlrYX';
@@ -57,8 +57,8 @@ class JConfig {
 	public $unicodeslugs = '1';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-	public $log_path = 'F:\rakhshansteel\administrator\logs';
-	public $tmp_path = 'F:\rakhshansteel\tmp';
+	public $log_path = '/home/rakhsha3/public_html/administrator/logs';
+	public $tmp_path = '/home/rakhsha3/public_html/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 	public $shared_session = '0';
@@ -85,7 +85,7 @@ class JConfig {
 	public $replytoname = '';
 	public $MetaRights = '';
 	public $sitename_pagetitles = '1';
-	public $force_ssl = '0';
+	public $force_ssl = '2';
 	public $session_memcache_server_host = 'localhost';
 	public $session_memcache_server_port = '11211';
 	public $session_memcached_server_host = 'localhost';
@@ -99,4 +99,6 @@ class JConfig {
 	public $cookie_domain = '';
 	public $cookie_path = '';
 	public $asset_id = '1';
+	public $behind_loadbalancer = '0';
+	public $block_floc = '1';
 }
