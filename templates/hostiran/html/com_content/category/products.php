@@ -92,7 +92,7 @@ $pageclass = $pageparams->get( 'pageclass_sfx' );
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
-            <?php if (!empty($this->lead_items) && $this->category->level > 1) : ?>
+            <?php if (!empty($this->lead_items)) : ?>
                 <div>
                     <div class="uk-grid-divider" data-uk-grid>
                         <?php if (!empty(JHTML::_('content.prepare','{loadposition productside}'))) { ?>
@@ -104,7 +104,7 @@ $pageclass = $pageparams->get( 'pageclass_sfx' );
                         <?php } ?>
                         <div class="uk-width-1-1 uk-width-expand@m">
                             <div>
-                                <div class="uk-child-width-1-1 uk-child-width-1-3@m" data-uk-grid>
+                                <div class="uk-child-width-1-1 uk-child-width-1-4@m" data-uk-grid>
                                     <?php foreach ($this->lead_items as &$item) : ?>
                                         <div class="<?php echo $item->state == 0 ? ' system-unpublished' : null; ?>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
                                             <?php $this->item = &$item; echo $this->loadTemplate('item'); ?>

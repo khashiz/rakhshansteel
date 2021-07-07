@@ -30,7 +30,7 @@ $images = json_decode($this->item->images);
                     <div class="uk-flex uk-flex-middle uk-cover" data-uk-cover>
                         <div>
                             <div class="uk-inline-clip uk-transition-toggle uk-display-block">
-                                <img class="uk-transition-scale-up uk-transition-opaque" src="<?php echo !empty($images->image_intro) ? htmlspecialchars($images->image_intro, ENT_COMPAT, 'UTF-8') : 'images/sprite.svg#placeholdersquare'; ?>" alt="<?php echo $this->item->title; ?>" itemprop="thumbnailUrl"<?php if (empty($images->image_intro)) {echo ' data-uk-svg';} ?>>
+                                <img class="uk-transition-scale-up uk-transition-opaque" src="<?php echo !empty($images->image_intro) ? htmlspecialchars($images->image_intro, ENT_COMPAT, 'UTF-8') : 'images/sprite.svg#placeholdersquare'; ?>" width="600" height="600" alt="<?php echo $this->item->title; ?>" itemprop="thumbnailUrl"<?php if (empty($images->image_intro)) {echo ' data-uk-svg';} ?>>
                             </div>
                         </div>
                     </div>

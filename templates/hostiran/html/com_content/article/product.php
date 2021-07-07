@@ -49,7 +49,7 @@ endforeach;
                         $gallery = explode("<br>", $fieldsValue['gallery']);
                         ?>
                         <div>
-                            <div data-uk-slideshow="ratio:4:3;">
+                            <div data-uk-slideshow="ratio:1:1;">
                                 <div class="uk-grid-small uk-child-width-1-1" data-uk-grid>
                                     <div>
                                         <div class="uk-position-relative">
@@ -58,7 +58,7 @@ endforeach;
                                                     <?php $image = explode(",", $gallery[$img]); ?>
                                                     <div>
                                                         <a class="uk-display-block" href="<?php echo $image[0]; ?>" data-uk-cover data-caption="<?php echo $image[1]; ?>">
-                                                            <img src="<?php echo $image[0]; ?>" alt="<?php echo $image[1]; ?>" />
+                                                            <img src="<?php echo $image[0]; ?>" width="600" height="600" alt="<?php echo $image[1]; ?>" />
                                                         </a>
                                                     </div>
                                                 <?php } ?>
@@ -107,50 +107,6 @@ endforeach;
                                 <span class="fulltext" hidden><?php echo JTEXT::_('CLOSE'); ?></span>
                             </button>
                         <?php } ?>
-                    </div>
-                </div>
-            </div>
-            <div class="uk-width-1-1">
-                <div>
-                    <div class="productTabsTitlesWrapper uk-position-relative uk-flex uk-flex-center uk-margin-medium-bottom">
-                        <div class="uk-position-relative uk-padding uk-padding-remove-vertical productTabsHeadersWrapper">
-                            <ul class="uk-subnav uk-subnav-pill uk-flex-center uk-margin-remove-bottom uk-child-width-1-3 uk-child-width-auto@m" data-uk-grid data-uk-switcher="connect: .uk-switcher; animation: uk-animation-fade productTabsTitles">
-                                <li><a href="#" class="uk-button uk-width-small uk-button-default uk-border-rounded uk-width-1-1 uk-height-1-1 uk-box-shadow-small font"><?php echo JTEXT::_('PRODUCTDETAILS'); ?></a></li>
-                                <li><a href="#" class="uk-button uk-width-small uk-button-default uk-border-rounded uk-width-1-1 uk-height-1-1 uk-box-shadow-small font"><?php echo JTEXT::_('DOWNLOADS'); ?></a></li>
-                                <li><a href="#" class="uk-button uk-width-small uk-button-default uk-border-rounded uk-width-1-1 uk-height-1-1 uk-box-shadow-small font"><?php echo JTEXT::_('FAQ'); ?></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="uk-switcher">
-                        <div class="productSpecifications">
-                            <?php $specRows = explode('<br>', $fieldsValue['specifications']); ?>
-                            <div class="uk-child-width-1-1 uk-grid-small" data-uk-grid>
-                                <?php for ($s=0;$s<count($specRows)-1;$s++) { ?>
-                                    <?php
-                                    $specItem = explode(',', $specRows[$s]);
-                                    ?>
-                                    <div>
-                                        <div>
-                                            <div class="uk-grid-small" data-uk-grid>
-                                                <div class="uk-width-small"><span class="uk-display-block uk-padding-small uk-background-muted uk-textse font uk-text-small title"><?php echo $specItem[0]; ?></span></div>
-                                                <div class="uk-width-expand"><span class="uk-display-block uk-padding-small uk-background-muted uk-textse font uk-text-small value"><?php echo nl2br($specItem[1]); ?></span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php } ?>
-                            </div>
-                        </div>
-                        <div class="productDownloads"><div class="uk-child-width-1-2 uk-child-width-1-5@m" data-uk-grid><?php echo $fieldsValue['downloads']; ?></div></div>
-                        <div class="productFAQ">
-                            <div data-uk-accordion>
-                                <?php $faqItem = JTable::getInstance('content'); for ($f=0;$f<count($fieldsRawValue['faq']);$f++) { $faqItem->load($fieldsRawValue['faq'][$f]); ?>
-                                    <div>
-                                        <a class="uk-accordion-title uk-background-muted uk-padding-small uk-text-small font uk-border-rounded" href="#"><?php echo $faqItem->title; ?></a>
-                                        <div class="uk-accordion-content"><?php echo $faqItem->introtext; ?></div>
-                                    </div>
-                                <?php } ?>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

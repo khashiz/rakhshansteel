@@ -36,7 +36,7 @@ $isUnpublished     = $this->item->state == 0 || $isNotPublishedYet || $isExpired
                             <div class="uk-flex uk-flex-middle uk-cover" data-uk-cover>
                                 <div>
                                     <div class="uk-inline-clip uk-transition-toggle uk-display-block">
-                                        <img class="uk-transition-scale-up uk-transition-opaque" src="<?php echo !empty(json_decode($this->item->images)->image_intro) ? htmlspecialchars(json_decode($this->item->images)->image_intro, ENT_COMPAT, 'UTF-8') : 'images/sprite.svg#placeholdersquare'; ?>" alt="<?php echo $this->item->title; ?>" itemprop="thumbnailUrl"<?php if (empty(json_decode($this->item->images)->image_intro)) {echo ' data-uk-svg';} ?>>
+                                        <img class="uk-transition-scale-up uk-transition-opaque" src="<?php echo !empty(json_decode($this->item->images)->image_intro) ? htmlspecialchars(json_decode($this->item->images)->image_intro, ENT_COMPAT, 'UTF-8') : 'images/sprite.svg#placeholdersquare'; ?>" width="600" height="600" alt="<?php echo $this->item->title; ?>" itemprop="thumbnailUrl"<?php if (empty(json_decode($this->item->images)->image_intro)) {echo ' data-uk-svg';} ?>>
                                     </div>
                                 </div>
                             </div>

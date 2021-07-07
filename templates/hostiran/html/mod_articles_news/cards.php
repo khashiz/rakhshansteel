@@ -22,9 +22,9 @@ defined('_JEXEC') or die;
 ?>
 <div class="uk-container">
     <div>
-        <div class="uk-slider-container-offset" data-uk-slider>
+        <div>
             <div class="uk-position-relative uk-visible-toggle">
-                <div class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m uk-grid uk-grid-match">
+                <div class="uk-child-width-1-1 uk-child-width-1-3@m" data-uk-grid>
                     <?php foreach ($list as $item) : ?>
                         <?php require JModuleHelper::getLayoutPath('mod_articles_news', '_cardsitem'); ?>
                     <?php endforeach; ?>

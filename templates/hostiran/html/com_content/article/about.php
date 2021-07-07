@@ -65,7 +65,7 @@ $totalNumbers = count($numbers);
                             <div>
                                 <div>
                                     <div data-uk-grid>
-                                        <div class="uk-width-1-1 uk-width-1-4@m uk-flex uk-flex-middle uk-flex-center"><img src="<?php echo $section[0]; ?>" alt="<?php echo $section[1]; ?>"></div>
+                                        <div class="uk-width-1-1 uk-width-1-4@m uk-flex uk-flex-middle uk-flex-center"><img src="<?php echo $section[0]; ?>" alt="<?php echo $section[1]; ?>" width="137" height="167"></div>
                                         <div class="uk-width-1-1 uk-width-3-4@m">
                                             <div class="uk-margin-bottom"><h2 class="sectionTitle border-color"><?php echo $section[1]; ?></h2></div>
                                             <div>

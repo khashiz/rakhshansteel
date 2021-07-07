@@ -39,7 +39,6 @@ $this->direction == 'rtl' ? JHtml::_('stylesheet', 'uikit-rtl.min.css', array('v
 JHtml::_('stylesheet', 'hostiran-'.$this->direction.'.css', array('version' => 'auto', 'relative' => true));
 
 // Add js
-/*if ($pageclass == 'contact') { JHtml::_('jquery.framework'); } else { JHtml::_('script', 'bootstrap.min.js', array('version' => 'auto', 'relative' => true)); } */
 JHtml::_('script', 'uikit.min.js', array('version' => 'auto', 'relative' => true));
 if ($languageCode == 'fa') {JHtml::_('script', 'persianumber.min.js', array('version' => 'auto', 'relative' => true));}
 
@@ -52,7 +51,7 @@ $cells = explode("\n", $params->get('cellphone'));
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="<?php echo $params->get('presetcolor'); ?>">
     <jdoc:include type="head" />
     <style type="text/css">
@@ -66,6 +65,15 @@ $cells = explode("\n", $params->get('cellphone'));
         .lightbg{background-color:<?php echo $params->get('templatecolor').'30;'; ?>}
         blockquote:before{color:<?php echo $params->get('templatecolor').';'; ?>;}
     </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C0VBBG253W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-C0VBBG253W');
+    </script>
 </head>
 <body>
 <header class="uk-text-zero <?php echo $pageparams->get('headerstyle') == 'transparent' ? 'uk-position-absolute uk-width-1-1' : 'uk-position-relative'; ?> uk-position-z-index <?php echo $pageparams->get('headerstyle', 'normal'); ?> <?php if ($pageclass == 'home') echo 'uk-box-shadow-medium'; ?>">
@@ -264,15 +272,12 @@ $cells = explode("\n", $params->get('cellphone'));
             <div class="uk-width-expand">
                 <div class="offcanvasTop uk-box-shadow-small uk-position-relative uk-flex-stretch background">
                     <div class="uk-grid-collapse uk-height-1-1 uk-grid uk-grid-stack" data-uk-grid="">
-                        <div class="uk-flex uk-width-1-3 uk-flex uk-flex-center uk-flex-middle"><a onclick="UIkit.offcanvas('#hamMenu').hide();" class="uk-flex uk-flex-center uk-flex-middle uk-height-1-1 uk-width-1-1 uk-margin-remove"><img src="<?php echo JURI::base().'images/sprite.svg#chevron-right'; ?>" width="24" height="24" data-uk-svg></a></div>
-                        <div class="uk-flex uk-width-1-3 uk-flex uk-flex-center uk-flex-middle"><a href="<?php echo JUri::base(); ?>" class="uk-flex uk-flex-center uk-flex-middle uk-height-1-1 uk-width-1-1 uk-margin-remove"><img src="<?php echo JURI::base().'images/sprite.svg#home'; ?>" width="28" height="28" data-uk-svg></a></div>
-                        <div class="uk-flex uk-width-1-3 uk-flex uk-flex-center uk-flex-middle"><a href="tel:<?php echo $phones[0]; ?>" class="uk-flex uk-flex-center uk-flex-middle uk-height-1-1 uk-width-1-1 uk-margin-remove"><img src="<?php echo JURI::base().'images/sprite.svg#phone'; ?>" width="24" height="24" data-uk-svg></a></div>
+                        <div class="uk-flex uk-width-1-3 uk-flex uk-flex-center uk-flex-middle"><a onclick="UIkit.offcanvas('#hamMenu').hide();" class="uk-flex uk-flex-center uk-flex-middle uk-height-1-1 uk-width-1-1 uk-margin-remove"><i class="uk-text-large fas fa-chevron-right"></i></a></div>
+                        <div class="uk-flex uk-width-1-3 uk-flex uk-flex-center uk-flex-middle"><a href="<?php echo JUri::base(); ?>" class="uk-flex uk-flex-center uk-flex-middle uk-height-1-1 uk-width-1-1 uk-margin-remove"><i class="uk-text-large fas fa-home"></i></a></div>
+                        <div class="uk-flex uk-width-1-3 uk-flex uk-flex-center uk-flex-middle"><a href="tel:<?php echo $phones[0]; ?>" class="uk-flex uk-flex-center uk-flex-middle uk-height-1-1 uk-width-1-1 uk-margin-remove"><i class="uk-text-large fas fa-phone"></i></a></div>
                     </div>
                 </div>
                 <div class="uk-padding-small"><jdoc:include type="modules" name="offcanvas" style="xhtml" /></div>
-            </div>
-            <div class="uk-text-center uk-padding">
-                <a href="<?php echo JURI::base(); ?>" title="<?php echo $sitename; ?>" class="uk-display-inline-block logo" target="_self"><img src="<?php echo JURI::base().'images/logo.svg'; ?>" width="105" height="60" alt="<?php echo $sitename; ?>"></a>
             </div>
         </div>
     </div>
@@ -285,6 +290,8 @@ $cells = explode("\n", $params->get('cellphone'));
         });
     </script>
 <?php } ?>
+
+
 
 </body>
 </html>
